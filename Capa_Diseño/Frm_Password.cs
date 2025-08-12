@@ -101,7 +101,7 @@ namespace Capa_Diseño
 
         private void Txt_Password_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Pasando de un Campo a Otro 1
+            // Pasando de un Campo a Otro 2
             if (e.KeyChar == (char)Keys.Enter)
             {
                 if (this.Txt_Password.ReadOnly == true)
