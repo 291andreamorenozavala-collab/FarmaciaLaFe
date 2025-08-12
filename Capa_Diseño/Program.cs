@@ -74,7 +74,7 @@ namespace Capa_Diseño
             }
             catch (Exception ex)
             {
-                MessageBox.Show(xError + ex.Message, SISTEMA, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult dialogResult = MessageBox.Show(xError + ex.Message, SISTEMA, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
