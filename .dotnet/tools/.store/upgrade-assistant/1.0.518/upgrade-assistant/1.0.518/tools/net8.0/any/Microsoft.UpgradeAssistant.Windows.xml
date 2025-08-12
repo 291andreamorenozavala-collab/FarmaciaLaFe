@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.UpgradeAssistant.Windows</name>
+    </assembly>
+    <members>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+                Reserved to be used by the compiler for tracking metadata.
+                This class should not be used by developers in source code.
+            </summary>
+            <remarks>
+                This definition is provided by the <i>IsExternalInit</i> NuGet package (https://www.nuget.org/packages/IsExternalInit).
+                Please see https://github.com/manuelroemer/IsExternalInit for more information.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Windows.Code.WindowsUpgradeFrameworkApiMapProvider.GetApiMapEntriesAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Windows.Code.WinFormsUpgradeFrameworkApiMapProvider.GetApiMapEntriesAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Windows.Packages.WinFormsPackageMapConfigProvider.GetPackageMapConfigAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Windows.Resources.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Resources.Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Resources.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Resources.Strings.ClickOnceNamespaceCommentWithUrl">
+            <summary>
+              Looks up a localized string similar to Although ClickOnce is supported on .NET 5+, apps do not have access to the {0} namespace. For more details see {1} and {2}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Resources.Strings.DefaultFontChanged">
+            <summary>
+              Looks up a localized string similar to Default font in Windows Forms has been changed from Microsoft Sans Serif to Segoe UI, in order to change the default font use the API - Application.SetDefaultFont(Font font)..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Resources.Strings.RemovingFile">
+            <summary>
+              Looks up a localized string similar to Removing file &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Resources.Strings.ReplacingValueInFile">
+            <summary>
+              Looks up a localized string similar to Replacing &apos;{0}&apos; with &apos;{1}&apos; in &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Resources.Strings.WinFormsTemplateDescription">
+            <summary>
+              Looks up a localized string similar to A project template for creating a .NET Windows Forms (WinForms) App..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Resources.Strings.WinFormsTemplateName">
+            <summary>
+              Looks up a localized string similar to Win Forms.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Resources.Strings.WPFTemplateDescription">
+            <summary>
+              Looks up a localized string similar to A project template for creating a .NET WPF App..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Resources.Strings.WPFTemplateName">
+            <summary>
+              Looks up a localized string similar to WPF.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Windows.Services.RegistryService">
+            <summary>
+            Note: this service only works on windows. On mac it would always return null values.
+            Check OS in code before calling its methods and plan different way to get data for OSX or Linux.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Windows.Services.RegistryService.GetLocalMachineKeyValue(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Templates.CSharp.WinForms.WinFormsProjectTemplate.ProjectFileExtension">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Templates.CSharp.WPF.WpfProjectTemplate.ProjectFileExtension">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Templates.VisualBasic.WinForms.WinFormsProjectTemplate.ProjectFileExtension">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Windows.Templates.VisualBasic.WPF.WpfProjectTemplate.ProjectFileExtension">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Windows.Traits.WindowsDesktopTraitProvider">
+            <summary>
+            Discover project traits specific to windows desktop project types like WPF or WinForms
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Windows.Traits.WindowsTraitProvider">
+            <summary>
+            Discover project traits specific to windows project types like WPF or WinForms
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Windows.Transformers.WinFormsDpiSettingTransformer">
+            <summary>
+            Updates Application.EnableVisualStyles(); with Application.SetHighDpiMode(HighDpiMode.{highDpiValue}) in main method.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Windows.Transformers.Package.WinFormsPackageMapTransformer">
+            <summary>
+            WinUI default packages transformer (uses package map embedded json file to decide how to upgrade packages).
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Windows.Transformers.Project.WindowsProjectFilesRemoveTransformer">
+            <summary>
+            Removes unnecessary files when converting WinForms or WPF projects to core
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Windows.Transformers.Project.WinFormsDefaultFontTransformer">
+            <summary>
+            Always returns a warning notifying that default font changed in Win Forms apps.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Windows.Transformers.WindowsTargetFrameworkTransformer">
+            <summary>
+            Windows projects TargetFramework transformer that modifies TargetFramework in the
+            context properties and adds a platform "windows" to it.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.TargetFrameworks.WindowsTargetFrameworkAdjuster">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.TargetFrameworks.WindowsTargetFrameworkAdjuster.GetAdjustedTargetFrameworkAsync(Microsoft.UpgradeAssistant.TargetFrameworks.TargetFramework,System.String,Microsoft.UpgradeAssistant.Services.IProject,Microsoft.UpgradeAssistant.Traits.ITraitsSet,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

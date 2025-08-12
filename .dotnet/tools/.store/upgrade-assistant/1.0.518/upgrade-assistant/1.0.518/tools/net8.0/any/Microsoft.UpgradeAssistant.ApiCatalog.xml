@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.UpgradeAssistant.ApiCatalog</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.UpgradeAssistant.ApiCatalog.Catalog.GetApiMapping">
+            <summary>
+            This method is used by the index builder to verify the correctness of the api mapping.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.ApiCatalog.CatalogLoader">
+            <summary>
+            Manages load of latest API catalog database and its updates from the remote blob.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.ApiCatalog.CatalogLoader.LoadCatalogAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Note: protected for unit tests. We cannot test loading real model, however error cases we can and 
+            they are actually more important to test.
+            </summary>
+            <param name="catalogPath"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

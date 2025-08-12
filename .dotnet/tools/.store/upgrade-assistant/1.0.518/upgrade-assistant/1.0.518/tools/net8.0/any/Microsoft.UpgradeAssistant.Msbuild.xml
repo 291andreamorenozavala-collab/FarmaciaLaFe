@@ -1,0 +1,1433 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.UpgradeAssistant.Msbuild</name>
+    </assembly>
+    <members>
+        <member name="M:MSBuild.Abstractions.MSBuildConversionWorkspace.TryCreateSdkBaselineProject(System.String,MSBuild.Abstractions.IProject,MSBuild.Abstractions.IProjectRootElement,System.Collections.Immutable.ImmutableDictionary{System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.String}},System.String,System.Boolean,System.Nullable{MSBuild.Abstractions.BaselineProject}@)">
+            <summary>
+            Clear out the project's construction model and add a simple SDK-based project to get a baseline.
+            We need to use the same name as the original csproj and same path so that all the default that derive
+            from name\path get the right values (there are a lot of them).
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildConversionWorkspaceFinder.FindWorkspace(System.String,System.String)">
+            <summary>
+            Finds a compatible MSBuild project or solution.
+            <param name="searchDirectory">The base directory to search</param>
+            <param name="workspacePath">A specific project or solution file to find</param>
+            </summary>
+        </member>
+        <member name="T:MSBuild.Abstractions.MSBuildHelpers">
+            <summary>
+            Static helper methods for working with general MSBuildisms.
+            </summary>
+        </member>
+        <member name="F:MSBuild.Abstractions.MSBuildHelpers.DimensionNameInConditionRegex">
+            <summary>
+            matches $(name) pattern.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.DimensionalValuePairsToCondition(System.Collections.Immutable.ImmutableDictionary{System.String,System.String})">
+            <summary>
+            Converts configuration dimensional value vector to a msbuild condition
+            Use the standard format of
+            '$(DimensionName1)|$(DimensionName2)|...|$(DimensionNameN)'=='DimensionValue1|...|DimensionValueN'.
+            </summary>
+            <param name="dimensionalValues">vector of configuration dimensional properties.</param>
+            <returns>msbuild condition representation.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.GetConfigurationName(System.Collections.Immutable.ImmutableDictionary{System.String,System.String})">
+            <summary>
+            Returns a name of a configuration like Debug|AnyCPU.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.GetConfigurationName(System.String)">
+            <summary>
+            Returns a name of a configuration like Debug|AnyCPU.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.ConditionToDimensionValues(System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.String}@)">
+            <summary>
+            Tries to parse an MSBuild condition to a dimensional vector
+            only matches standard pattern:
+            '$(DimensionName1)|$(DimensionName2)|...|$(DimensionNameN)'=='DimensionValue1|...|DimensionValueN'.
+            </summary>
+            <param name="condition">msbuild condition string.</param>
+            <param name="dimensionalValues">configuration dimensions vector (output).</param>
+            <returns>true on success.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.FrameworkHasAValueTuple(System.String)">
+            <summary>
+            Given a TFM string, determines if that TFM has an explicit System.ValueTuple reference.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.TrySetGeneratePathPropertyForPackage(MSBuild.Abstractions.IProjectRootElement,System.String)">
+            <summary>
+            Try to set GeneratePathProperty to the package reference
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.TryGetPathPropertyAwareInclude(Microsoft.Build.Construction.ProjectItemElement,System.String,System.String@)">
+            <summary>
+            Try to rewrite the include using the new PathProperty value.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.GetReferences(Microsoft.Build.Construction.ProjectItemGroupElement)">
+            <summary>
+            Gets all Reference items from a given item group.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.GetPackageReferences(Microsoft.Build.Construction.ProjectItemGroupElement)">
+            <summary>
+            Gets all PackageReference items from a given item group.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.HasProjectTypeGuidsNode(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Checks if a root has a project type guids node.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.GetAllProjectTypeGuids(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Gets a flat list of all project type guids.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsWPF(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Determines if a given project is a WPF project by looking at its references.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsWinForms(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Determines if a given project is a WinForms project by looking at its references.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsDesktop(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Determines if a given project references Desktop assemblies.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsUwp(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Determines if a given project is UWP.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsWeb(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Determines if a given project references ASP.NET assemblies.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsWebApp(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Determines if a given project uses ASP.NET web app project type guid.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsAspNetCore(MSBuild.Abstractions.IProjectRootElement,System.String)">
+            <summary>
+            Determines if a project should be treated as an ASP.NET Core project (as opposed to classic ASP.NET). Returns
+            true if the project is a web app (since there's no good way to build an ASP.NET app with an SDK-style project
+            except to upgrade to ASP.NET Core) or the project has web dependencies and will target .NET/.NET Core.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsNETFrameworkMSTestProject(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Determines if a project is a .NET Framework MSTest project by looking at its references.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsNotNetFramework(System.String)">
+            <summary>
+            Checks if a given TFM is not .NET Framework.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsWindows(System.String)">
+            <summary>
+            Checks if a given TFM include -windows.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.GetPackagesConfigItemGroup(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Finds the item group where a packages.config is included. Assumes only one.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.GetPackagesConfigItem(Microsoft.Build.Construction.ProjectItemGroupElement)">
+            <summary>
+            Finds the packages.config item in its containing item group.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.AddUseWinForms(Microsoft.Build.Construction.ProjectPropertyGroupElement)">
+            <summary>
+            Adds the UseWindowsForms=True property to the top-level project property group.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.AddUseWPF(Microsoft.Build.Construction.ProjectPropertyGroupElement)">
+            <summary>
+            Adds the UseWPF=true property to the top-level project property group.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.AddUseWinUI(Microsoft.Build.Construction.ProjectPropertyGroupElement)">
+            <summary>
+            Adds the UseWinUI=true property to the top-level project property group.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.AddImportWindowsDesktopTargets(Microsoft.Build.Construction.ProjectPropertyGroupElement)">
+            <summary>
+            Adds the ImportWindowsDesktopTargets=true property to ensure builds targeting .NET Framework will succeed.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.GetOrCreateTopLevelPropertyGroupWithTFM(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Finds the property group with the TFM specified, which is normally the top-level property group.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.GetOrCreatePackageReferencesItemGroup(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Finds the item group where PackageReferences are specified. Usually there is only one.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsValidMetadataForConversionPurposes(MSBuild.Abstractions.IProjectMetadata)">
+            <summary>
+            Checks if a metadata item can stay or if it needs to be converted.
+            </summary>
+            <returns>True if the metadata item is fine. False if it needs to be removed or converted.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsTargetFromNuGetPackage(Microsoft.Build.Construction.ProjectImportElement)">
+            <summary>
+            Checks if an import is a target that comes from the packages directory (which would mean it's probably brought in via a NuGet package).
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.GetOrCreateTopLevelPropertyGroup(MSBuild.Abstractions.BaselineProject,MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Gets the top-level property group, and if it doesn't exist, creates it.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.ArePropertyGroupElementsIdentical(Microsoft.Build.Construction.ProjectPropertyGroupElement,Microsoft.Build.Construction.ProjectPropertyGroupElement)">
+            <summary>
+            Determines if all the properties in two property groups are identical.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.UnquoteString(System.String@)">
+            <summary>
+            Unquote string. It simply removes the starting and ending "'", and checks they are present before.
+            </summary>
+            <param name="s">string to unquote. </param>
+            <returns>true if string is successfuly unquoted.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsXamarinDroid(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Determines if a given project is of type Xamarin.Android.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsXamariniOS(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Determines if a given project is of type Xamarin.iOS.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.HookAssemblyResolveForMSBuild(System.String)">
+            <summary>
+            Given an optional path to MSBuild, registers an MSBuild.exe to be used for assembly resolution with this tool.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.IsNETFrameworkTfms(System.String)">
+            <summary>
+            Check if the tfm is a .NET Framework target framework
+            </summary>
+            <param name="tfm">frm moniker</param>
+            <returns>True if the passed tfm is a .NET Framework one.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.MSBuildHelpers.GetMSBuildPathIfNotSpecified(System.String)">
+            <summary>
+            Given an optional path to MSBuild, finds an MSBuild path. Will query Visual Studio instances and ask for user input if there are multitple ones.
+            </summary>
+        </member>
+        <member name="T:MSBuild.Abstractions.IProject">
+            <summary>
+            Interface used to Mock access to MSBuild's Project apis.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Abstractions.IProjectItem.EvaluatedIncludeWithWindowsPathSeparators">
+            <summary>
+            We need a stable string in order to avoid continued allocations in GetHashCode (and Equals). We can store a version of EvaluatedInclude once on IProjectItem allocation
+            with windows path separators so we don't have to continue to call WithWindowsPathSeparators on every call
+            </summary>
+        </member>
+        <member name="T:MSBuild.Abstractions.ProjectItemHelpers">
+            <summary>
+            Helper functions for working with ProjectItemElements.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsPackageReference(Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if a given item is a PackageReference node.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsSpecificPacakgeReference(Microsoft.Build.Construction.ProjectItemElement,System.String)">
+            <summary>
+            Checks if a given item is a specific PackageReference.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.DesktopReferencesNeedsRemoval(Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if a given item needs to be removed because it either only runs on desktop .NET or is automatically pulled in as a reference and is thus unnecessary.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsDesktopRemovableGlobbedItem(MSBuild.Abstractions.ProjectStyle,Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if a given item is a desktop item that is globbed, so long as the metadata is a form type.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsReferenceConvertibleToPackageReference(Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if a given item is a well-known reference that can be converted to PackageReference.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsReferenceComingFromOldNuGet(Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if a reference is coming from an old-stlye NuGet package.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsContentOrNoneComingFromOldNuGet(Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if a None or Content is coming from an old-stlye NuGet package.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.CanItemMetadataBeRemoved(Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if a given item is a well-known item that has unnecessary metadata.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsLegacyXamlDesignerItem(Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if a given item is a XAML designer item (which will be globbed).
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsDependentUponXamlDesignerItem(Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if a given item has DependentUpon metadata for a globbed designer (and can thus be globbed).
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsItemWithUnnecessaryMetadata(Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if a given item is a source file with needless metadata (example: source files in WPF templates).
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsDesignerFile(Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if the given item is a designer file.
+            </summary>
+            <param name="item">The ProjectItemElement that might be a designer file.</param>
+            <returns>true if the given ProjectItemElement is a designer file.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsResxFile(Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if the given item is a resx file.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsSettingsFile(Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if the given item is a settings file.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsExplicitValueTupleReferenceThatCanBeRemoved(Microsoft.Build.Construction.ProjectItemElement,System.String)">
+            <summary>
+            Checks if an item is an explicit System.ValueTuple and if the given TFM correspondes with an in-box System.ValueTuple type.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.IsReferencingSystemWeb(Microsoft.Build.Construction.ProjectItemElement)">
+            <summary>
+            Checks if a given item is a reference to System.Web, which is 100% incompatible with .NET Core.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectItemHelpers.TryGetPackageNameAndVersionForContentOrNoneComingFromOldNuget(Microsoft.Build.Construction.ProjectItemElement,System.Collections.Immutable.ImmutableArray{Microsoft.UpgradeAssistant.Services.Package},System.String@,System.String@)">
+            <summary>
+            Try to get the package name and version from a None or Content item that is coming from an old-style NuGet package.
+            </summary>
+        </member>
+        <member name="T:MSBuild.Abstractions.ProjectOutputType">
+            <summary>
+            Represents the output of a project given from the OutpuType property.
+            </summary>
+        </member>
+        <member name="T:MSBuild.Abstractions.ProjectPropertyHelpers">
+            <summary>
+            Helper functions for working with ProjectPropertyElements.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsDefaultAssemblyName(Microsoft.Build.Construction.ProjectPropertyElement,System.String)">
+            <summary>
+            Checks if property is AssemblyName and equals to the project name.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsDefaultRootNamespace(Microsoft.Build.Construction.ProjectPropertyElement,System.String)">
+            <summary>
+            Checks if property is RootNamespace and equals to the project name.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsNameDefault(Microsoft.Build.Construction.ProjectPropertyElement,System.String)">
+            <summary>
+            Checks if the given property is the 'Name' property, and if its value is the same as the project file name.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsDefineConstantDefault(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if the given property is 'DefineConstants', and if the values defined are the defaults brought in by a template.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsDebugTypeDefault(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if the given property is 'DebugType', and if the value defined is a default brought in by a template.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsOutputPathDefault(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if the given property is 'OutputPath', and if the value defined is a default brought in by a template.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsPlatformTargetDefault(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if the given property is 'PlatformTarget', and if the value defined is a default brought in by a template.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsDocumentationFileDefault(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if the given property is 'DocumentationFile', and if the value defined is a default brought in by a template.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsUnnecessaryTestProperty(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if a property is any of the unencessary test properties. This is only good to do <em>after</em> the loading phase where we discard inapplicable test projects.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsEmptyNuGetPackageImportStamp(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if a property is the old NuGetPackageImportStamp property that used to be for some reason starting with VS 2013, but seems to no longer be required, but is still<em>stamped</em>(har har har...) into test project files and maybe others (lol).
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsAutoGenerateBindingRedirects(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Check if AutoGenerateBindingRedirects is set to true.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsUITestExtensionsPackagesReferencePath(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if a property is a default ReferencePath property that MSTest stamps into the project file.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.ArePropertiesEqual(Microsoft.Build.Construction.ProjectPropertyElement,Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Determines if the name and value of two properties are identical.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:MSBuild.Abstractions.ProjectPropertyHelpers.IsProjectTypeGuidsNode(Microsoft.Build.Construction.ProjectPropertyElement)" -->
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsLegacyWebProjectTypeGuidsProperty(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Determines if a property lists the default project type GUIds for legacy web projects.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsSupportedOutputType(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if a given OutputType node is wither a library, exe, or WinExe.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.AllProjectTypeGuidsAreLanguageProjectTypeGuids(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if a given property defines project type guids for C#, VB.NET, or F#.
+            </summary>
+            <param name="prop">Element to analyze for type.</param>
+            <returns>True if all types are language project types, false otherwise.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.AllProjectTypeGuidsAreDesktopProjectTypeGuids(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if all projecttypeguids specified are known desktop project type guids.
+            </summary>
+            <param name="prop">Element to analyze for type.</param>
+            <returns>True if all types are desktop project types, false otherwise.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.AllProjectTypeGuidsAreLegacyTestProjectTypeGuids(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if all projecttypeguids specified are known desktop project type guids.
+            </summary>
+            <param name="prop">Element to analyze for type.</param>
+            <returns>True if all types are legacy test types, false otherwise.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsCodedUITest(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if a given property specifies IsCodedUITest=True, which is not only unsupported for .NET Core but is also deprecated after VS 2019.
+            </summary>
+            <param name="prop">Element to analyze for type.</param>
+            <returns>True if property indicates a Coded UI test, false otherwise.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsUnitTestType(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if a test property is TestProjectType=UnitTest.
+            </summary>
+            <param name="prop">Element to analyze for type.</param>
+            <returns>True if property indicates a unit test, false otherwise.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsLibraryOutputType(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if an OutputType node is Library.
+            </summary>
+            <param name="prop">Element to analyze for type.</param>
+            <returns>True if property indicates a library output type, false otherwise.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsExeOutputType(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if an OutputType node is Exe.
+            </summary>
+            <param name="prop">Element to analyze for type.</param>
+            <returns>True if property indicates an executable, false otherwise.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsAppContainerExeOutputType(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if an OutputType node is AppContainerExe.
+            </summary>
+            <param name="prop">Element to analyze for type.</param>
+            <returns>True if property indicates an app container executable, false otherwise.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsWinExeOutputType(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if an OutputType node is Exe.
+            </summary>
+            <param name="prop">Element to analyze for type.</param>
+            <returns>True if property indicates a windows executable, false otherwise.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsWinMdObjProjectType(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Checks if an OutputType node is WinMdObj.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsXamarinDroidProjectTypeGuidsProperty(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Determines if a property lists the default project type GUId for Xamarin.Android.
+            </summary>
+            <param name="prop">Element to analyze for type.</param>
+            <returns>True if any property indicates a Xamarin Android project, false otherwise.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectPropertyHelpers.IsXamariniOSProjectTypeGuidsProperty(Microsoft.Build.Construction.ProjectPropertyElement)">
+            <summary>
+            Determines if a property lists the default project type GUId for Xamarin.iOS projects.
+            </summary>
+            <param name="prop">Element to analyze for type.</param>
+            <returns>True if any property indicate a Xamarin IOS project, false otherwise.</returns>
+        </member>
+        <member name="M:MSBuild.Abstractions.ProjectRootElementExtensions.GetOutputTypeNode(MSBuild.Abstractions.IProjectRootElement)">
+            <summary>
+            Gets the OutputType node in a project. There will only reasonably be one.
+            </summary>
+        </member>
+        <member name="F:MSBuild.Abstractions.ProjectStyle.Default">
+            <summary>
+            The project has an import of two defaults. Typically Common.props and CSharp.targets or FSharp.targets, etc.
+            </summary>
+        </member>
+        <member name="F:MSBuild.Abstractions.ProjectStyle.DefaultSubset">
+            <summary>
+            Using one of the two defaults, typically CSharp.targets or FSharp.targets.
+            </summary>
+        </member>
+        <member name="F:MSBuild.Abstractions.ProjectStyle.Custom">
+            <summary>
+            Not using any default targets or props.
+            </summary>
+        </member>
+        <member name="F:MSBuild.Abstractions.ProjectStyle.WindowsDesktop">
+            <summary>
+            The project is WPF or WinForms, and will use the WinDesktop framework reference.
+            </summary>
+        </member>
+        <member name="F:MSBuild.Abstractions.ProjectStyle.MSTest">
+            <summary>
+            The project is an MSTest project that pulls in a lot of unnecessary imports.
+            </summary>
+        </member>
+        <member name="F:MSBuild.Abstractions.ProjectStyle.Web">
+            <summary>
+            The project is an ASP.NET project that will not be possible to completely convert automatically.
+            If the user has specified --force-web-conversion, a best-effort will be made using the
+            Microsoft.NET.Sdk.Web SDK.
+            </summary>
+        </member>
+        <member name="F:MSBuild.Abstractions.ProjectStyle.XamarinDroid">
+            <summary>
+            The project is of type Xamarin.Android.
+            </summary>
+        </member>
+        <member name="F:MSBuild.Abstractions.ProjectStyle.XamariniOS">
+            <summary>
+            The project is of type Xamarin.iOS.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:MSBuild.Abstractions.VisualStudioLocator" -->
+        <member name="T:MSBuild.Abstractions.Logger">
+            <summary>
+            Since we are reusing try-convert code currently as is, there is no way to pass parameters or contracts.
+            Thus we use simplest way and hide Console object behind this Logger.
+            </summary>
+        </member>
+        <member name="T:MSBuild.Conversion.Facts.DesktopFacts">
+            <summary>
+             A bunch of known values regarding desktop projects.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Facts.DesktopFacts.ReferencesThatNeedRemoval">
+            <summary>
+            Gets for use with conversion of WinForms and WPF projects only.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Facts.DesktopFacts.KnownWPFReferences">
+            <summary>
+            Gets the core set of references all desktop WPF projects use.
+            </summary>
+            <remarks>
+            Desktop projects will only convert to .NET Core, so any item includes that have .NET Core equivalents will be removed.
+            Users will have to ensure those packages are also added if they cannot do so with a tool.
+            References that are already present will also be removed.
+            </remarks>
+        </member>
+        <member name="P:MSBuild.Conversion.Facts.DesktopFacts.KnownWinFormsReferences">
+            <summary>
+            Gets the core set of references all desktop WinForms projects use.
+            </summary>
+            <remarks>
+            Desktop projects will only convert to .NET Core, so any item includes that have .NET Core equivalents will be removed.
+            Users will have to ensure those packages are also added if they cannot do so with a tool.
+            References that are already present will also be removed.
+            </remarks>
+        </member>
+        <member name="T:MSBuild.Conversion.Facts.FSharpFacts">
+            <summary>
+            A bunch of known values regarding legacy F# projects.
+            </summary>
+        </member>
+        <member name="T:MSBuild.Conversion.Facts.MSBuildFacts">
+            <summary>
+            A bunch of values regarding MSBuild project files.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Facts.MSBuildFacts.PropsToRemove">
+            <summary>
+            Gets props files which are known to be imported in standard projects created from templates that can be omitted from SDK projects.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Facts.MSBuildFacts.TargetsToRemove">
+            <summary>
+            Gets targets files which are known to be imported in standard projects created from templates that can be omitted from SDK projects.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Facts.MSBuildFacts.ImportsToKeep">
+            <summary>
+            Gets props and targets files which are recognized and can be left unchanged during conversion.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Facts.MSBuildFacts.PCLToNetStandardVersionMapping">
+            <summary>
+            Gets mapping of PCL profiles to netstandard versions.
+            </summary>
+        </member>
+        <member name="T:MSBuild.Conversion.Facts.PackageFacts">
+            <summary>
+            A bunch of known values regarding NuGet.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Facts.WebFacts.KnownWebReferences">
+            <summary>
+            Gets the core set of references all ASP.NET projects use.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Package.PackageReferencePackage.ID">
+            <summary>
+            Gets or sets name of the package.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Package.PackageReferencePackage.Version">
+            <summary>
+            Gets or sets exact version of the package depended upon.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Package.PackageReferencePackage.TargetFramework">
+            <summary>
+            Gets or sets optional TFM that the package dependency applies to.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Package.PackageReferencePackage.DevelopmentDependency">
+            <summary>
+            Gets or sets a value indicating whether optional flag for use only in development; the package will not be included when a consuming package is created.
+            </summary>
+        </member>
+        <member name="M:MSBuild.Conversion.Package.PackagesConfigConverter.Convert(System.String)">
+            <summary>
+            Given a path to a 'packages.config' file, gets an enumerable of package reference items.
+            </summary>
+            <param name="path">The path on disk to a specific packages.config file.</param>
+        </member>
+        <member name="P:MSBuild.Conversion.Package.PackagesConfigPackage.ID">
+            <summary>
+            Gets or sets name of the package.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Package.PackagesConfigPackage.Version">
+            <summary>
+            Gets or sets exact version of the package depended upon.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Package.PackagesConfigPackage.TargetFramework">
+            <summary>
+            Gets or sets optional TFM that the package dependency applies to.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Package.PackagesConfigPackage.AllowedVersions">
+            <summary>
+            Gets or sets optional string of allowed versions that follow the NuGet spec for syntax.
+            </summary>
+        </member>
+        <member name="P:MSBuild.Conversion.Package.PackagesConfigPackage.DevelopmentDependency">
+            <summary>
+            Gets or sets a value indicating whether optional flag for use only in development; the package will not be included when a consuming package is created.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:MSBuild.Conversion.Project.Converter.AddConfigurations(System.Xml.Linq.XDocument,System.String)" -->
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.AddFrameworkReferences(Microsoft.Build.Evaluation.Project,System.Collections.Generic.IEnumerable{Microsoft.UpgradeAssistant.Services.FrameworkReference},Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Adds specified FrameworkReference items if they don't exist in the project.
+            </summary>
+            <param name="project"></param>
+            <param name="references"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.AddFrameworkReference(Microsoft.Build.Evaluation.Project,Microsoft.Build.Construction.ProjectItemGroupElement,Microsoft.UpgradeAssistant.Services.FrameworkReference,Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Adds a FrameworkReference item to the project if it does not exist yet.
+            </summary>
+            <param name="project"></param>
+            <param name="itemGroup"></param>
+            <param name="frameworkReference"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.AddPackageReferences(Microsoft.Build.Evaluation.Project,System.Collections.Generic.IEnumerable{Microsoft.UpgradeAssistant.Services.Package},Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Adds specified PackageReference items to the project if they don't exist.
+            </summary>
+            <param name="project"></param>
+            <param name="packages"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.AddPackageReference(Microsoft.Build.Evaluation.Project,Microsoft.UpgradeAssistant.Services.Package,Microsoft.UpgradeAssistant.Services.ILogger,System.Boolean,System.Collections.Immutable.ImmutableDictionary{System.String,System.String})">
+            <summary>
+            Adds PackageReference item to the project if it does not exist.
+            </summary>
+            <param name="project"></param>
+            <param name="packageReference"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.RemovePackageReferences(Microsoft.Build.Evaluation.Project,System.Collections.Generic.IEnumerable{Microsoft.UpgradeAssistant.Services.Package},Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Removes specified PackageReference items from the project if they exist.
+            </summary>
+            <param name="project"></param>
+            <param name="packages"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.RemovePackageReference(Microsoft.Build.Evaluation.Project,Microsoft.UpgradeAssistant.Services.Package,Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Removes specified PackageReference from the project if exists.
+            </summary>
+            <param name="project"></param>
+            <param name="package"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.AddReferences(Microsoft.Build.Evaluation.Project,System.Collections.Generic.IEnumerable{Microsoft.UpgradeAssistant.Services.Reference},Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Adds specified Reference items to the project if they don't exist.
+            </summary>
+            <param name="project"></param>
+            <param name="references"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.AddReference(Microsoft.Build.Evaluation.Project,Microsoft.Build.Construction.ProjectItemGroupElement,Microsoft.UpgradeAssistant.Services.Reference,Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Adds specified Reference item to the project if it does not exist.
+            </summary>
+            <param name="project"></param>
+            <param name="itemGroup"></param>
+            <param name="reference"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.RemoveReferences(Microsoft.Build.Evaluation.Project,System.Collections.Generic.IEnumerable{Microsoft.UpgradeAssistant.Services.Reference},Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Removes specified Reference items from teh project if they exist.
+            </summary>
+            <param name="project"></param>
+            <param name="references"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.RemoveReference(Microsoft.Build.Evaluation.Project,Microsoft.UpgradeAssistant.Services.Reference,Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Removes specified Reference item from the project if it exists.
+            </summary>
+            <param name="project"></param>
+            <param name="reference"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.AddProjectReferences(Microsoft.Build.Evaluation.Project,System.Collections.Generic.IEnumerable{Microsoft.UpgradeAssistant.Services.ProjectReference},Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Adds specified ProjectReference items to the project if they don't exist.
+            </summary>
+            <param name="project"></param>
+            <param name="projectReferences"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.AddProjectReference(Microsoft.Build.Evaluation.Project,Microsoft.Build.Construction.ProjectItemGroupElement,Microsoft.UpgradeAssistant.Services.ProjectReference,Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Adds specified ProjectReference item to the project if it does not exist.
+            </summary>
+            <param name="project"></param>
+            <param name="itemGroup"></param>
+            <param name="projectReference"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.RemoveProjectReferences(Microsoft.Build.Evaluation.Project,System.Collections.Generic.IEnumerable{Microsoft.UpgradeAssistant.Services.ProjectReference},Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Removes ProjectReference items from the project if they exist.
+            </summary>
+            <param name="project"></param>
+            <param name="references"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.RemoveProjectReference(Microsoft.Build.Evaluation.Project,Microsoft.UpgradeAssistant.Services.ProjectReference,Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Removes specified ProjectReference item from the project if it exists.
+            </summary>
+            <param name="project"></param>
+            <param name="reference"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.RemoveFrameworkReferences(Microsoft.Build.Evaluation.Project,System.Collections.Generic.IEnumerable{Microsoft.UpgradeAssistant.Services.FrameworkReference},Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Removes specified FrameworkReference items from the project if they exist.
+            </summary>
+            <param name="project"></param>
+            <param name="references"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.RemoveFrameworkReference(Microsoft.Build.Evaluation.Project,Microsoft.UpgradeAssistant.Services.FrameworkReference,Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Removes specified FrameworkReference item from the project it if exists.
+            </summary>
+            <param name="project"></param>
+            <param name="frameworkReference"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.MsbuildProjectExtensions.IsMsBuildCPM(Microsoft.Build.Evaluation.Project)">
+            <summary>
+            Whether the project enables legacy Microsoft.Build.CentralPackageVersions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.ProjectItemElementExtensions.GetName(Microsoft.Build.Construction.ProjectItemElement,Microsoft.UpgradeAssistant.ItemNameKind)">
+            <summary>
+            Gets a simple name of the item from its Include, Update or Remove attribute. If metadata value is 
+            a strong assembly name or full/relative path, returns just a name.
+            </summary>
+            <param name="item"></param>
+            <param name="itemNameKind"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.ProjectItemElementExtensions.GetPathOrName(Microsoft.Build.Construction.ProjectItemElement,Microsoft.UpgradeAssistant.ItemNameKind)">
+            <summary>
+            Attempts to get full path of the item from its Include, Update or Remove attribute. If its not a path based item, returns just a name.
+            </summary>
+            <param name="item"></param>
+            <param name="itemNameKind"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.ProjectItemElementExtensions.IsMatchingHintPath(Microsoft.Build.Construction.ProjectItemElement,Microsoft.UpgradeAssistant.Services.Dependency)">
+            <summary>
+            Compares names first, if names are not equal - returns false. Then checks if HintPath
+            is present, tries to compare HintPaths.
+            </summary>
+            <param name="item"></param>
+            <param name="dependency"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.ProjectRootElementExtensions.AddPackageReference(Microsoft.Build.Construction.ProjectRootElement,Microsoft.UpgradeAssistant.Services.Package,Microsoft.UpgradeAssistant.Services.ILogger,System.Boolean,System.Boolean,System.Collections.Immutable.ImmutableDictionary{System.String,System.String})">
+            <summary>
+            Adds PackageReference item to the project if it does not exist.
+            </summary>
+            <param name="project"></param>
+            <param name="package"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.ProjectRootElementExtensions.AddPackageVersion(Microsoft.Build.Construction.ProjectRootElement,Microsoft.UpgradeAssistant.Services.Package,Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Adds PackageVersion item to the project if it does not exist.
+            </summary>
+            <param name="project"></param>
+            <param name="package"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.ProjectRootElementExtensions.AddGlobalPackageReference(Microsoft.Build.Construction.ProjectRootElement,Microsoft.UpgradeAssistant.Services.Package,Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            Adds GlobalPackageReference item to the project if it does not exist.
+            </summary>
+            <param name="project"></param>
+            <param name="package"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.ProjectRootElementExtensions.AddPackageItem(Microsoft.Build.Construction.ProjectRootElement,Microsoft.UpgradeAssistant.Services.Package,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.String},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Ensures a package related item is added to the project.
+            </summary>
+            <param name="project"></param>
+            <param name="packageReference"></param>
+            <param name="itemType"></param>
+            <param name="logger"></param>
+            <param name="withoutVersion"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.ProjectRootElementExtensions.RemovePackageReference(Microsoft.Build.Construction.ProjectRootElement,Microsoft.UpgradeAssistant.Services.Package,Microsoft.UpgradeAssistant.Services.ILogger,System.Boolean)">
+            <summary>
+            Removes specified PackageReference from the project if exists.
+            </summary>
+            <param name="project"></param>
+            <param name="package"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.ProjectRootElementExtensions.CleanupEmptyElements(Microsoft.Build.Construction.ProjectRootElement)">
+            <summary>
+            Removes empty ItemGroup and PropertyGroup elements.
+            </summary>
+            <param name="project"></param>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants">
+            <summary>
+             MSBuild constants.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Properties">
+            <summary>
+             MSBuild properties.
+            </summary>
+        </member>
+        <member name="F:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Properties.MauiVersion">
+            <summary>
+            MSBuild property: MauiVersion
+            </summary>
+            <remarks>
+             For example: <c>&lt;PackageReference Include="MyPackage" Version="$(MauiVersion)"/></c>
+            </remarks>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Items">
+            <summary>
+             MSBuild items.
+            </summary>
+        </member>
+        <member name="F:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Items.FrameworkReference">
+            <summary>
+             MSBuild item: FrameworkReference
+            </summary>
+            <remarks>
+             For example: <c>&lt;FrameworkReference Include="Microsoft.AspNetCore.App" /></c>
+            </remarks>
+        </member>
+        <member name="F:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Items.PackageReference">
+            <summary>
+             MSBuild item: PackageReference
+            </summary>
+            <remarks>
+             For example: <c>&lt;PackageReference Include="MyPackage" /></c>
+            </remarks>
+        </member>
+        <member name="F:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Items.GlobalPackageReference">
+            <summary>
+            MSBuild item: GlobalPackageReference
+            </summary>
+        </member>
+        <member name="F:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Items.PackageVersion">
+            <summary>
+            MSBuild item: PackageVersion
+            </summary>
+        </member>
+        <member name="F:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Items.ProjectReference">
+            <summary>
+             MSBuild item: ProjectReference
+            </summary>
+            <remarks>
+             For example: <c>&lt;ProjectReference Include="..\MyPackage.csproj" /></c>
+            </remarks>
+        </member>
+        <member name="F:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Items.Reference">
+            <summary>
+             MSBuild item: Reference
+            </summary>
+            <remarks>
+             For example: <c>&lt;Reference Include="System" /></c>
+            </remarks>
+        </member>
+        <member name="F:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Items.Using">
+            <summary>
+             MSBuild item: Using
+            </summary>
+            <remarks>
+             For example: <c>&lt;Using Include="System.Threading.ExecutionContext" Alias="ExecutionContext" /></c>
+            </remarks>
+        </member>
+        <member name="F:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Items.SupportedOSPlatformVersion">
+            <summary>
+             MSBuild item: SupportedOSPlatformVersion
+            </summary>
+            <remarks>
+             For example: <c>&lt;SupportedOSPlatformVersion>11.0&lt;/SupportedOSPlatformVersion></c>
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Items.Compile" -->
+        <!-- Badly formed XML comment ignored for member "F:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Items.Content" -->
+        <!-- Badly formed XML comment ignored for member "F:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Items.None" -->
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Attributes">
+            <summary>
+             MSBuild metadata.
+            </summary>
+        </member>
+        <member name="F:Microsoft.UpgradeAssistant.Msbuild.MSBuildConstants.Attributes.Version">
+            <summary>
+             MSBuild metadata: Version
+            </summary>
+            <remarks>
+             For example: <c>&lt;PackageReference Include="MyPackage" Version="1.0.0" /></c>
+            </remarks>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.AddAssemblyReferenceToProjectFile">
+            <summary>
+              Looks up a localized string similar to Adding assembly reference &apos;{0}&apos; to project file &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.AddedAssemblyReference">
+            <summary>
+              Looks up a localized string similar to Added assembly reference {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.AddedFrameworkReference">
+            <summary>
+              Looks up a localized string similar to Added framework reference {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.AddedProjectReference">
+            <summary>
+              Looks up a localized string similar to Added project reference {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.AddFrameworkReferenceToProjectFile">
+            <summary>
+              Looks up a localized string similar to Adding framework reference &apos;{0}&apos; to project file &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.AddPackageReferenceToProjectFile">
+            <summary>
+              Looks up a localized string similar to Adding package reference &apos;{0}&apos; to project file &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.AddPackageUpdateToProjectFile">
+            <summary>
+              Looks up a localized string similar to Add package update &apos;{0}&apos;, &apos;{1}&apos; to &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.AddPackageVersionToProjectFile">
+            <summary>
+              Looks up a localized string similar to Adding package version &apos;{0} {1}&apos; to &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.AddProjectReferenceToProjectFile">
+            <summary>
+              Looks up a localized string similar to Adding project reference &apos;{0}&apos; to project file &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.CheckPackageSourceMappings">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; contains multiple package sources and one or more package source mappings with pattern &apos;*&apos; were added. Consider verifying them and updating to contain more precise patterns as needed ({1}). .
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.CouldNotFindProject">
+            <summary>
+              Looks up a localized string similar to Could not find project &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.CurrentPropertyValue">
+            <summary>
+              Looks up a localized string similar to Current property {0} value is {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.PackageVersionWasChosen">
+            <summary>
+              Looks up a localized string similar to Multiple versions were discovered for package &apos;{0}&apos;, version &apos;{1}&apos; was chosen. Discovered versions: {2}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.ProjectPropertyChanged">
+            <summary>
+              Looks up a localized string similar to Project property &apos;{0}&apos; value changed from &apos;{1}&apos; to &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.ProjectPropertyRemoved">
+            <summary>
+              Looks up a localized string similar to Project property &apos;{0}&apos; removed..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.PropertyReplaced">
+            <summary>
+              Looks up a localized string similar to Replaced property {0} with property {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.RemovedAssemblyReference">
+            <summary>
+              Looks up a localized string similar to Removed assembly reference {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.RemovedFrameworkReference">
+            <summary>
+              Looks up a localized string similar to Removed framework reference {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.RemovedPackage">
+            <summary>
+              Looks up a localized string similar to Removed NuGet package reference {0} {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.RemovedProjectReference">
+            <summary>
+              Looks up a localized string similar to Removed project reference {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.RemoveItemFromProjectFile">
+            <summary>
+              Looks up a localized string similar to Removing item {0} &apos;{1}&apos; from project file &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.RemovingProperty">
+            <summary>
+              Looks up a localized string similar to Removing property &apos;0&apos; from project &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.UpdatedPackageVersion">
+            <summary>
+              Looks up a localized string similar to Updated NuGet package reference {0} to version {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Msbuild.Resources.Strings.UpgradeDependenciesInProjectFile">
+            <summary>
+              Looks up a localized string similar to Upgrading dependencies in project file &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.Services.Project.MsBuildCentralPackageDependenciesModifier">
+            <summary>
+            Dependency modifier supports legacy Microsoft.Build.CentralPackageVersions packages.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Msbuild.Services.Project.ProjectDependenciesSetBuilder.GetPackages(Microsoft.Build.Evaluation.Project,System.Collections.Generic.IEnumerable{Microsoft.Build.Evaluation.ResolvedImport},System.String,System.Threading.CancellationToken)">
+            <summary>
+            If project is a classic project and has packages.config, take packages from there. Otherwise take 
+            all PackageReference elements declared in the project or imports residing under solution folder.
+            </summary>
+            <param name="msbuildProject"></param>
+            <param name="imports"></param>
+            <param name="rootFolder"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Msbuild.Services.TryConvert.TryConvertService.ConvertAsync(Microsoft.UpgradeAssistant.Operations.OperationContext,System.String,Microsoft.UpgradeAssistant.TargetFrameworks.TargetFramework,Microsoft.UpgradeAssistant.Services.ILogger,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.Transformers.CopilotTargetFrameworkTransformer">
+            <summary>
+            TargetFramework transformer that applies a target framework found in the context properties to the
+            project that is being upgraded by GH Copilot in-place or side-by-side. If no TargetFramework property found in the context, does nothing.
+            It tries to update target framework at the location where it is defined: in the project file or any imported file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.Transformers.CpmProjectNodeSdkStyleTransformer">
+            <summary>
+            Tries to convert project node to SDK-style inplace.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.Transformers.CpmProjectPackagesTransformer">
+            <summary>
+            Adds project packages to proposed changes related to CPM conversion.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.Transformers.CpmUpgradeFinalizerTransformer">
+            <summary>
+            Converts to CPM all projects specified during the upgrade operation via <see cref="T:Microsoft.UpgradeAssistant.Services.CpmDependenciesChangeSet"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.Transformers.InplaceDuplicatePackageReferenceTransformer">
+            <summary>
+            If package is already in the project and is supported, skips. Otherwise, tries to find and add
+            latest supported by the project package version (for all target frameworks). If not, removes the package.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.Transformers.PrettifyProjectFileTransformer">
+            <summary>
+            Tries to make project file pretty, consolidates all similar items and properties together.
+            Runs at the end of project file node upgrade.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Msbuild.Transformers.PrettifyProjectFileTransformer.ConsolidateProperties(Microsoft.Build.Evaluation.Project,System.Threading.CancellationToken)">
+            <summary>
+            Moves all properties without conditions into single PropertyGroup (first one defined in the project).
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Msbuild.Transformers.PrettifyProjectFileTransformer.PrettifyPackageReferences(Microsoft.Build.Evaluation.Project,System.Threading.CancellationToken)">
+            <summary>
+            If PackageReference had version as Metadata, moves it to Version attribute.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Msbuild.Transformers.PrettifyProjectFileTransformer.ConsolidatePackageReferences(Microsoft.Build.Evaluation.Project,System.Threading.CancellationToken)">
+            <summary>
+            Moves all PackageReference elements into single ItemGroup (first one defined with PackageReference items).
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.Transformers.ProjectDependenciesFinalizerTransformer">
+            <summary>
+            Applies final normalized set of project dependencies after all previous transformers made their changes to
+            <see cref="T:Microsoft.UpgradeAssistant.Services.DependenciesChangeSet"/> for objects like PackageReference, AssemblyReference, FrameworkReference
+            or ProjectReference.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.Transformers.ProjectPackagesConfigCleanupTransformer">
+            <summary>
+            Tries to clean up project file when packages.config was present and removed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Msbuild.Transformers.ProjectTargetFrameworkModifier.TryGetMultitargetAdditionPropertyName(Microsoft.Build.Evaluation.Project,System.String,System.String@,System.String@)">
+            <summary>
+            TargetFrameworks property could be depending on other properties, like in the examples below. We need to find 
+            correct place where to add new TFMs and remove old ones.
+            
+            Examples:
+            
+            <MyTfmBase>net472;net6.0</MyTfmBase>
+            <MyTfm>$(MyTfmBase)</MyTfm>
+            <TargetFrameworks>$(MyTfm);net5.0</TargetFrameworks>
+            
+            or 
+            
+            <MyTfmBase>net472;net6.0</MyTfmBase>
+            <MyTfm>$(MyTfmBase);net5.0</MyTfm>
+            <TargetFrameworks>$(MyTfm)</TargetFrameworks>
+            
+            (those are just 2 examples, there could be more in real repos).
+            </summary>
+            <param name="rootElement"></param>
+            <param name="name"></param>
+            <param name="dependentPropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.Transformers.TargetFrameworkTransformer">
+            <summary>
+            Default TargetFramework transformer that applies a target framework found in the context properties to the
+            project that is being upgraded in-place or side-by-side. If no TargetFramework property found in the context, does nothing.
+            It tries to update target framework at the location where it is defined: in the project file or any imported file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Msbuild.Transformers.WebProjectFileTransformer">
+            <summary>
+            Applies changes to old web project file that are specific to web and are not done during SDK-style conversion.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Services.IMsbuildService">
+            <summary>
+            Provides API to access to MSBuild objects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.IMsbuildService.GetProjectAccessAsync(System.String,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Returns a disposable scope object that provides access to an MSBuild project object.
+            </summary>
+            <param name="projectPath"></param>
+            <param name="isReadOnly"></param>
+            <param name="logger"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Services.IProjectEditor">
+            <summary>
+            Abstraction to hide project access API that are used for CRUD operations over project file.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.IProjectEditor.GetPropertyAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Returns property value or null if it is not found.
+            </summary>
+            <param name="projectPath"></param>
+            <param name="key"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.IProjectEditor.SetPropertiesAsync(System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Set specified property value.
+            </summary>
+            <param name="projectPath"></param>
+            <param name="properties"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.IProjectEditor.RemovePropertiesAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <summary>
+            Remove specified properties from the project.
+            </summary>
+            <param name="projectPath"></param>
+            <param name="keys"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.IProjectEditor.AddItemAsync(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Add new project item.
+            </summary>
+            <param name="projectPath"></param>
+            <param name="itemType"></param>
+            <param name="include"></param>
+            <param name="attributes"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.IProjectEditor.HasItemAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Returns true if project item exists, false otherwise.
+            </summary>
+            <param name="projectPath"></param>
+            <param name="itemType"></param>
+            <param name="include"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.IProjectEditor.HasItemsInFolderAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Returns true if specified folder contains any project items.
+            </summary>
+            <param name="projectPath"></param>
+            <param name="relativeProjectFolderPath"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.IProjectEditor.GetItemsAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Returns all evaluated items of specified item type.
+            </summary>
+            <param name="projectPath"></param>
+            <param name="itemType"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.IProjectEditor.GetItemsAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Returns all evaluated items.
+            </summary>
+            <param name="projectPath"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Services.MsbuildProjectEditor">
+            <summary>
+            Edits project using Msbuild API.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.MsbuildProjectEditor.GetPropertyAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.MsbuildProjectEditor.SetPropertiesAsync(System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.MsbuildProjectEditor.RemovePropertiesAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.MsbuildProjectEditor.AddItemAsync(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.MsbuildProjectEditor.HasItemAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.MsbuildProjectEditor.HasItemsInFolderAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.MsbuildProjectEditor.GetItemsAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.MsbuildProjectEditor.GetItemsAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Services.MsbuildServiceExtensions">
+            <summary>
+            Provides API to access to MSBuild objects.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Services.CpmDependenciesChangeSet">
+            <summary>
+            Contains data across all projects that need to be updated during conversion to CPM.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Services.CpmDependenciesChangeSet.ImplicitPackages">
+            <summary>
+            We collect data for packages that are implicitly added by SDKs (coming from any projects in this operation).
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Services.CpmDependenciesChangeSet.ProjectChanges">
+            <summary>
+            Contains CPM related dependency and project changes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Services.DependenciesManager">
+            <summary>
+            Contains logic that responsible for managing projects dependencies from msbuild perspective and not only
+            (packages, assemblies, frameworks etc). Knows how and where to add/remove dependencies and update their versions.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Services.PackageDiagnosticsResolver">
+            <summary>
+            Resolves package conflicts in the project file:
+             - NU1109 Detected package downgrade
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.PackageDiagnosticsResolver.ResolveAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <summary>
+            Adds VersionOverrides to the project file if there are any conflicts: i.e. if the project has a higher version of a transitive package 
+            than the central package from Directory.Packages.props. Example:
+            
+                   Project -> NuGet.Packaging 6.11.0 -> Newtonsoft.Json (>= 13.0.3)
+                   Project -> Newtonsoft.Json(>= 13.0.1)
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.ProjectDependenciesModifier.ApplyProjectReferenceChanges(System.Collections.Generic.IEnumerable{Microsoft.UpgradeAssistant.Services.ProjectReference},System.Collections.Generic.IEnumerable{Microsoft.UpgradeAssistant.Services.ProjectReference})">
+            <summary>
+            Note: there no project reference removals in current transformers since our strategy is to keep project
+            references and let user deal with them. However if there will be future scenarios, we support it from the
+            API standpoint.
+            </summary>
+            <param name="additions"></param>
+            <param name="removals"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Services.ProjectDependenciesModifier.ApplyReferenceChanges(System.Collections.Generic.IEnumerable{Microsoft.UpgradeAssistant.Services.Reference},System.Collections.Generic.IEnumerable{Microsoft.UpgradeAssistant.Services.Reference})">
+            <summary>
+            Note: we do add assembly references if user happened to have ones supporting their new TFM, which should
+            never happen if we found a NuGet package for that assembly we would use NuGet package. However if we did
+            not find a package we at least add assembly if user had it.
+            </summary>
+            <param name="additions"></param>
+            <param name="removals"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

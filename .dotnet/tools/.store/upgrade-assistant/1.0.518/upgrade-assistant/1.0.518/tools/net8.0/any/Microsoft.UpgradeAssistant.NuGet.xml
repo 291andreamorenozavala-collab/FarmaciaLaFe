@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.UpgradeAssistant.NuGet</name>
+    </assembly>
+    <members>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+                Reserved to be used by the compiler for tracking metadata.
+                This class should not be used by developers in source code.
+            </summary>
+            <remarks>
+                This definition is provided by the <i>IsExternalInit</i> NuGet package (https://www.nuget.org/packages/IsExternalInit).
+                Please see https://github.com/manuelroemer/IsExternalInit for more information.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.NuGet.NuGetClient">
+            <summary>
+            NuGet client wrapping NuGet client assemblies API and remote calls.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.NuGet.NuGetClient.PackageSources">
+            <summary>
+             Gets the list of NuGet sources the client will use to search for requested packages.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.NuGet.NuGetClient.CanFindPackageAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Returns true if the package with the given name and version can be found in the NuGet sources.
+            </summary>
+            <param name="packageName"></param>
+            <param name="version"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.NuGet.NuGetClient.DownloadPackageAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Downloads package to default NuGet cache folder.
+            Returns package folder path if succeeded, null otherwise.
+            </summary>
+            <param name="name"></param>
+            <param name="version"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.NuGet.NuGetClient.DownloadPackageAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Downloads specified package to a folder if it was not downloaded yet. If folder is not specified downloads to default NuGet cache.
+            Returns package folder path if succeeded, null otherwise.
+            </summary>
+            <param name="name"></param>
+            <param name="version"></param>
+            <param name="path"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.NuGet.NuGetClient.GetLatestDownloadedPackagePath(System.String,System.String)">
+            <summary>
+            Returns path to package folder with highest version. If versionPattern is specified uses it to filter out package versions.
+            versionPattern format "1.0.*" where * should be at the end.
+            </summary>
+            <param name="name"></param>
+            <param name="versionPattern"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.NuGet.NuGetClient.GetDowngradedPackageVersions(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Returns a list of packages and their version that had been downgraded in the project (as specified in the given project.assets.json file.
+            </summary>
+            <param name="projectAssetsPath"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.NuGet.PackageDownloader.PackageSources">
+            <summary>
+             Gets the list of NuGet sources from which an instance of the service will use to search for requested packages.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.NuGet.Resources.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.NuGet.Resources.Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.NuGet.Resources.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.NuGet.Resources.Strings.CredentialProviderMessage">
+            <summary>
+              Looks up a localized string similar to If NuGet packages are coming from an authenticated source, Upgrade Assistant requires a .NET Core-compatible v2 credential provider be installed. To authenticate with an Azure DevOps NuGet source, for example, see https://github.com/microsoft/artifacts-credprovider#setup.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.NuGet.Resources.Strings.InvalidPackageFile">
+            <summary>
+              Looks up a localized string similar to Invalid package file for &apos;{0} {1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.NuGet.Resources.Strings.NuGetSourceError">
+            <summary>
+              Looks up a localized string similar to Failed to get package from NuGet package source {0} due to a NuGet protocol error, skipping this source..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.NuGet.Resources.Strings.PackageSourceRequestError">
+            <summary>
+              Looks up a localized string similar to Failed to get package versions from source {0} due to an HTTP error: &apos;{1}&apos;..
+            </summary>
+        </member>
+    </members>
+</doc>

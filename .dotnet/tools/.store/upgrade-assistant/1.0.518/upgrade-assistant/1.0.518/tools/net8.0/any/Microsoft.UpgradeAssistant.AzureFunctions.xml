@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.UpgradeAssistant.AzureFunctions</name>
+    </assembly>
+    <members>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+                Reserved to be used by the compiler for tracking metadata.
+                This class should not be used by developers in source code.
+            </summary>
+            <remarks>
+                This definition is provided by the <i>IsExternalInit</i> NuGet package (https://www.nuget.org/packages/IsExternalInit).
+                Please see https://github.com/manuelroemer/IsExternalInit for more information.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.AzureFunctions.Code.FunctionsUpgradeFrameworkApiMapProvider.GetApiMapEntriesAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Nodes.TriggersFolderSliceNodeBuilder">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.AzureFunctions.Nodes.TriggersFolderSliceNodeBuilder.CreateNode(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.AzureFunctions.Nodes.TriggerSliceNode.GetUpgradeDisplayName">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Nodes.TriggerSliceNodeBuilder">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.AzureFunctions.Nodes.TriggerSliceNodeBuilder.CreateNode(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Nodes.ProjectTriggersVisitor">
+            <summary>
+            A visitor class that can scan project's assembly and find all object model components specific to given initializers collection.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Nodes.TriggerProvider">
+            <summary>
+            This provider checks files and types and detects if there is dependency on any function trigger.
+            If any trigger found, returns trigger slice nodes to allow special actions related for triggers (for example add
+            a NuGet package in a new Azure Function version).
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.AzureFunctions.Nodes.TriggerProvider.GetNodesAsync(Microsoft.UpgradeAssistant.SliceContext,Microsoft.UpgradeAssistant.SliceNode,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Nodes.TriggersFolderProvider">
+            <summary>
+            This provider creates a virtual folder "Triggers" for a function project.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.AzureFunctions.Nodes.TriggersFolderProvider.GetNodesAsync(Microsoft.UpgradeAssistant.SliceContext,Microsoft.UpgradeAssistant.SliceNode,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.AzureFunctions.Packages.AzureFunctionsPackageMapConfigProvider.GetPackageMapConfigAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings.AddingCtorWithInjectedTypeToClass">
+            <summary>
+              Looks up a localized string similar to Adding constructor with injected &apos;{0}&apos; to &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings.AspNetCoreTemplateDescription">
+            <summary>
+              Looks up a localized string similar to A project template for creating an Azure Function App using ASP .NET core template..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings.AspNetCoreTemplateName">
+            <summary>
+              Looks up a localized string similar to ASP .NET Core Integration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings.FunctionAzureSettingsWarning">
+            <summary>
+              Looks up a localized string similar to Upgrade your function app in Azure..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings.FunctionV4TemplateDescription">
+            <summary>
+              Looks up a localized string similar to A project template for creating an Azure Function V4 App..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings.FunctionV4TemplateName">
+            <summary>
+              Looks up a localized string similar to Azure Function V4.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings.HttpTriggerWebHookTypeComment">
+            <summary>
+              Looks up a localized string similar to WebHooks attribute was removed from HttpTrigger. Please add middleware for functionality..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings.RemoveStaticModifierFrom">
+            <summary>
+              Looks up a localized string similar to Removing static modifier from &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings.RemovingLoggerArgumentFromMethod">
+            <summary>
+              Looks up a localized string similar to Removing logger argument from &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings.TriggerDependencies">
+            <summary>
+              Looks up a localized string similar to {0} dependencies.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.AzureFunctions.Resources.Strings.Triggers">
+            <summary>
+              Looks up a localized string similar to Trigger types.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.TargetFrameworks.FunctionsTargetFrameworkProvider">
+            <summary>
+            Azure Functions target framework matcher.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Traits.FunctionsTraitProvider">
+            <summary>
+            Discover AzureFunctions traits. Sometimes AzureFunctions capability is appearing late after restore and
+            we could inject a trait AzureFunctions explicitly here if we see corresponding AzureFunctionsVersion
+            property in the project. Also we inject AzureFunctionsVx traits for telemetry purpose (or it could be
+            usable for transformers later if we need to condition them on some functions version).
+            We also inject the different triggers that are found in the project.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Transformers.Code.CSharp.FunctionsAspNetCoreTransformer">
+            <summary>
+            Transforms functions to integrate ASP.NET core by checking if the project has a Program.cs file,
+            it will replace the ConfigureFunctionsWorkerDefaults method with ConfigureFunctionsWebApplication method.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Transformers.Code.CSharp.FunctionsAspNetCoreTransformer.ConfigureMethodProcessor">
+            <summary>
+            Replaces ConfigureFunctionsWorkerDefaults method with corresponding ConfigureFunctionsWebApplication method depending on arguments passed in.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Transformers.Code.CSharp.FunctionsBlobTransformer">
+            <summary>
+            Transforms functions to remove Access Rights for Blob functions and update them to be BlobInput or BlobOutput
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Transformers.Code.CSharp.FunctionsServiceBusTransformer">
+            <summary>
+            Transforms functions to remove Access Rights for ServiceBusTrigger and ServiceBusOutput bindings.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Transformers.Code.CSharp.FunctionsUpdateHttpTriggerTransformer">
+            <summary>
+            Transforms functions to remove WebHookProperty for Host V1 HttpTriggers and adds a comment for users to add middleware.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Transformers.Code.CSharp.FunctionsUpdateOutputBindingTransformer">
+            <summary>
+            Transforms function to create output binding if the in-proc function has return type attribute for all extensions.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Transformers.Code.CSharp.TraceWriterToLoggerTransformer">
+            <summary>
+            Replaces TraceWriter method calls to corresponding ILogger methods.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Transformers.Code.CSharp.TraceWriterToLoggerTransformer.TraceMethodProcessor">
+            <summary>
+            Replaces TraceWriter.Trace(...) method with corresponding LogXxx method depending on a TRaceLevel argument.
+            If we cannot determine TraceLevel we do nothing.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Transformers.Code.CSharp.TraceWriterToLoggerTransformer.FlushMethodProcessor">
+            <summary>
+            Removes TraceWriter.Flush method call.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Transformers.Project.FunctionsRemoveOldPackagesTransformer">
+            <summary>
+            Removes old functions packages from the project.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Transformers.Project.FunctionsTriggerDependenciesTransformer">
+            <summary>
+            Adds extra package dependencies for function trigger types
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Transformers.Project.FunctionsPropertyTransformer">
+            <summary>
+            As users migrate their azure functions to new versions this transformer
+            handles the changes that occur in the .csproj file of the function in place 
+            It updates the version of the function to the latest version, converts the
+            function into an .exe, and adds execution context value.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.AzureFunctions.Transformers.Package.FunctionsPackageMapTransformer">
+            <summary>
+            AzureFunctions default packages transformer (uses package map embedded json file to decide how to upgrade packages).
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Nodes.Providers.Rules.NuGet.AzureFunctionsNuGetPackagesRuleProvider">
+            <summary>
+            Returns rules that suggest to remove Microsoft.Azure.WebJobs. packages for functions projects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Nodes.Providers.Rules.NuGet.AzureFunctionsNuGetPackagesRuleProvider.GetRuleInstancesAsync(Microsoft.UpgradeAssistant.SliceContext,Microsoft.UpgradeAssistant.SliceNode,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.Code.CSharp.IdentifierNameProcessor">
+            <summary>
+            A helper contract that allows to have atomic transformations for identifier name syntax nodes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.Code.CSharp.InvocationProcessor">
+            <summary>
+            A helper contract that allows to have atomic transformations for invocation syntax nodes.
+            </summary>
+        </member>
+    </members>
+</doc>

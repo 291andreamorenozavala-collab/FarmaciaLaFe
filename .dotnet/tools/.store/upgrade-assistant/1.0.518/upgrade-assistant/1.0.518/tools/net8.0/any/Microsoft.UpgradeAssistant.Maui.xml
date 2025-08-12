@@ -1,0 +1,362 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.UpgradeAssistant.Maui</name>
+    </assembly>
+    <members>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+                Reserved to be used by the compiler for tracking metadata.
+                This class should not be used by developers in source code.
+            </summary>
+            <remarks>
+                This definition is provided by the <i>IsExternalInit</i> NuGet package (https://www.nuget.org/packages/IsExternalInit).
+                Please see https://github.com/manuelroemer/IsExternalInit for more information.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Maui.Code.MauiUpgradeFrameworkApiMapProvider.GetApiMapEntriesAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Maui.Code.XamarinUpgradeFrameworkApiMapProvider.GetApiMapEntriesAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Maui.Packages.MauiPackageMapConfigProvider.GetPackageMapConfigAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Resources.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.CodeAnalysis_Category">
+            <summary>
+              Looks up a localized string similar to Upgrade.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.CodeAnalysis_CodeFixTitle">
+            <summary>
+              Looks up a localized string similar to Upgrade to .NET MAUI.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.CodeAnalysis_Description">
+            <summary>
+              Looks up a localized string similar to You can apply the code fixes or run the .NET Upgrade Assistant to discover and apply all upgrade changes to the whole project.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.CodeAnalysis_MessageFormat">
+            <summary>
+              Looks up a localized string similar to Xamarin code should be upgraded to .NET MAUI.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.Error_FailedFindNuGetPackage">
+            <summary>
+              Looks up a localized string similar to Could not find &apos;{0}/{1}&apos; on the configured NuGet feeds..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.Error_FailedFindProject">
+            <summary>
+              Looks up a localized string similar to Could not find project..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.Error_PropertyNotFoundInContext">
+            <summary>
+              Looks up a localized string similar to Invalid operation context. &apos;{0}&apos; was not found for project &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.Error_RemovingProjectProperty">
+            <summary>
+              Looks up a localized string similar to Unable to remove property &apos;{0}&apos; from project &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.Error_SettingProjectProperty">
+            <summary>
+              Looks up a localized string similar to Unbalbe to set property &apos;{0}&apos; to &apos;{1}&apos; for project &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.InstallMissingWorkloads">
+            <summary>
+              Looks up a localized string similar to Please install missing workloads by running &quot;dotnet workload install {0}&quot;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.Maui_AndroidNative_TemplateDescription">
+            <summary>
+              Looks up a localized string similar to Maui Android Native Application targeting .NET .
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.Maui_AndroidNative_TemplateName">
+            <summary>
+              Looks up a localized string similar to Maui Android Native Application.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.Maui_iOSNative_TemplateDescription">
+            <summary>
+              Looks up a localized string similar to Maui iOS Native Application targeting .NET.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.Maui_iOSNative_TemplateName">
+            <summary>
+              Looks up a localized string similar to Maui iOS Native Application.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.MauiApp_Android_TemplateDescription">
+            <summary>
+              Looks up a localized string similar to Maui Android Application head project targeting .NET.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.MauiApp_Android_TemplateName">
+            <summary>
+              Looks up a localized string similar to Maui Android Application.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.MauiApp_iOS_TemplateDescription">
+            <summary>
+              Looks up a localized string similar to Maui iOS Application head project targeting .NET.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.MauiApp_iOS_TemplateName">
+            <summary>
+              Looks up a localized string similar to Maui iOS Application.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.MauiApp_TemplateDescription">
+            <summary>
+              Looks up a localized string similar to Maui Application head project targeting .NET.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.MauiApp_TemplateName">
+            <summary>
+              Looks up a localized string similar to Maui Application.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.MauiApp_Windows_TemplateDescription">
+            <summary>
+              Looks up a localized string similar to Maui Windows head project targeting .NET.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.MauiApp_Windows_TemplateName">
+            <summary>
+              Looks up a localized string similar to Maui Windows Application.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.MoveLogicMessage">
+            <summary>
+              Looks up a localized string similar to //TODO: Please move your logic out of &apos;{0}&apos; and &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.RemovingProjectProperty">
+            <summary>
+              Looks up a localized string similar to Removing property &apos;{0}&apos; from project &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.RemovingXmlElement">
+            <summary>
+              Looks up a localized string similar to Removing XML element &apos;{0}&apos; from file &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.RenamingProjectProperty">
+            <summary>
+              Looks up a localized string similar to Renaming property &apos;{0}&apos; to &apos;{1}&apos; for project &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.ReplaceTokenInFile">
+            <summary>
+              Looks up a localized string similar to Replacing &apos;{0}&apos; with &apos;{1}&apos; in file &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.ReplacingVersion">
+            <summary>
+              Looks up a localized string similar to Replacing all &apos;{0}&apos; references with version &apos;{1}&apos; in file &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Resources.Strings.SettingProjectProperty">
+            <summary>
+              Looks up a localized string similar to Setting property &apos;{0}&apos; to &apos;{1}&apos; for project &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.TargetFrameworks.MauiTargetFrameworkAdjuster">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Maui.TargetFrameworks.MauiTargetFrameworkAdjuster.GetAdjustedTargetFrameworkAsync(Microsoft.UpgradeAssistant.TargetFrameworks.TargetFramework,System.String,Microsoft.UpgradeAssistant.Services.IProject,Microsoft.UpgradeAssistant.Traits.ITraitsSet,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.TargetFrameworks.XamarinTargetFrameworkProvider">
+            <summary>
+            Xamarin Android or iOS target framework matcher.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Maui.Templates.MauiBaseProjectTemplate.ProjectFileExtension">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Traits.MauiTraitProvider">
+            <summary>
+            Discover project traits specific to Maui and Xamarin project types.
+            Features that support either can specify traits as "Xamarin | Maui".
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.Code.CSharp.IOSNativeHandleTransformer">
+            <summary>
+            Constructors of Foundation.NSObject or ObjCRuntime.DisposableObject types changed to take
+            ObjCRuntime.NativeHandle instead of IntPtr. We ASSUME that if derived class has constructor
+            which takes exactly one IntPtr then it will pass it to the base class constructor and thus
+            needs to be changed to ObjCRuntime.NativeHandle.
+            </summary>
+            <remarks>
+            https://github.com/xamarin/xamarin-macios/issues/13087
+            </remarks>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.Code.CSharp.MauiMemberMapTransformer">
+            <summary>
+            Replaces Xamarin members with new MAUI equivalents.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.Code.CSharp.MauiNamespaceMapTransformer">
+            <summary>
+            Replaces Xamarin namespaces with new MAUI namespaces.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.Code.CSharp.MauiTypeMapTransformer">
+            <summary>
+            Replaces Xamarin types with new MAUI types.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.Code.Xaml.AndroidManifestTransformer">
+            <summary>
+            Updates the AndroidManifest.xml file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.Code.Xaml.IOSInfoPListTransformer">
+            <summary>
+            Updates the info.plist file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.Code.Xaml.MauiXamlNamespaceTransformer">
+            <summary>
+            Upgrades Xamarin xaml files and performs basic XAML root namespace replacements.
+            </summary>
+        </member>
+        <member name="F:Microsoft.UpgradeAssistant.Maui.Transformers.Code.Xaml.MauiXamlNamespaceTransformer.XmlNamespaces">
+            <summary>
+            Mapping of xmlns values.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.Package.MauiControlsPackageTransformer">
+            <summary>
+            MauiControlsPackageMapTransformer adds new package references introduced in .Net 8.0 for Maui.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.Package.MauiPackageMapTransformer">
+            <summary>
+            Maui default packages transformer (uses package map embedded json file to decide how to upgrade packages).
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.AllowUnsafeBlocksTransformer">
+            <summary>
+            Project transformer that carries over AllowUnsafeBlocks if it is set to true.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MauiAndroidPropertiesTransformer">
+            <summary>
+            Maui Android project properties transformer
+            </summary>
+            <remarks>
+            https://learn.microsoft.com/en-us/dotnet/maui/migration/android-projects
+            </remarks>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MauiDesktopPropertiesTransformer">
+            <summary>
+            Maui WinUI project properties transformer
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MauiiOSPropertiesTransformer">
+            <summary>
+            Maui iOS project properties transformer
+            </summary>
+            <remarks>
+            https://github.com/xamarin/xamarin-macios/wiki/Project-file-properties-dotnet-migration
+            </remarks>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MauiLibraryPropertiesTransformer">
+            <summary>
+            Maui library project properties transformer
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MauiProjectFilesRenameTransformer">
+            <summary>
+            Renames unnecessary files when converting Xamarin.Forms projects to .Net Maui by appending an ".original" tag to the end of the file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MauiProjectTransformer">
+            <summary>
+            Maui project transformer that makes critical project changes, such as
+            replacing TargetFramework with TargetFrameworks and setting UseMaui.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MauiProjectUsingTransformer">
+            <summary>
+            Maui project transformer that adds project-wide using statements.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MauiSingleProjectTransformer">
+            <summary>
+            Maui project transformer that targets upgrading Maui applications to newer versions of DotNet.
+            </summary>
+            <remarks>
+            https://github.com/xamarin/xamarin-macios/wiki/Project-file-properties-dotnet-migration
+            </remarks>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MauiTargetFrameworksTransformer">
+            <summary>
+            Maui target frameworks transformer that makes string replacements across the 
+            targeted project file to update any target framework reference.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MauiTargetFrameworkProjectTransformer">
+            <summary>
+            Maui in-place TargetFramework transformer that modifies TargetFramework(s)
+            properties in the context and adds the platforms "android" and "ios" to it.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MauiCreateProjectOperationInitializerTransformer">
+            <summary>
+            Maui side-by-side TargetFramework transformer that modifies TargetFramework(s)
+            properties in the context and adds the platforms "android" and "ios" to it.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MauiProjectTemplateItemTransformer">
+            <summary>
+            Maui template transformer that adds project template items during in-place transformations.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MauiWinUIFilesRenameTransformer">
+            <summary>
+            Renames unnecessary files when converting Xamarin.Forms UWP projects to .Net Maui by appending an ".original" tag to the end of the file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.MsbuildProjectTransformerBase">
+            <summary>
+            Base class for project transformers which need to use MSBuild projects
+            </summary>
+        </member>
+        <member name="F:Microsoft.UpgradeAssistant.Maui.Transformers.MsbuildProjectTransformerBase.LegacyRuntimeSeparators">
+            <summary>
+            Separators for runtime identifier values in Xamarin Forms projects
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Operations.Finalizers.MauiProjectOperationFinalizer">
+            <summary>
+            Makes final edits to remove artifacts that were added to run Maui upgrades successfully.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,730 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.UpgradeAssistant.Web</name>
+    </assembly>
+    <members>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+                Reserved to be used by the compiler for tracking metadata.
+                This class should not be used by developers in source code.
+            </summary>
+            <remarks>
+                This definition is provided by the <i>IsExternalInit</i> NuGet package (https://www.nuget.org/packages/IsExternalInit).
+                Please see https://github.com/manuelroemer/IsExternalInit for more information.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.Code.WebUpgradeFrameworkApiMapProvider.GetApiMapEntriesAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Nodes.WebTypeKindAdjuster">
+            <summary>
+            Adjusts the kind=Type to Controller after checking symbols of given type name
+            and checking if given class inherits from corresponding base classes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.Nodes.WebTypeKindAdjuster.GetAdjustedNodeAsync(Microsoft.UpgradeAssistant.SliceContext,Microsoft.UpgradeAssistant.SliceNode,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Nodes.AreaSliceNodeBuilder">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.Nodes.AreaSliceNodeBuilder.CreateNode(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Nodes.ContentSliceNodeBuilder">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.Nodes.ContentSliceNodeBuilder.CreateNode(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Nodes.ControllerSliceNodeBuilder">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.Nodes.ControllerSliceNodeBuilder.CreateNode(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Nodes.RouteSliceNodeBuilder">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.Nodes.RouteSliceNodeBuilder.CreateNode(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Nodes.SharedViewSliceNode">
+            <summary>
+            This model represents a view that can be shared across controllers like _Layout.cshtml or _ViewStart.cshtml.
+            It has DependentViews set to easier keep track of views for which this shared view is used, when needed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Nodes.ViewSliceNodeBuilder">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.Nodes.ViewSliceNodeBuilder.CreateNode(System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.Nodes.Providers.AreaProvider.GetNodesAsync(Microsoft.UpgradeAssistant.SliceContext,Microsoft.UpgradeAssistant.SliceNode,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.Nodes.Providers.RouteProvider.GetNodesAsync(Microsoft.UpgradeAssistant.SliceContext,Microsoft.UpgradeAssistant.SliceNode,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.ApplicationVisitor">
+            <summary>
+            A visitor class that can scan project's assembly and find all object model components specific to given initializers collection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Controllers.AspNetCoreApiController.HasAttributesEnabled">
+            <summary>
+            Returns true if Microsoft.AspNetCore.Mvc.ApiControllerAttribute is declared for it.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Controllers.ControllerInitializer">
+            <summary>
+            Discovers ASP.NET MVC controllers and their metadata
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Controllers.ControllerInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Controllers.ControllerInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Endpoints.ApiEndpointMethodInitializer">
+            <summary>
+            Discovers ASP.NET WebApi endpoint methods in controllers. Endpoint methods are not guaranteed to be endpoints yet,
+            but are most likely endpoints. We would merge them with controllers and routes later to get final endpoints set.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Endpoints.ApiEndpointMethodInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Endpoints.ApiEndpointMethodInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Endpoints.MvcEndpointMethodInitializer">
+            <summary>
+            Discovers ASP.NET Core Mvc endpoint methods in controllers. Endpoint methods are not guaranteed to be endpoints yet,
+            but are most likely endpoints. We would merge them with controllers and routes later to get final endpoints set.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Endpoints.MvcEndpointMethodInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Endpoints.MvcEndpointMethodInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.ISymbolMatcher">
+            <summary>
+            This is an abstraction for the logic that can find specific code pieces that we need to discover.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.MainMethodMatcher">
+            <summary>
+            Matches a method in any class with one of the parameters of given type symbol.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Routes.OrderedMerger`1">
+            <summary>
+            Helper that can find a place for a new item given base ordered collection and current items collection.
+            This can be used in scenarios like finding a correct place to insert a route registration in an ASP.NET Core
+            app given routes order in the old ASP.NET MVC app.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Routes.OrderedMerger`1.TryGetPlacement(`0,`0@)">
+             <summary>
+             Given that we found some placement relative to base items list, starting this index lets go in reverse direction
+             and try to find place comparing with items that were not in the base using Compare instead of Equals.
+             For example:
+                  - A, B, C, D are base
+                  - K, B, Q, X are current items
+                  - when we try to find position for C
+             We first fonund index of B = 1 to put C before B going in reverse direction.
+             Then we go from B to Q, X and compare C to Q and X to see if any of them are higher than C and adjust index to
+             find better element to insert before it.
+            
+             Note: we return item at placementIndex + 1 since we are inserting before some element, not after (it is related
+             to the implementation we have in the code that uses this class).
+            
+             If we did not find a good place or reached corener case, for example new item weight is higher than all items we return null.
+             This would let caller know that default placement should be applied.
+             </summary>
+             <param name="newItem"></param>
+             <param name="placement"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Routes.RouteInitializer">
+            <summary>
+            Discovers ASP.NET Core routes
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Routes.RouteInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Routes.RouteInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Routes.RouteWriter">
+             <summary>
+             Helper that knows how to add ASP.NET core routes (regular and Area routes) registration via WebApplication extensions.
+            
+             Note: at the moment it only knows how to add routes to the implicit Main method (minimal Program.cs).
+             </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Routes.RouteWriter.AddRouteAsync(Microsoft.UpgradeAssistant.Web.ObjectModel.Route,System.Collections.Generic.IEnumerable{Microsoft.UpgradeAssistant.Web.ObjectModel.Route},System.Threading.CancellationToken)">
+            <summary>
+            Adding new route to the target app if it does not exist. Source routes is optional.
+            When specified is used to get correct order for this route in relationship of given
+            source routes. Is used to compare placements between ASP.NET Core and ASP.NET app.
+            </summary>
+            <param name="route"></param>
+            <param name="sourceRoutes"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Routes.RouteWriter.FindDefaultAreaPlacementNode(Microsoft.CodeAnalysis.SemanticModel,Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)">
+            <summary>
+            For areas by default we first try to place them on top of all routes, if no routes found then we place it just before app.Run()
+            </summary>
+            <param name="semanticModel"></param>
+            <param name="container"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Routes.RouteWriter.FindDefaultRoutePlacementNode(Microsoft.CodeAnalysis.SemanticModel,Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)">
+            <summary>
+            For routes by default we place it just before app.Run().
+            </summary>
+            <param name="semanticModel"></param>
+            <param name="container"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.Routes.RouteWriter.RouteMergeable.GetId">
+            <summary>
+            For id we use normalized templatePath, i.e. we normalize everything in the format of ASP.NET core:
+                - "{controller:aaa=vvv}/{id:ccc?}"
+                
+            Note: Adding more checks would be much more complicated and is out of scope of upgrade operations
+            at the moment. It can be enhanced later when needed to add constraints array to the Id, for example.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNetCore.TopLevelMainMethodVisitor">
+            <summary>
+            A helper visitor class that can find a top level implicit main method that is generated for minimal Asp.Net Core apps.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Areas.AreaInitializer">
+            <summary>
+            Discovers ASP.NET MVC areas and their metadata
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Areas.AreaInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Areas.AreaInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Controllers.ApiControllerInitializer">
+            <summary>
+            Discovers ASP.NET WebApi controllers and their metadata.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Controllers.ApiControllerInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Controllers.ApiControllerInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Controllers.MvcControllerInitializer">
+            <summary>
+            Discovers ASP.NET MVC controllers and their metadata
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Controllers.MvcControllerInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Controllers.MvcControllerInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routing.ApiEndpointMethodInitializer">
+            <summary>
+            Discovers ASP.NET WebApi endpoint methods in controllers. Endpoint methods are not guaranteed to be endpoints yet,
+            but are most likely endpoints. We would merge them with controllers and routes later to get final endpoints set.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routing.ApiEndpointMethodInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routing.ApiEndpointMethodInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routing.MvcEndpointMethodInitializer">
+            <summary>
+            Discovers ASP.NET Mvc endpoint methods in controllers. Endpoint methods are not guaranteed to be endpoints yet,
+            but are most likely endpoints. We would merge them with controllers and routes later to get final endpoints set.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routing.MvcEndpointMethodInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routing.MvcEndpointMethodInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routes.ApiIgnoreRouteInitializer">
+            <summary>
+            Discovers ASP.NET WebApi routes to be ignored registered in the System.Web.Http.EndpointCollection.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routes.ApiIgnoreRouteInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routes.ApiIgnoreRouteInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routes.ApiRouteInitializer">
+            <summary>
+            Discovers ASP.NET WebApi routes registered in the System.Web.Http.EndpointCollection.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routes.ApiRouteInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routes.ApiRouteInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routes.MvcIgnoreRouteInitializer">
+            <summary>
+            Discovers ASP.NET MVC routes to be ignored registered in the System.Web.Routing.RouteCollection.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routes.MvcIgnoreRouteInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routes.MvcIgnoreRouteInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routes.MvcRouteInitializer">
+            <summary>
+            Discovers ASP.NET MVC routes registered in the System.Web.Routing.EndpointCollection.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routes.MvcRouteInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.AspNet.Routes.MvcRouteInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.IApplicationFactory">
+            <summary>
+            Factory knows how to discover project object model components using specified initializers.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.ObjectModel.IComponentInitializer">
+            <summary>
+            Contract that is used in in the process of <see cref="T:Microsoft.UpgradeAssistant.Web.ObjectModel.Application"/> initialization and
+            is responsible for discovering application components it is dedicated to.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.IComponentInitializer.Discover(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <summary>
+            Scans given named type symbol and fills builder with any kind of data it discovered.
+            </summary>
+            <param name="symbol"></param>
+            <param name="semanticModel"></param>
+            <param name="builder"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.IComponentInitializer.Discover(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.SemanticModel,Microsoft.UpgradeAssistant.Web.ObjectModel.ComponentCollectionBuilder,System.Threading.CancellationToken)">
+            <summary>
+            Scans given method symbol and fills builder with any kind of data it discovered.
+            </summary>
+            <param name="symbol"></param>
+            <param name="semanticModel"></param>
+            <param name="builder"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.Route.ReplacePart(System.String,System.String,System.String)">
+            <summary>
+            Substitutes part in the roiute path correctly. part can have default value or constraints, we need to substitute whole {part} token.
+            </summary>
+            <param name="path"></param>
+            <param name="part"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.ObjectModel.RouteParser.GetConstraints(System.String,System.Int32@)">
+            <summary>
+            There could be multiple inline constraints: {par:constraint1:constraint2=default}
+            </summary>
+            <param name="part"></param>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.Packages.WebPackageMapConfigProvider.GetPackageMapConfigAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Resources.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.AddingAreaRoute">
+            <summary>
+              Looks up a localized string similar to Registering area route &apos;{0}&apos; in &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.AddingArgumentToAttribute">
+            <summary>
+              Looks up a localized string similar to Adding argument &apos;{0}&apos; for attribute {1} on the {2} {3} in the file &apos;{4}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.AddingAttribute">
+            <summary>
+              Looks up a localized string similar to Adding attribute {0} to the {1} {2} in the file &apos;{3}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.AddingAttributeToClass">
+            <summary>
+              Looks up a localized string similar to Adding attribute {0} to class {1} in the file &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.AddingAttributeToMethod">
+            <summary>
+              Looks up a localized string similar to Adding attribute {0} to the method &apos;{1}&apos; in the file &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.AddingAttributeToProperty">
+            <summary>
+              Looks up a localized string similar to Adding attribute {0} to property {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.AddingConnectionString">
+            <summary>
+              Looks up a localized string similar to Adding connection string &apos;{0}&apos; to &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.AddingNamespaceToViewImports">
+            <summary>
+              Looks up a localized string similar to Adding namespace &apos;{0}&apos; to &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.AddingRoute">
+            <summary>
+              Looks up a localized string similar to Registering route &apos;{0}&apos; in &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.AddingSetting">
+            <summary>
+              Looks up a localized string similar to Adding setting &apos;0&apos; to &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.ApiTemplateDescription">
+            <summary>
+              Looks up a localized string similar to ASP.NET Core Web API project targeting .NET.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.ApiTemplateName">
+            <summary>
+              Looks up a localized string similar to ASP.NET Core Web API.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.ApplyChangesForArea">
+            <summary>
+              Looks up a localized string similar to Applying changes to register area {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.ApplyChangesForRoute">
+            <summary>
+              Looks up a localized string similar to Applying changes to register route {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.Area">
+            <summary>
+              Looks up a localized string similar to Area.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.AspNetCoreTemplateDescription">
+            <summary>
+              Looks up a localized string similar to ASP.NET Core web application.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.AspNetCoreTemplateName">
+            <summary>
+              Looks up a localized string similar to ASP.NET Core web application.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.AspNetMembershipCommentWithUrl">
+            <summary>
+              Looks up a localized string similar to ASP.NET membership should be replaced with ASP.NET Core identity. For more details see {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.BundlingCommentWithUrl">
+            <summary>
+              Looks up a localized string similar to Script and style bundling works differently in ASP.NET Core. BundleCollection should be replaced by alternative bundling technologies. For more details see {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.ChildActionOnlyCommentWithUrl">
+            <summary>
+              Looks up a localized string similar to Child actions should be replaced with view components. For more details see {0} and {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.Class">
+            <summary>
+              Looks up a localized string similar to class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.CommentingStylesAndScripts">
+            <summary>
+              Looks up a localized string similar to Commenting @Styles and @Scripts attributes from view since bundling and minification is not supported in ASP.NET Core..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.FailedToApplyChangesForArea">
+            <summary>
+              Looks up a localized string similar to Failed to apply changes for area {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.IdentityToCoreCommentWithUrl">
+            <summary>
+              Looks up a localized string similar to ASP.NET identity should be replaced with ASP.NET Core identity. For more details see {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.Method">
+            <summary>
+              Looks up a localized string similar to method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.ModulesAndHandlersInCommentWithUrl">
+            <summary>
+              Looks up a localized string similar to HTTP modules and HTTP handlers should be rewritten as middleware in ASP.NET Core. For more details see {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.MvcTemplateDescription">
+            <summary>
+              Looks up a localized string similar to ASP.NET Core MVC application project targeting .NET.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.MvcTemplateName">
+            <summary>
+              Looks up a localized string similar to ASP.NET Core MVC.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.RawUrlCommentWithUrl">
+            <summary>
+              Looks up a localized string similar to HttpRequest.RawUrl should be replaced with HttpRequest.GetEncodedUrl() or HttpRequest.GetDisplayUrl()..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.RemovingAttribute">
+            <summary>
+              Looks up a localized string similar to Removing attribute {0} from the {1} {2} in the file &apos;{3}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.RemovingParameterFromAttribute">
+            <summary>
+              Looks up a localized string similar to Removing parameter {0} from the attribute {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.ReplacingAttributeInFile">
+            <summary>
+              Looks up a localized string similar to Replacing attribute {0} with {1} in the file &apos;{2}&apos; at position ({3},{4})..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.ReplacingAttributeParametersInFile">
+            <summary>
+              Looks up a localized string similar to Replacing attribute {0} parameters for the method {1} in the file &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.Route">
+            <summary>
+              Looks up a localized string similar to Route.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.UpdatingAttribute">
+            <summary>
+              Looks up a localized string similar to Updating attribute {0} in the file &apos;{1}&apos; at position ({2},{3})..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.UpdatingAttributeOnMethod">
+            <summary>
+              Looks up a localized string similar to Updating attribute {0} for the method {1} in the file &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Resources.Strings.ViewWithColon">
+            <summary>
+              Looks up a localized string similar to View: {0}.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.TargetFrameworks.ClassicWebTargetFrameworkProvider">
+            <summary>
+            Classic web or System.Web dependent app's target framework matcher.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Templates.CSharp.Api.ApiProjectTemplate.ProjectFileExtension">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Templates.CSharp.Mvc.HybridInplaceProjectTemplate.ProjectFileExtension">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Web.Templates.CSharp.Mvc.MvcProjectTemplate.ProjectFileExtension">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Traits.WebTraitProvider">
+            <summary>
+            Discover project traits specific to web project types.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.Code.CSharp.AcceptVerbsMvcTransformer">
+             <summary>
+             For MVC controllers old AcceptVerbs attribute supported HttpVerbs flags which now are
+             deprecated in ASP.NET Core version of AcceptVerbs attribute.
+            
+             We search for all HttpVerbs in AcceptVerb attributes on MVC controller methods and replace them with strings.
+             </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.Code.CSharp.ApiControllerTransformer">
+            <summary>
+            Converts ASP.NET Api controller to ASP.NET Core:
+                - Adds [ApiController] attribute
+                - Ensures there is [Route] attribute on the controller class with best available template
+                  (looks up existing conventional templates and tries to see if one of them matches this controller)
+                - For each method ensures http verb attributes are added to match old conventions. If verb attributes
+                  are already present, ensure there is correct template specified for the method's parameters that
+                  don't have any binding attributes. If method name starts with any http verb, adds an explicit
+                  attribute. If method has [NonActionAttribute] skips.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.Transformers.Code.CSharp.ApiControllerTransformer.RefactorMethodWithVerbAttributes(Microsoft.UpgradeAssistant.Transformers.RoslynDocumentEditor,Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax,Microsoft.UpgradeAssistant.Web.Transformers.Code.CSharp.AttributeListBuilder,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax},System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax},Microsoft.UpgradeAssistant.Services.ILogger)">
+            <summary>
+            If has http verb attributes and method has some parameters without attributes, add a route template
+             - if only one Http Verb - add template in it
+             - if many Http Verb attributes or only AcceptVerbsAttribute attributes are present - add a [Route] template with method parameters
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Web.Transformers.Code.CSharp.ApiControllerTransformer.GetClassRouteTemplateAsync(Microsoft.UpgradeAssistant.Operations.SideBySideOperationContext,Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax,System.Threading.CancellationToken)">
+            <summary>
+            We look for all API routes that could be applied to this controller and pick the best one we could guess.
+            </summary>
+            <param name="classNode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.Code.CSharp.AreaRouteTransformer">
+            <summary>
+            Adds a MapAreaControllerRoute registration for a given area slice node if it is not present yet.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.Code.CSharp.BindArgumentAttributeTransformer">
+            <summary>
+            Converts BindAttribute on method parameters and replaces single string containing comma separated 
+            property names with an array of strings (each string is a separate property name). For excluded properties,
+            we scan all properties in associated method parameter type and take ones with public setter and that are not 
+            in excluded list.
+            
+            Example:
+            
+            From: void Method([Bind(Include = "Id,Name,Description")] myparam)
+            To: void Method([Bind("Id", "Name", "Description")] myparam)
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.Code.CSharp.BindAttributeTransformer">
+            <summary>
+            Ensures new namespace for Bind attribute if it is present.
+            Checks if the class has [Bind(Exclude="somepropertyname")]. If yes, removes Bind attribute and adds
+            BindNever attribute on class' property "somepropertyname" with corresponding usings.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.Code.CSharp.IdentityBuilderUIExtensionsTransformer">
+            <summary>
+            This transformer removes the UIFramework parameter from the AddDefaultUI method in the IdentityBuilderUIExtensions class.
+            The overload of the Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI method that 
+            takes a Microsoft.AspNetCore.Identity.UI.UIFramework parameter is no longer supported.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.Code.CSharp.MvcControllerTransformer">
+             <summary>
+             Transforms MVC controllers and their attributes to work with ASP.NET Core:
+            
+             If there are RouteArea or RoutePrefix attributes, applies prefix to
+                 - all Route attributes on class,
+                 - if there were any Route attributes on class before, adds ~/ for al method level Route attributes
+                 - If there were no Route attributes on class before adds a new one with prefix and leaves method
+                   level Route attributes unchanged.
+             If there are no RouteArea or RoutePrefix or Route on controller class, does not change anything.
+             </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.Code.CSharp.RequestMembersTransformer">
+            <summary>
+            Converts old HttpRequest members to new ones.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.Code.CSharp.RouteTransformer">
+            <summary>
+            Adds a route registration for a given route slice node if it is not present yet to the target project.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.Code.CSharp.RoutingRegistrationCleanupTransformer">
+            <summary>
+            Removes calls:
+                - AreaRegistration.*
+                - RoutingConfig.* 
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Microsoft.UpgradeAssistant.Web.Transformers.Code.VisualBasic.BindAttributeTransformer" -->
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.Package.WebPackageMapTransformer">
+            <summary>
+            Web default packages transformer (uses package map embedded json file to decide how to upgrade packages).
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.Project.WebProjectFilesDefaultFilesTransformer">
+            <summary>
+            Adds new skeleton ASP.NET Core files to old MVC or API projects.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.Project.WebProjectFilesRemoveTransformer">
+            <summary>
+            Removes old web project files.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.ViewImportsTransformer">
+            <summary>
+            Attempts to add namespaces to _viewImport.cshtml that were used before inside of Views\web.config.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.ViewStyleTransformer">
+            <summary>
+            Since bundling and minification are not supported in ASP.NET Core, this transformer exists
+            to locate scripts and styles attributes and comment them out to prevent build errors.
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.WebConfig.WebConfigSettingsTransformer">
+            <summary>
+            Removes web.config and its configuration specific versions when all other transformations related to this file are done.
+            </summary>
+            Note: it is not active at the moment, and should be enabled when we are ready to add settings to appSettings.json.
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Web.Transformers.WebConfig.WebConfigToAppConfigTransformer">
+            <summary>
+            Removes web.config and its configuration specific versions when all other transformations related to this file are done.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Nodes.WebTypeProvider">
+            <summary>
+            This provider is a superset of <see cref="T:Microsoft.UpgradeAssistant.Nodes.DefaultTypeProvider"/> and can provide complex slice nodes
+            like Controller or DbContext.
+            </summary>
+        </member>
+    </members>
+</doc>

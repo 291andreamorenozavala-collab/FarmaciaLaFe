@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.UpgradeAssistant.Aspire</name>
+    </assembly>
+    <members>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+                Reserved to be used by the compiler for tracking metadata.
+                This class should not be used by developers in source code.
+            </summary>
+            <remarks>
+                This definition is provided by the <i>IsExternalInit</i> NuGet package (https://www.nuget.org/packages/IsExternalInit).
+                Please see https://github.com/manuelroemer/IsExternalInit for more information.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Aspire.Code.AspireClientApiMapProvider.GetApiMapEntriesAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Aspire.Code.AspireHostApiMapProvider.GetApiMapEntriesAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Aspire.Operations.AspireUpgradeControllerBase.Id">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Aspire.Operations.AspireUpgradeControllerBase.CategoryId">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Aspire.Operations.AspireUpgradeControllerBase.DisplayName">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Aspire.Operations.AspireUpgradeControllerBase.Description">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Aspire.Operations.AspireUpgradeControllerBase.GetContextAsync(System.String,Microsoft.UpgradeAssistant.Traits.ITraitsSet,Microsoft.UpgradeAssistant.Services.IServiceCollection,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Aspire.Operations.AspireUpgradeControllerBase.GetOperationDefinitionAsync(System.String,Microsoft.UpgradeAssistant.Traits.ITraitsSet,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.Aspire.Operations.AspireUpgradeControllerBase.GetTraitsAsync(Microsoft.UpgradeAssistant.Traits.ITraitsSet,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Aspire.Resources.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Aspire.Resources.Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Aspire.Resources.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Aspire.Resources.Strings.AddingSdkToProject">
+            <summary>
+              Looks up a localized string similar to Adding SDK &apos;{0}&apos; with version &apos;{1}&apos; to the project..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Aspire.Resources.Strings.AspireCategoryDescription">
+            <summary>
+              Looks up a localized string similar to Upgrade Aspire related features in the projects.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Aspire.Resources.Strings.AspireCategoryName">
+            <summary>
+              Looks up a localized string similar to Aspire upgrades.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Aspire.Resources.Strings.AspireUpgradeDescription">
+            <summary>
+              Looks up a localized string similar to Upgrade your .NET Aspire AppHost and projects to latest packages and APIs.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Aspire.Resources.Strings.AspireUpgradeName">
+            <summary>
+              Looks up a localized string similar to Upgrade to latest .NET Aspire version.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Aspire.Resources.Strings.CouldNotFindPackageVersion">
+            <summary>
+              Looks up a localized string similar to Could not find supported version for package &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Aspire.Resources.Strings.SdkPackageNotFound">
+            <summary>
+              Looks up a localized string similar to SDK package &apos;{0}&apos; is not found. Make sure correct NuGet feeds are configured for current solution..
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Aspire.Transformers.Code.CSharp.AspireMemberMapTransformer">
+            <summary>
+            Replaces Aspire members with new equivalents.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Aspire.Transformers.Code.CSharp.AspireTwoChainedFunctionsTransformer">
+            <summary>
+            Replaces Aspire members with new equivalents.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Aspire.Transformers.Code.CSharp.AspireTypeMapTransformer">
+            <summary>
+            Replaces Aspire members with new equivalents.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Aspire.Transformers.Package.ExtensionMethodsVisitor">
+            <summary>
+            A visitor class that can scan project's assembly and find all Aspire extension 
+            methods to determine their new packages.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Operations.Categories.AspireOperationCategory.Id">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Operations.Categories.AspireOperationCategory.DisplayName">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Operations.Categories.AspireOperationCategory.Description">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.Operations.Categories.AspireOperationCategory.Order">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

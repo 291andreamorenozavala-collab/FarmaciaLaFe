@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.UpgradeAssistant.WinUI</name>
+    </assembly>
+    <members>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+                Reserved to be used by the compiler for tracking metadata.
+                This class should not be used by developers in source code.
+            </summary>
+            <remarks>
+                This definition is provided by the <i>IsExternalInit</i> NuGet package (https://www.nuget.org/packages/IsExternalInit).
+                Please see https://github.com/manuelroemer/IsExternalInit for more information.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.WinUI.Code.UwpUpgradeFrameworkApiMapProvider.GetApiMapEntriesAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.WinUI.Packages.WinUIPackageMapConfigProvider.GetPackageMapConfigAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Resources.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.AcrylicBrushMessage">
+            <summary>
+              Looks up a localized string similar to The {0} property exists in UWP, but not in the Windows App SDK. Now the AcrylicBrush always samples from the app content. For more details see {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.AddingXmlElement">
+            <summary>
+              Looks up a localized string similar to Adding XML element &apos;{0}&apos; with value &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.AddingXmlNamespace">
+            <summary>
+              Looks up a localized string similar to Adding XML namespace &apos;{0}&apos; to file &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.ApiNotSupportedComment">
+            <summary>
+              Looks up a localized string similar to     TODO: This api is not supported in Windows App SDK yet.
+               Read: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.BackButtonComment">
+            <summary>
+              Looks up a localized string similar to     TODO Default back button in the title bar does not exist in WinUI3 apps.
+               The tool has generated a custom back button in the MainWindow.xaml.cs file.
+               Feel free to edit its position, behavior and use the custom back button instead.
+               Read: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.ContentDialogComment">
+            <summary>
+              Looks up a localized string similar to TODO You should replace &apos;this&apos; with the instance of UserControl that this ContentDialog is meant to be a part of..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.CsWinRTLogMessage">
+            <summary>
+              Looks up a localized string similar to A CsWinRTIncludes property with value {0} has been added to specify the namespace of the referenced vcxproj component to project. If your project assembly name differs from {0}, update this value with the assembly name. Read more about C#/WinRT here: https://docs.microsoft.com/en-us/windows/apps/develop/platform/csharp-winrt/.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.RemovingXmlAttribute">
+            <summary>
+              Looks up a localized string similar to Removing XML attribute &apos;&quot;{0}&apos; from element &apos;{1}&apos; in file &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.RemovingXmlElement">
+            <summary>
+              Looks up a localized string similar to Removing XML element &apos;{0}&apos; from file &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.ReplaceTokenInFile">
+            <summary>
+              Looks up a localized string similar to Replacing &apos;{0}&apos; with &apos;{1}&apos; in file &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.ResourceContextComment">
+            <summary>
+              Looks up a localized string similar to     TODO ResourceContext.GetForCurrentView and ResourceContext.GetForViewIndependentUse do not exist in Windows App SDK
+               Use your ResourceManager instance to create a ResourceContext as below. If you already have a ResourceManager instance,
+               replace the new instance created below with correct instance.
+               Read: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.UpdatingXmlAttribute">
+            <summary>
+              Looks up a localized string similar to Updating XML attribute &apos;&quot;{0}&apos; for element &apos;{1}&apos; in file &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.UwpToWinUI_TemplateDescription">
+            <summary>
+              Looks up a localized string similar to A project template containing new files to be added to UWP project when it is migrated to WinUI..
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.UwpToWinUI_TemplateName">
+            <summary>
+              Looks up a localized string similar to UWP to WinUI upgrade project template.
+            </summary>
+        </member>
+        <member name="P:Microsoft.UpgradeAssistant.WinUI.Resources.Strings.WindowHandleComment">
+            <summary>
+              Looks up a localized string similar to     TODO You should replace &apos;App.WindowHandle&apos; with the your window&apos;s handle (HWND) 
+               Read more on retrieving window handle here: {0}.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.TargetFrameworks.WinUITargetFrameworkAdjuster">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.UpgradeAssistant.WinUI.TargetFrameworks.WinUITargetFrameworkAdjuster.GetAdjustedTargetFrameworkAsync(Microsoft.UpgradeAssistant.TargetFrameworks.TargetFramework,System.String,Microsoft.UpgradeAssistant.Services.IProject,Microsoft.UpgradeAssistant.Traits.ITraitsSet,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.TargetFrameworks.WinUITargetFrameworkProvider">
+            <summary>
+            WinUI (UWP) target framework matcher.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Traits.WinUITraitProvider">
+            <summary>
+            Discover project traits specific to UWP and WinUI project types
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Transformers.Code.CSharp.BackButtonTransformer">
+             <summary>
+             Replaces assignments of .AppViewBackButtonVisibility with Microsoft.UI.Xaml.Visibility
+             and changes corresponding assignment values from AppViewBackButtonVisibility.Collapsed/AppViewBackButtonVisibility.Visiable
+             to just Collapsed/Visible.
+            
+             In other use cases of AppViewBackButtonVisibility or BackRequested it adds a comment suggesting to switch to new types in WinUI.
+             </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Transformers.Code.CSharp.ContentDialogTransformer">
+             <summary>
+             Injects a method that sets a root for ContentDialog when ShowAsync is called:
+            
+             Before:
+                 ContentDialogResult result = saveDialog.ShowAsync();
+            
+             After:
+            
+                 ContentDialogResult result = SetContentDialogRoot(saveDialog.ShowAsync,this);
+            
+                 private static ContentDialog SetContentDialogRoot(ContentDialog contentDialog, UserControl control)
+                 {
+                     if (Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(""Windows.Foundation.UniversalApiContract"", 8))
+                     {
+                         contentDialog.XamlRoot = control.Content.XamlRoot;
+                     }
+                     return contentDialog;
+                  }
+             </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Microsoft.UpgradeAssistant.WinUI.Transformers.Code.CSharp.DataTransferManagerTransformer" -->
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Transformers.Code.CSharp.InitializeWindowTransformer">
+             <summary>
+             Tries to detect the creation of known classes that implement IInitializeWithWindow and
+             wraps their calls with a method that associates an IInitializeWithWindow with an owner's
+             window handle.
+            
+             Before:
+            
+                 var filePicker = new FileSavePicker();
+            
+             After:
+            
+                 var filePicker = InitializeWithWindow(new FileSavePicker(),App.WindowHandle);
+            
+                 private static FileSavePicker InitializeWithWindow(FileSavePicker obj, IntPtr windowHandle)
+                 {
+                     WinRT.Interop.InitializeWithWindow.Initialize(obj, windowHandle);
+                     return obj;
+                 }
+             </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Transformers.Code.CSharp.MRTResourceManagerTransformer">
+             <summary>
+             Detect presence of MRT ResourceManager and ResourceContext creation and replaces them with new API:
+            
+             Before:
+            
+                 var currentResourceManager = ResourceManager.Current;
+                 var resourceContext1 = ResourceContext.GetForViewIndependentUse();
+            
+             After:
+            
+                 var currentResourceManager = new Microsoft.Windows.ApplicationModel.Resources.ResourceManager();
+                 var resourceContext1 = new Microsoft.Windows.ApplicationModel.Resources.ResourceManager().CreateResourceContext();
+             
+             </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Transformers.Package.WinUIPackageMapTransformer">
+            <summary>
+            WinUI default packages transformer (uses package map embedded json file to decide how to upgrade packages).
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Transformers.Project.WinUIProjectFilesRemoveTransformer">
+            <summary>
+            Removes unnecessary files when converting UWP projects to WinUI.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Transformers.Project.WinUIProjectPropertiesRemoveTransformer">
+            <summary>
+            Removes unnecessary project properties when converting UWP projects to WinUI.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Transformers.Project.WinUIProjectPropertiesSetTransformer">
+            <summary>
+            Sets project properties when converting UWP projects to WinUI.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Transformers.Project.WinUIProjectVcxprojTransformer">
+            <summary>
+            If UWP project had reference to a .vcxproj file add it to the CsWinRTIncludes property ';' separated list.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Transformers.Project.WinUITargetFrameworkTransformer">
+            <summary>
+            WinUI(uwp) projects TargetFramework transformer that modifies TargetFramework in the
+            context properties and adds a platform "windows" + latest stable platform version.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Transformers.Xaml.WinUIAnimationsXamlTransformer">
+            <summary>
+            Upgrades UWP xaml files and replaces animations related namespaces and attributes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.WinUI.Transformers.Xaml.WinUIPackageAppxManifestTransformer">
+            <summary>
+            Upgrades Package.appxmanifest with WinUI namespaces and specific attributes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpgradeAssistant.Maui.Transformers.WinUIProjectTemplateItemTransformer">
+            <summary>
+            UWP to WinUI template transformer that adds project template items during in-place and side-by-side transformations.
+            </summary>
+        </member>
+    </members>
+</doc>

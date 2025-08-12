@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Spectre.Console.Flow</name>
+    </assembly>
+    <members>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+                Reserved to be used by the compiler for tracking metadata.
+                This class should not be used by developers in source code.
+            </summary>
+            <remarks>
+                This definition is provided by the <i>IsExternalInit</i> NuGet package (https://www.nuget.org/packages/IsExternalInit).
+                Please see https://github.com/manuelroemer/IsExternalInit for more information.
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Spectre.Console.Flow.FlowMultiSelectionPrompt`1" -->
+        <member name="P:Spectre.Console.Flow.FlowNavigation.Back">
+            <inheritdoc />
+        </member>
+        <member name="P:Spectre.Console.Flow.FlowNavigation.Exit">
+            <inheritdoc />
+        </member>
+        <member name="M:Spectre.Console.Flow.FlowNavigation.AddPromptChoices``1(Spectre.Console.SelectionPrompt{Spectre.Console.Flow.FlowStepOption{``0}})">
+            <inheritdoc />
+        </member>
+        <member name="M:Spectre.Console.Flow.FlowNavigation.AddPromptChoices``1(Spectre.Console.MultiSelectionPrompt{Spectre.Console.Flow.FlowStepOption{``0}})">
+            <inheritdoc />
+        </member>
+        <member name="T:Spectre.Console.Flow.FlowRunner">
+            <summary>
+            Runs operation flow given initial steps and properties. A CLI commands are responsible for
+            initializing flows with starting step(s) and properties containing applicable CLI arguments.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.FlowRunner.Context">
+            <inheritdoc />
+        </member>
+        <member name="P:Spectre.Console.Flow.FlowRunner.CurrentStepId">
+            <inheritdoc />
+        </member>
+        <member name="P:Spectre.Console.Flow.FlowRunner.IsComplete">
+            <inheritdoc />
+        </member>
+        <member name="P:Spectre.Console.Flow.FlowRunner.ShowBreadcrumbs">
+            <inheritdoc />
+        </member>
+        <member name="P:Spectre.Console.Flow.FlowRunner.ShowSelectedOptions">
+            <inheritdoc />
+        </member>
+        <member name="M:Spectre.Console.Flow.FlowRunner.RunAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Spectre.Console.Flow.FlowSelectionPrompt`1" -->
+        <member name="T:Spectre.Console.Flow.IFlow">
+            <summary>
+            The flow object that drives operation steps and asks for user input when some data is needed at some step.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.IFlow.Context">
+            <summary>
+            Provides access to current flow properties and state.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.IFlow.CurrentStepId">
+            <summary>
+            Currently executing step.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.IFlow.IsComplete">
+            <summary>
+            Returns true if flow was executed until the very last step.
+            </summary>
+        </member>
+        <member name="M:Spectre.Console.Flow.IFlow.RunAsync(System.Threading.CancellationToken)">
+            <summary>
+            Start the operation flow.
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Spectre.Console.Flow.IFlowContext">
+            <summary>
+            Flow context object that contains all data gathered from user input by operation steps.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.IFlowContext.Navigation">
+            <summary>
+            Navigation object controls available navigation options (back, exit etc) and helps
+            steps to add corresponding navigation user choices when applicable.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.IFlowContext.Properties">
+            <summary>
+            Context properties gathered during flow execution and used at the end to run an operation.
+            </summary>
+        </member>
+        <member name="T:Spectre.Console.Flow.IFlowNavigation">
+            <summary>
+            Navigation object that helps controlling/displaying navigation options to user.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.IFlowNavigation.Back">
+            <summary>
+            When true Back option is available.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.IFlowNavigation.Exit">
+            <summary>
+            When true Exit option is available.
+            </summary>
+        </member>
+        <member name="M:Spectre.Console.Flow.IFlowNavigation.AddPromptChoices``1(Spectre.Console.SelectionPrompt{Spectre.Console.Flow.FlowStepOption{``0}})">
+            <summary>
+            Adds all available navigation options into specified prompt.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="prompt"></param>
+        </member>
+        <member name="M:Spectre.Console.Flow.IFlowNavigation.AddPromptChoices``1(Spectre.Console.MultiSelectionPrompt{Spectre.Console.Flow.FlowStepOption{``0}})">
+            <summary>
+            Adds all available navigation options into specified prompt.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="prompt"></param>
+        </member>
+        <member name="T:Spectre.Console.Flow.IFlowStep">
+            <summary>
+            A flow step responsible for collecting some corresponding piece of data and ask for user input if needed.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.IFlowStep.Id">
+            <summary>
+            Unique step ID.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.IFlowStep.DisplayName">
+            <summary>
+            Friendly step name (used in breadcrumbs).
+            </summary>
+        </member>
+        <member name="M:Spectre.Console.Flow.IFlowStep.ValidateUserInputAsync(Spectre.Console.Flow.IFlowContext,System.Threading.CancellationToken)">
+            <summary>
+            Returns true if this step is missing some data and needs user to input it.
+            </summary>
+            <param name="context"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Spectre.Console.Flow.IFlowStep.RunAsync(Spectre.Console.Flow.IFlowContext,System.Threading.CancellationToken)">
+            <summary>
+            Executes this step and returns a result which could be Success/Failure or one of the navigation states Back/Exit etc.
+            </summary>
+            <param name="context"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Spectre.Console.Flow.IFlowStep.ResetAsync(Spectre.Console.Flow.IFlowContext,System.Threading.CancellationToken)">
+            <summary>
+            Called when we go back in navigation flow to clear some data that step added to the context.
+            </summary>
+            <param name="context"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Spectre.Console.Flow.Styles">
+             <summary>
+             To have consistent colors (and other markup styles), we have this helper class that replaces
+             all known aliases with actual Spectre.Console color/markup tokens. This way when some special
+             style needs to be applied to some output, we apply aliases instead of hardcoded Spectre tokens.
+            
+             Changing color/markup value once in this file would change all appearances.
+             </summary>
+        </member>
+        <member name="T:Spectre.Console.Flow.Resources.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.Resources.Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.Resources.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.Resources.Strings.Back">
+            <summary>
+              Looks up a localized string similar to Back.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.Resources.Strings.Exit">
+            <summary>
+              Looks up a localized string similar to Exit.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.Resources.Strings.ExitPrompt">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to exit?.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.Resources.Strings.Navigation">
+            <summary>
+              Looks up a localized string similar to Navigation.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.Resources.Strings.NoOptionsSelected">
+            <summary>
+              Looks up a localized string similar to No options specified, follow steps below to continue.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.Resources.Strings.PickMoreSelectionOptions">
+            <summary>
+              Looks up a localized string similar to (Move up and down to reveal more selection options).
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.Resources.Strings.SelectedOptions">
+            <summary>
+              Looks up a localized string similar to Selected options.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.Resources.Strings.Steps">
+            <summary>
+              Looks up a localized string similar to Steps.
+            </summary>
+        </member>
+        <member name="P:Spectre.Console.Flow.Resources.Strings.UserInputIsRequiredForStep">
+            <summary>
+              Looks up a localized string similar to User input is required for step &apos;{0}&apos;. Please run in regular mode without --non-interactive option to provide missing data..
+            </summary>
+        </member>
+    </members>
+</doc>
