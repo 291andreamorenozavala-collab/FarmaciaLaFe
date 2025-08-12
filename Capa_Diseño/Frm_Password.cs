@@ -28,10 +28,10 @@ namespace Capa_Diseño
         private void Btn_Ok_Click(object sender, EventArgs e)
         {
             try
-            {                
+            {
                 Program.xMsg = string.Empty; this.Pb_Tiempo.Visible = true;
                 List<Capa_Entidad.TBL_AUTENTICACION> Mis_Reg = Program.Autenticar_Usuario(this.Txt_Login.Text, this.Txt_Password.Text);
-                
+
                 if (Program.Str_Resp_Msg.Length > 0)
                 { MessageBox.Show(Program.Str_Resp_Msg, Program.SISTEMA, MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
 
@@ -42,7 +42,7 @@ namespace Capa_Diseño
                     Program.Nombre_Quien = Mis_Reg[0].NOMBRE.ToString();
                     Program.Id_User = double.Parse(Mis_Reg[0].ID.ToString());
                     Program.Rol_Quien = Mis_Reg[0].TIPO.ToString();
-                    
+
 
                     //Abriendo el formulario principal
                     this.DialogResult = DialogResult.OK; this.Close();
@@ -67,7 +67,7 @@ namespace Capa_Diseño
             try
             {
                 this.Pb_Tiempo.Visible = true;
-                               
+
                 this.Txt_Login.Text = Environment.UserName.ToString().ToUpper();
                 this.Txt_Password.Text = string.Empty;
                 this.Txt_Login.Select();
@@ -96,7 +96,7 @@ namespace Capa_Diseño
                 }
                 this.Txt_Password.Select();
             }
-            else { e.Handled = false;  }
+            else { e.Handled = false; }
         }
 
         private void Txt_Password_KeyPress(object sender, KeyPressEventArgs e)
@@ -123,6 +123,12 @@ namespace Capa_Diseño
         private void Txt_Password_TextChanged(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        //// Comentario de prueba
+        private void Txt_Login_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
