@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Capa_Entidad
 {
     public class cCLIENTES
-    {
+    {   
+        // prueba
         // Campos de la Clase
         private string xID = string.Empty;
         private string xDESC = string.Empty;
