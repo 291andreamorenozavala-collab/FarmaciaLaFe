@@ -65,7 +65,7 @@ namespace Capa_Diseño
             // 
             // PictureBox2
             // 
-            PictureBox2.BackColor = SystemColors.ActiveCaption;
+            PictureBox2.BackColor = Color.SteelBlue;
             PictureBox2.Image = (Image)resources.GetObject("PictureBox2.Image");
             PictureBox2.Location = new Point(10, 6);
             PictureBox2.Margin = new Padding(4, 3, 4, 3);
@@ -79,21 +79,22 @@ namespace Capa_Diseño
             // 
             Label2.AutoSize = true;
             Label2.BackColor = Color.Transparent;
-            Label2.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Label2.ForeColor = Color.White;
+            Label2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            Label2.ForeColor = Color.SteelBlue;
             Label2.Location = new Point(323, 73);
             Label2.Margin = new Padding(4, 0, 4, 0);
             Label2.Name = "Label2";
-            Label2.Size = new Size(182, 22);
+            Label2.Size = new Size(184, 25);
             Label2.TabIndex = 132;
             Label2.Text = "INICIO DE SESIÓN";
             // 
             // Btn_Ok
             // 
-            Btn_Ok.BackColor = Color.Transparent;
+            Btn_Ok.BackColor = Color.SteelBlue;
+            Btn_Ok.FlatAppearance.BorderSize = 0;
             Btn_Ok.FlatStyle = FlatStyle.Flat;
-            Btn_Ok.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Btn_Ok.ForeColor = Color.Transparent;
+            Btn_Ok.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            Btn_Ok.ForeColor = Color.White;
             Btn_Ok.Image = (Image)resources.GetObject("Btn_Ok.Image");
             Btn_Ok.ImageAlign = ContentAlignment.MiddleLeft;
             Btn_Ok.Location = new Point(328, 249);
@@ -108,13 +109,14 @@ namespace Capa_Diseño
             // Txt_Login
             // 
             Txt_Login.CharacterCasing = CharacterCasing.Upper;
-            Txt_Login.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Txt_Login.ForeColor = SystemColors.HotTrack;
+            Txt_Login.BackColor = Color.White;
+            Txt_Login.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            Txt_Login.ForeColor = Color.Black;
             Txt_Login.Location = new Point(323, 149);
             Txt_Login.Margin = new Padding(4, 3, 4, 3);
             Txt_Login.MaxLength = 50;
             Txt_Login.Name = "Txt_Login";
-            Txt_Login.Size = new Size(294, 23);
+            Txt_Login.Size = new Size(294, 25);
             Txt_Login.TabIndex = 129;
             Txt_Login.WordWrap = false;
             Txt_Login.TextChanged += Txt_Login_TextChanged;
@@ -124,12 +126,12 @@ namespace Capa_Diseño
             // 
             Label3.AutoSize = true;
             Label3.BackColor = Color.Transparent;
-            Label3.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Label3.ForeColor = Color.White;
+            Label3.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            Label3.ForeColor = Color.DimGray;
             Label3.Location = new Point(323, 177);
             Label3.Margin = new Padding(4, 0, 4, 0);
             Label3.Name = "Label3";
-            Label3.Size = new Size(69, 18);
+            Label3.Size = new Size(53, 19);
             Label3.TabIndex = 128;
             Label3.Text = "CLAVE:";
             // 
@@ -137,12 +139,12 @@ namespace Capa_Diseño
             // 
             Label7.AutoSize = true;
             Label7.BackColor = Color.Transparent;
-            Label7.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Label7.ForeColor = Color.White;
+            Label7.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            Label7.ForeColor = Color.DimGray;
             Label7.Location = new Point(323, 119);
             Label7.Margin = new Padding(4, 0, 4, 0);
             Label7.Name = "Label7";
-            Label7.Size = new Size(90, 18);
+            Label7.Size = new Size(74, 19);
             Label7.TabIndex = 127;
             Label7.Text = "USUARIO:";
             // 
@@ -158,8 +160,8 @@ namespace Capa_Diseño
             // 
             // Pb_Tiempo
             // 
-            Pb_Tiempo.BackColor = Color.Black;
-            Pb_Tiempo.ForeColor = Color.Navy;
+            Pb_Tiempo.BackColor = Color.Gainsboro;
+            Pb_Tiempo.ForeColor = Color.SteelBlue;
             Pb_Tiempo.Location = new Point(12, 300);
             Pb_Tiempo.Margin = new Padding(4, 3, 4, 3);
             Pb_Tiempo.MarqueeAnimationSpeed = 20;
@@ -171,13 +173,13 @@ namespace Capa_Diseño
             // Label1
             // 
             Label1.AutoSize = true;
-            Label1.BackColor = SystemColors.ActiveCaption;
-            Label1.Font = new Font("Georgia", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Label1.ForeColor = Color.Black;
+            Label1.BackColor = Color.SteelBlue;
+            Label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            Label1.ForeColor = Color.White;
             Label1.Location = new Point(47, 6);
             Label1.Margin = new Padding(4, 0, 4, 0);
             Label1.Name = "Label1";
-            Label1.Size = new Size(185, 23);
+            Label1.Size = new Size(189, 25);
             Label1.TabIndex = 123;
             Label1.Text = "FARMACIA LA FÉ";
             // 
@@ -195,11 +197,11 @@ namespace Capa_Diseño
             // 
             // Btn_Cerrar
             // 
-            Btn_Cerrar.BackColor = SystemColors.ActiveCaption;
+            Btn_Cerrar.BackColor = Color.SteelBlue;
             Btn_Cerrar.FlatAppearance.BorderSize = 0;
             Btn_Cerrar.FlatStyle = FlatStyle.Flat;
-            Btn_Cerrar.Font = new Font("Arial Rounded MT Bold", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Btn_Cerrar.ForeColor = Color.Transparent;
+            Btn_Cerrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            Btn_Cerrar.ForeColor = Color.White;
             Btn_Cerrar.Image = (Image)resources.GetObject("Btn_Cerrar.Image");
             Btn_Cerrar.Location = new Point(588, 6);
             Btn_Cerrar.Margin = new Padding(4, 3, 4, 3);
@@ -213,12 +215,12 @@ namespace Capa_Diseño
             // 
             Label4.AutoSize = true;
             Label4.BackColor = Color.Transparent;
-            Label4.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Label4.ForeColor = Color.White;
+            Label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Label4.ForeColor = Color.DimGray;
             Label4.Location = new Point(538, 353);
             Label4.Margin = new Padding(4, 0, 4, 0);
             Label4.Name = "Label4";
-            Label4.Size = new Size(80, 15);
+            Label4.Size = new Size(75, 15);
             Label4.TabIndex = 122;
             Label4.Text = "Version 1.0";
             // 
@@ -226,18 +228,18 @@ namespace Capa_Diseño
             // 
             Label5.AutoSize = true;
             Label5.BackColor = Color.Transparent;
-            Label5.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Label5.ForeColor = Color.White;
+            Label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Label5.ForeColor = Color.DimGray;
             Label5.Location = new Point(13, 353);
             Label5.Margin = new Padding(4, 0, 4, 0);
             Label5.Name = "Label5";
-            Label5.Size = new Size(218, 15);
+            Label5.Size = new Size(197, 15);
             Label5.TabIndex = 121;
             Label5.Text = "Copyright © Farmacia la Fé 2019";
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.BackColor = Color.SteelBlue;
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(4, 3, 4, 3);
             panel1.Name = "panel1";
@@ -247,13 +249,14 @@ namespace Capa_Diseño
             // Txt_Password
             // 
             Txt_Password.CharacterCasing = CharacterCasing.Upper;
-            Txt_Password.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Txt_Password.ForeColor = SystemColors.HotTrack;
+            Txt_Password.BackColor = Color.White;
+            Txt_Password.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            Txt_Password.ForeColor = Color.Black;
             Txt_Password.Location = new Point(323, 216);
             Txt_Password.Margin = new Padding(4, 3, 4, 3);
             Txt_Password.MaxLength = 50;
             Txt_Password.Name = "Txt_Password";
-            Txt_Password.Size = new Size(294, 23);
+            Txt_Password.Size = new Size(294, 25);
             Txt_Password.TabIndex = 137;
             Txt_Password.WordWrap = false;
             Txt_Password.TextChanged += Txt_Password_TextChanged_1;
@@ -262,7 +265,7 @@ namespace Capa_Diseño
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(18, 44, 69);
+            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(643, 381);
             Controls.Add(Txt_Password);
             Controls.Add(PictureBox3);
