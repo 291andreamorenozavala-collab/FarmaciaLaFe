@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Capa_Diseño
 {
-    public partial class Frm_Inicio : Form
+    public partial class Frm_Inicio : BaseForm
     {
         public Frm_Inicio()
         {
@@ -36,5 +36,12 @@ namespace Capa_Diseño
             //Fin de la Aplicacion
             this.Close();
         }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

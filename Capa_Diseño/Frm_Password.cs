@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Capa_Diseño
 {
-    public partial class Frm_Password : Form
+    public partial class Frm_Password : BaseForm
     {
         public Frm_Password()
         {

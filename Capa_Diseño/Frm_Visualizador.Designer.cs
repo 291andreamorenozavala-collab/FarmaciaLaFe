@@ -28,48 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            //this.rpt_Informes = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            //this.SuspendLayout();
-            //// 
-            //// rpt_Informes
-            //// 
-            //this.rpt_Informes.ActiveViewIndex = -1;
-            //this.rpt_Informes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            //this.rpt_Informes.Cursor = System.Windows.Forms.Cursors.Default;
-            //this.rpt_Informes.Dock = System.Windows.Forms.DockStyle.Fill;
-            //this.rpt_Informes.Location = new System.Drawing.Point(0, 0);
-            //this.rpt_Informes.Name = "rpt_Informes";
-            //this.rpt_Informes.ShowCloseButton = false;
-            //this.rpt_Informes.ShowCopyButton = false;
-            //this.rpt_Informes.ShowGroupTreeButton = false;
-            //this.rpt_Informes.ShowLogo = false;
-            //this.rpt_Informes.ShowParameterPanelButton = false;
-            //this.rpt_Informes.Size = new System.Drawing.Size(1154, 644);
-            //this.rpt_Informes.TabIndex = 0;
-            //this.rpt_Informes.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
-            //// 
-            //// Frm_Visualizador
-            //// 
-            //this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.ClientSize = new System.Drawing.Size(1154, 644);
-            //this.Controls.Add(this.rpt_Informes);
-            //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            //this.MaximizeBox = false;
-            //this.MinimizeBox = false;
-            //this.Name = "Frm_Visualizador";
-            //this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            //this.Text = "Reportes del Sistema";
-            //this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Visualizador_FormClosing);
-            //this.Load += new System.EventHandler(this.Frm_Visualizador_Load);
-            //this.VisibleChanged += new System.EventHandler(this.Frm_Visualizador_VisibleChanged);
-            //this.ResumeLayout(false);
+            dgvReporte = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvReporte).BeginInit();
+            SuspendLayout();
+
+            // dgvReporte
+            dgvReporte.AllowUserToAddRows = false;
+            dgvReporte.AllowUserToDeleteRows = false;
+            dgvReporte.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvReporte.Location = new Point(0, 0);
+            dgvReporte.Name = "dgvReporte";
+            dgvReporte.ReadOnly = true;
+            dgvReporte.RowHeadersWidth = 7;
+            dgvReporte.RowTemplate.Height = 24;
+            dgvReporte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvReporte.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvReporte.Size = new Size(500, 500);
+            dgvReporte.TabIndex = 0;
+
+            // Frm_Visualizador
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            Controls.Add(dgvReporte);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Frm_Visualizador";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Reportes del Sistema";
+            FormClosing += Frm_Visualizador_FormClosing;
+            Load += Frm_Visualizador_Load;
+            VisibleChanged += Frm_Visualizador_VisibleChanged;
+
+            ((System.ComponentModel.ISupportInitialize)dgvReporte).EndInit();
+            ResumeLayout(false);
+            ResumeLayout(true);
+
 
         }
 
         #endregion
 
-        ///    private CrystalDecisions.Windows.Forms.CrystalReportViewer rpt_Informes;
+        private System.Windows.Forms.DataGridView dgvReporte;
     }
 }
