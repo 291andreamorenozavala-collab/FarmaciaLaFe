@@ -9,8 +9,10 @@ using Capa_Logica;
 
 namespace Capa_Diseño
 {
-    static class Program
+
+    static class Program    
     {
+
         // Variables Globales
         public static string xNomb_Opcion = string.Empty;
         public static string Nombre_Quien = string.Empty;

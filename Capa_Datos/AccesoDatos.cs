@@ -12,6 +12,7 @@ namespace Capa_Datos
     public class AccesoDatos
     {
         // Campos de la Clase Extrae la Cadena de Conexion desde la Capa Diseño
+//
         private static string xCONEXION = ConfigHelper.GetConnectionString("My_DB_DATOS_01");
 
         // Los Contenedores para recepcionar los Procedimientos con sus parametros
