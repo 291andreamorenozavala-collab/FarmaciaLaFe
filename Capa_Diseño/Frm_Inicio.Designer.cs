@@ -36,7 +36,6 @@
             Label4 = new Label();
             Label6 = new Label();
             PictureBox3 = new PictureBox();
-            Label3 = new Label();
             Cmd_Cerrar = new Button();
             label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)PictureBox3).BeginInit();
@@ -48,7 +47,7 @@
             Label1.BackColor = Color.Transparent;
             Label1.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Label1.ForeColor = Color.White;
-            Label1.Location = new Point(144, 286);
+            Label1.Location = new Point(169, 285);
             Label1.Margin = new Padding(4, 0, 4, 0);
             Label1.Name = "Label1";
             Label1.Size = new Size(416, 22);
@@ -59,7 +58,7 @@
             // 
             Pb_Tiempo.BackColor = Color.Black;
             Pb_Tiempo.ForeColor = Color.Navy;
-            Pb_Tiempo.Location = new Point(124, 329);
+            Pb_Tiempo.Location = new Point(56, 373);
             Pb_Tiempo.Margin = new Padding(4);
             Pb_Tiempo.Name = "Pb_Tiempo";
             Pb_Tiempo.Size = new Size(581, 23);
@@ -94,35 +93,21 @@
             Label6.Location = new Point(10, 451);
             Label6.Margin = new Padding(4, 0, 4, 0);
             Label6.Name = "Label6";
-            Label6.Size = new Size(218, 15);
+            Label6.Size = new Size(220, 15);
             Label6.TabIndex = 98;
-            Label6.Text = "Copyright © Farmacia la Fé 2019";
+            Label6.Text = "Copyright © Farmacia la MJ 2025";
             // 
             // PictureBox3
             // 
             PictureBox3.BackColor = Color.Transparent;
             PictureBox3.Image = (Image)resources.GetObject("PictureBox3.Image");
-            PictureBox3.Location = new Point(251, 45);
+            PictureBox3.Location = new Point(262, 76);
             PictureBox3.Margin = new Padding(4);
             PictureBox3.Name = "PictureBox3";
             PictureBox3.Size = new Size(199, 185);
             PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             PictureBox3.TabIndex = 97;
             PictureBox3.TabStop = false;
-            // 
-            // Label3
-            // 
-            Label3.AutoSize = true;
-            Label3.BackColor = Color.Transparent;
-            Label3.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Label3.ForeColor = Color.White;
-            Label3.Location = new Point(268, 241);
-            Label3.Margin = new Padding(4, 0, 4, 0);
-            Label3.Name = "Label3";
-            Label3.Size = new Size(173, 22);
-            Label3.TabIndex = 96;
-            Label3.Text = "FARMACIA SABA";
-            Label3.Click += Label3_Click;
             // 
             // Cmd_Cerrar
             // 
@@ -146,7 +131,7 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(10, 329);
+            label5.Location = new Point(310, 332);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(93, 22);
@@ -159,7 +144,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(254, 240, 225);
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            BackgroundImageLayout = ImageLayout.Stretch;
+            BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(718, 485);
             Controls.Add(label5);
             Controls.Add(Label1);
@@ -167,14 +152,19 @@
             Controls.Add(Label4);
             Controls.Add(Label6);
             Controls.Add(PictureBox3);
-            Controls.Add(Label3);
             Controls.Add(Cmd_Cerrar);
-            DoubleBuffered = true;
             Margin = new Padding(4);
-            Name = "Frm_Inicio";
+            Name = "Farmacia MJ";
             ShowInTaskbar = false;
-            Text = "Frm_Inicio";
+            Text = "Farmacia MJ";
             Load += Frm_Inicio_Load;
+            Controls.SetChildIndex(Cmd_Cerrar, 0);
+            Controls.SetChildIndex(PictureBox3, 0);
+            Controls.SetChildIndex(Label6, 0);
+            Controls.SetChildIndex(Label4, 0);
+            Controls.SetChildIndex(Pb_Tiempo, 0);
+            Controls.SetChildIndex(Label1, 0);
+            Controls.SetChildIndex(label5, 0);
             ((System.ComponentModel.ISupportInitialize)PictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -183,13 +173,14 @@
 
         #endregion
 
-        internal System.Windows.Forms.Label Label1;
+     
+       internal System.Windows.Forms.Label Label1;
+    
         internal System.Windows.Forms.ProgressBar Pb_Tiempo;
         internal System.Windows.Forms.Timer Timer1;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.PictureBox PictureBox3;
-        internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Button Cmd_Cerrar;
         internal System.Windows.Forms.Label label5;
     }

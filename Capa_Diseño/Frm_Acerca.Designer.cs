@@ -29,209 +29,220 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Acerca));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Pb_Tiempo = new System.Windows.Forms.ProgressBar();
-            this.Label6 = new System.Windows.Forms.Label();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Label5 = new System.Windows.Forms.Label();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.Btn_Cerrar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            pictureBox2 = new PictureBox();
+            Pb_Tiempo = new ProgressBar();
+            Label6 = new Label();
+            PictureBox1 = new PictureBox();
+            Label5 = new Label();
+            Label4 = new Label();
+            Label3 = new Label();
+            Label2 = new Label();
+            Label1 = new Label();
+            label7 = new Label();
+            pictureBox3 = new PictureBox();
+            Btn_Cerrar = new Button();
+            panel1 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 110);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1015, 4);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 149;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(14, 127);
+            pictureBox2.Margin = new Padding(4, 3, 4, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(1184, 5);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 149;
+            pictureBox2.TabStop = false;
             // 
             // Pb_Tiempo
             // 
-            this.Pb_Tiempo.BackColor = System.Drawing.Color.Black;
-            this.Pb_Tiempo.ForeColor = System.Drawing.Color.Navy;
-            this.Pb_Tiempo.Location = new System.Drawing.Point(11, 553);
-            this.Pb_Tiempo.MarqueeAnimationSpeed = 20;
-            this.Pb_Tiempo.Name = "Pb_Tiempo";
-            this.Pb_Tiempo.Size = new System.Drawing.Size(1016, 15);
-            this.Pb_Tiempo.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.Pb_Tiempo.TabIndex = 148;
+            Pb_Tiempo.BackColor = Color.Black;
+            Pb_Tiempo.ForeColor = Color.Navy;
+            Pb_Tiempo.Location = new Point(13, 638);
+            Pb_Tiempo.Margin = new Padding(4, 3, 4, 3);
+            Pb_Tiempo.MarqueeAnimationSpeed = 20;
+            Pb_Tiempo.Name = "Pb_Tiempo";
+            Pb_Tiempo.Size = new Size(1185, 17);
+            Pb_Tiempo.Style = ProgressBarStyle.Marquee;
+            Pb_Tiempo.TabIndex = 148;
             // 
             // Label6
             // 
-            this.Label6.AutoSize = true;
-            this.Label6.BackColor = System.Drawing.Color.Transparent;
-            this.Label6.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label6.ForeColor = System.Drawing.Color.White;
-            this.Label6.Location = new System.Drawing.Point(447, 406);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(432, 63);
-            this.Label6.TabIndex = 147;
-            this.Label6.Text = "Elaborado por: \r\n               GENESIS ANIELKA MARTINEZ SANTANA\r\n               " +
-    "RONALD ERNESTO SÁNCHEZ COLOMER";
+            Label6.AutoSize = true;
+            Label6.BackColor = Color.Transparent;
+            Label6.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Label6.ForeColor = Color.White;
+            Label6.Location = new Point(677, 434);
+            Label6.Margin = new Padding(4, 0, 4, 0);
+            Label6.Name = "Label6";
+            Label6.Size = new Size(229, 63);
+            Label6.TabIndex = 147;
+            Label6.Text = "Elaborado por: \r\n               Michell Moreno\r\n               Juan Membreno";
             // 
             // PictureBox1
             // 
-            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
-            this.PictureBox1.Location = new System.Drawing.Point(1, 141);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(450, 383);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox1.TabIndex = 146;
-            this.PictureBox1.TabStop = false;
+            PictureBox1.Image = (Image)resources.GetObject("PictureBox1.Image");
+            PictureBox1.Location = new Point(1, 163);
+            PictureBox1.Margin = new Padding(4, 3, 4, 3);
+            PictureBox1.Name = "PictureBox1";
+            PictureBox1.Size = new Size(525, 442);
+            PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            PictureBox1.TabIndex = 146;
+            PictureBox1.TabStop = false;
             // 
             // Label5
             // 
-            this.Label5.BackColor = System.Drawing.Color.Transparent;
-            this.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.ForeColor = System.Drawing.Color.White;
-            this.Label5.Location = new System.Drawing.Point(451, 280);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(531, 101);
-            this.Label5.TabIndex = 145;
-            this.Label5.Text = "Sistema de Facturación de Farmacia, es diseñado bajo la platafoma de Windows y de" +
-    "sarrollado en Visual Estudio 2015, La base de datos se alamcena en el gestor de " +
-    "Base de Datos SQL-Server 2014. ";
+            Label5.BackColor = Color.Transparent;
+            Label5.BorderStyle = BorderStyle.FixedSingle;
+            Label5.FlatStyle = FlatStyle.Flat;
+            Label5.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Label5.ForeColor = Color.White;
+            Label5.Location = new Point(561, 307);
+            Label5.Margin = new Padding(4, 0, 4, 0);
+            Label5.Name = "Label5";
+            Label5.Size = new Size(557, 116);
+            Label5.TabIndex = 145;
+            Label5.Text = "Sistema de Facturación de Farmacia, es diseñado bajo la platafoma de Windows y desarrollado en Visual studio 2025, La base de datos se alamcena en el gestor de Base de Datos SQL-Server 2022. ";
             // 
             // Label4
             // 
-            this.Label4.AutoSize = true;
-            this.Label4.BackColor = System.Drawing.Color.Transparent;
-            this.Label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.ForeColor = System.Drawing.Color.White;
-            this.Label4.Location = new System.Drawing.Point(671, 184);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(100, 23);
-            this.Label4.TabIndex = 144;
-            this.Label4.Text = "Version 1.0";
+            Label4.AutoSize = true;
+            Label4.BackColor = Color.Transparent;
+            Label4.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Label4.ForeColor = Color.White;
+            Label4.Location = new Point(783, 212);
+            Label4.Margin = new Padding(4, 0, 4, 0);
+            Label4.Name = "Label4";
+            Label4.Size = new Size(100, 23);
+            Label4.TabIndex = 144;
+            Label4.Text = "Version 1.1";
             // 
             // Label3
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.BackColor = System.Drawing.Color.Transparent;
-            this.Label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.ForeColor = System.Drawing.Color.White;
-            this.Label3.Location = new System.Drawing.Point(580, 228);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(273, 23);
-            this.Label3.TabIndex = 143;
-            this.Label3.Text = "Copyright © Farmacia la Fé 2019";
+            Label3.AutoSize = true;
+            Label3.BackColor = Color.Transparent;
+            Label3.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Label3.ForeColor = Color.White;
+            Label3.Location = new Point(677, 263);
+            Label3.Margin = new Padding(4, 0, 4, 0);
+            Label3.Name = "Label3";
+            Label3.Size = new Size(259, 23);
+            Label3.TabIndex = 143;
+            Label3.Text = "Copyright © Farmacia MJ 2025";
+            Label3.Click += Label3_Click;
             // 
             // Label2
             // 
-            this.Label2.AutoSize = true;
-            this.Label2.BackColor = System.Drawing.Color.Transparent;
-            this.Label2.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.ForeColor = System.Drawing.Color.White;
-            this.Label2.Location = new System.Drawing.Point(354, 51);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(329, 45);
-            this.Label2.TabIndex = 141;
-            this.Label2.Text = "FARMACIA LA \"FE\"";
+            Label2.AutoSize = true;
+            Label2.BackColor = Color.Transparent;
+            Label2.Font = new Font("Comic Sans MS", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Label2.ForeColor = Color.White;
+            Label2.Location = new Point(413, 59);
+            Label2.Margin = new Padding(4, 0, 4, 0);
+            Label2.Name = "Label2";
+            Label2.Size = new Size(339, 45);
+            Label2.TabIndex = 141;
+            Label2.Text = "FARMACIA LA \"MJ\"";
             // 
             // Label1
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.BackColor = System.Drawing.Color.Transparent;
-            this.Label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.ForeColor = System.Drawing.Color.White;
-            this.Label1.Location = new System.Drawing.Point(510, 141);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(436, 27);
-            this.Label1.TabIndex = 142;
-            this.Label1.Text = "SISTEMA DE FARMACIA DE FACTURACIÓN";
+            Label1.AutoSize = true;
+            Label1.BackColor = Color.Transparent;
+            Label1.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Label1.ForeColor = Color.White;
+            Label1.Location = new Point(595, 163);
+            Label1.Margin = new Padding(4, 0, 4, 0);
+            Label1.Name = "Label1";
+            Label1.Size = new Size(436, 27);
+            Label1.TabIndex = 142;
+            Label1.Text = "SISTEMA DE FARMACIA DE FACTURACIÓN";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label7.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(46, 6);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(213, 23);
-            this.label7.TabIndex = 137;
-            this.label7.Text = "Acerca del Sistema...";
+            label7.AutoSize = true;
+            label7.BackColor = SystemColors.ActiveCaption;
+            label7.Font = new Font("Georgia", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(54, 7);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(213, 23);
+            label7.TabIndex = 137;
+            label7.Text = "Acerca del Sistema...";
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(11, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 139;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.BackColor = SystemColors.ActiveCaption;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(13, 6);
+            pictureBox3.Margin = new Padding(4, 3, 4, 3);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(34, 28);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 139;
+            pictureBox3.TabStop = false;
             // 
             // Btn_Cerrar
             // 
-            this.Btn_Cerrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Btn_Cerrar.FlatAppearance.BorderSize = 0;
-            this.Btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Cerrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Cerrar.ForeColor = System.Drawing.Color.Transparent;
-            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
-            this.Btn_Cerrar.Location = new System.Drawing.Point(991, 5);
-            this.Btn_Cerrar.Name = "Btn_Cerrar";
-            this.Btn_Cerrar.Size = new System.Drawing.Size(37, 23);
-            this.Btn_Cerrar.TabIndex = 138;
-            this.Btn_Cerrar.UseVisualStyleBackColor = false;
-            this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
+            Btn_Cerrar.BackColor = SystemColors.ActiveCaption;
+            Btn_Cerrar.FlatAppearance.BorderSize = 0;
+            Btn_Cerrar.FlatStyle = FlatStyle.Flat;
+            Btn_Cerrar.Font = new Font("Arial Rounded MT Bold", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Btn_Cerrar.ForeColor = Color.Transparent;
+            Btn_Cerrar.Image = (Image)resources.GetObject("Btn_Cerrar.Image");
+            Btn_Cerrar.Location = new Point(1156, 6);
+            Btn_Cerrar.Margin = new Padding(4, 3, 4, 3);
+            Btn_Cerrar.Name = "Btn_Cerrar";
+            Btn_Cerrar.Size = new Size(43, 27);
+            Btn_Cerrar.TabIndex = 138;
+            Btn_Cerrar.UseVisualStyleBackColor = false;
+            Btn_Cerrar.Click += Btn_Cerrar_Click;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.Btn_Cerrar);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1040, 35);
-            this.panel1.TabIndex = 150;
+            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(pictureBox3);
+            panel1.Controls.Add(Btn_Cerrar);
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1213, 40);
+            panel1.TabIndex = 150;
             // 
             // Frm_Acerca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(44)))), ((int)(((byte)(69)))));
-            this.ClientSize = new System.Drawing.Size(1040, 574);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.Pb_Tiempo);
-            this.Controls.Add(this.Label6);
-            this.Controls.Add(this.PictureBox1);
-            this.Controls.Add(this.Label5);
-            this.Controls.Add(this.Label4);
-            this.Controls.Add(this.Label3);
-            this.Controls.Add(this.Label2);
-            this.Controls.Add(this.Label1);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Frm_Acerca";
-            this.Text = "Frm_Acerca";
-            this.Load += new System.EventHandler(this.Frm_Acerca_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 128, 128);
+            ClientSize = new Size(1213, 662);
+            Controls.Add(pictureBox2);
+            Controls.Add(Pb_Tiempo);
+            Controls.Add(Label6);
+            Controls.Add(PictureBox1);
+            Controls.Add(Label5);
+            Controls.Add(Label4);
+            Controls.Add(Label3);
+            Controls.Add(Label2);
+            Controls.Add(Label1);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
+            Name = "Frm_Acerca";
+            Text = "Frm_Acerca";
+            Load += Frm_Acerca_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

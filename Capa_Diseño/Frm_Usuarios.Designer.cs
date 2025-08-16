@@ -1,6 +1,6 @@
 ﻿namespace Capa_Diseño
 {
-    partial class Frm_Usuarios
+    partial class Frm_Usuarios 
     {
         /// <summary>
         /// Required designer variable.
@@ -28,406 +28,404 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Usuarios));
-            this.Cmd_Cancelar = new System.Windows.Forms.Button();
-            this.Label9 = new System.Windows.Forms.Label();
-            this.Txt_Filtro = new System.Windows.Forms.TextBox();
-            this.Lbl_Contador = new System.Windows.Forms.Label();
-            this.Lv_Usuarios = new System.Windows.Forms.ListView();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.Cbo_Tipo = new System.Windows.Forms.ComboBox();
-            this.Txt_Usuario = new System.Windows.Forms.TextBox();
-            this.Txt_Login = new System.Windows.Forms.TextBox();
-            this.Chk_Activo = new System.Windows.Forms.CheckBox();
-            this.Label5 = new System.Windows.Forms.Label();
-            this.Cmd_Nuevo = new System.Windows.Forms.Button();
-            this.Cmd_Editar = new System.Windows.Forms.Button();
-            this.Cmd_Guardar = new System.Windows.Forms.Button();
-            this.Txt_Password = new System.Windows.Forms.TextBox();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.Label8 = new System.Windows.Forms.Label();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.Txt_Codigo = new System.Windows.Forms.TextBox();
-            this.Btn_Cerrar = new System.Windows.Forms.Button();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Imagenes = new System.Windows.Forms.ImageList(this.components);
-            this.ep_Error = new System.Windows.Forms.ErrorProvider(this.components);
-            this.GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ep_Error)).BeginInit();
-            this.SuspendLayout();
+            Cmd_Cancelar = new Button();
+            Label9 = new Label();
+            Txt_Filtro = new TextBox();
+            Lbl_Contador = new Label();
+            Lv_Usuarios = new ListView();
+            Label1 = new Label();
+            Cbo_Tipo = new ComboBox();
+            Txt_Usuario = new TextBox();
+            Txt_Login = new TextBox();
+            Chk_Activo = new CheckBox();
+            Label5 = new Label();
+            Cmd_Nuevo = new Button();
+            Cmd_Editar = new Button();
+            Cmd_Guardar = new Button();
+            Txt_Password = new TextBox();
+            Label4 = new Label();
+            Label3 = new Label();
+            Label7 = new Label();
+            Label8 = new Label();
+            GroupBox1 = new GroupBox();
+            Txt_Codigo = new TextBox();
+            Btn_Cerrar = new Button();
+            PictureBox1 = new PictureBox();
+            Imagenes = new ImageList(components);
+            ep_Error = new ErrorProvider(components);
+            GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ep_Error).BeginInit();
+            SuspendLayout();
             // 
             // Cmd_Cancelar
             // 
-            this.Cmd_Cancelar.BackColor = System.Drawing.Color.Transparent;
-            this.Cmd_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cmd_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmd_Cancelar.ForeColor = System.Drawing.Color.White;
-            this.Cmd_Cancelar.Image = ((System.Drawing.Image)(resources.GetObject("Cmd_Cancelar.Image")));
-            this.Cmd_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cmd_Cancelar.Location = new System.Drawing.Point(608, 63);
-            this.Cmd_Cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Cmd_Cancelar.Name = "Cmd_Cancelar";
-            this.Cmd_Cancelar.Size = new System.Drawing.Size(171, 37);
-            this.Cmd_Cancelar.TabIndex = 89;
-            this.Cmd_Cancelar.Text = "Cancelar";
-            this.Cmd_Cancelar.UseVisualStyleBackColor = false;
-            this.Cmd_Cancelar.Click += new System.EventHandler(this.Cmd_Cancelar_Click);
+            Cmd_Cancelar.BackColor = Color.IndianRed;
+            Cmd_Cancelar.FlatStyle = FlatStyle.Flat;
+            Cmd_Cancelar.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Cmd_Cancelar.ForeColor = Color.White;
+            Cmd_Cancelar.Image = (Image)resources.GetObject("Cmd_Cancelar.Image");
+            Cmd_Cancelar.ImageAlign = ContentAlignment.MiddleLeft;
+            Cmd_Cancelar.Location = new Point(532, 59);
+            Cmd_Cancelar.Margin = new Padding(4);
+            Cmd_Cancelar.Name = "Cmd_Cancelar";
+            Cmd_Cancelar.Size = new Size(150, 35);
+            Cmd_Cancelar.TabIndex = 89;
+            Cmd_Cancelar.Text = "Cancelar";
+            Cmd_Cancelar.UseVisualStyleBackColor = false;
+            Cmd_Cancelar.Click += Cmd_Cancelar_Click;
             // 
             // Label9
             // 
-            this.Label9.AutoSize = true;
-            this.Label9.BackColor = System.Drawing.Color.Transparent;
-            this.Label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label9.ForeColor = System.Drawing.Color.White;
-            this.Label9.Location = new System.Drawing.Point(11, 559);
-            this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(239, 20);
-            this.Label9.TabIndex = 45;
-            this.Label9.Text = "Buscar Usuario por nombre:";
-            this.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            Label9.AutoSize = true;
+            Label9.BackColor = Color.Transparent;
+            Label9.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label9.ForeColor = Color.White;
+            Label9.Location = new Point(10, 524);
+            Label9.Margin = new Padding(4, 0, 4, 0);
+            Label9.Name = "Label9";
+            Label9.Size = new Size(189, 15);
+            Label9.TabIndex = 45;
+            Label9.Text = "Buscar Usuario por nombre:";
+            Label9.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // Txt_Filtro
             // 
-            this.Txt_Filtro.BackColor = System.Drawing.Color.White;
-            this.Txt_Filtro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Txt_Filtro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Filtro.Location = new System.Drawing.Point(271, 556);
-            this.Txt_Filtro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_Filtro.Name = "Txt_Filtro";
-            this.Txt_Filtro.Size = new System.Drawing.Size(844, 25);
-            this.Txt_Filtro.TabIndex = 44;
-            this.Txt_Filtro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Filtro_KeyPress);
+            Txt_Filtro.BackColor = Color.White;
+            Txt_Filtro.CharacterCasing = CharacterCasing.Upper;
+            Txt_Filtro.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txt_Filtro.Location = new Point(237, 521);
+            Txt_Filtro.Margin = new Padding(4);
+            Txt_Filtro.Name = "Txt_Filtro";
+            Txt_Filtro.Size = new Size(739, 21);
+            Txt_Filtro.TabIndex = 44;
+            Txt_Filtro.KeyPress += Txt_Filtro_KeyPress;
             // 
             // Lbl_Contador
             // 
-            this.Lbl_Contador.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_Contador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lbl_Contador.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Contador.ForeColor = System.Drawing.Color.White;
-            this.Lbl_Contador.Location = new System.Drawing.Point(1129, 558);
-            this.Lbl_Contador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_Contador.Name = "Lbl_Contador";
-            this.Lbl_Contador.Size = new System.Drawing.Size(213, 23);
-            this.Lbl_Contador.TabIndex = 43;
-            this.Lbl_Contador.Text = "Registro:";
+            Lbl_Contador.BackColor = Color.Transparent;
+            Lbl_Contador.BorderStyle = BorderStyle.FixedSingle;
+            Lbl_Contador.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Lbl_Contador.ForeColor = Color.White;
+            Lbl_Contador.Location = new Point(988, 523);
+            Lbl_Contador.Margin = new Padding(4, 0, 4, 0);
+            Lbl_Contador.Name = "Lbl_Contador";
+            Lbl_Contador.Size = new Size(187, 22);
+            Lbl_Contador.TabIndex = 43;
+            Lbl_Contador.Text = "Registro:";
             // 
             // Lv_Usuarios
             // 
-            this.Lv_Usuarios.BackColor = System.Drawing.Color.Thistle;
-            this.Lv_Usuarios.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lv_Usuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Lv_Usuarios.FullRowSelect = true;
-            this.Lv_Usuarios.GridLines = true;
-            this.Lv_Usuarios.LabelWrap = false;
-            this.Lv_Usuarios.Location = new System.Drawing.Point(15, 140);
-            this.Lv_Usuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Lv_Usuarios.MultiSelect = false;
-            this.Lv_Usuarios.Name = "Lv_Usuarios";
-            this.Lv_Usuarios.ShowGroups = false;
-            this.Lv_Usuarios.Size = new System.Drawing.Size(1327, 402);
-            this.Lv_Usuarios.TabIndex = 42;
-            this.Lv_Usuarios.UseCompatibleStateImageBehavior = false;
-            this.Lv_Usuarios.View = System.Windows.Forms.View.Details;
-            this.Lv_Usuarios.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.Lv_Usuarios_ItemSelectionChanged);
-            this.Lv_Usuarios.DoubleClick += new System.EventHandler(this.Lv_Usuarios_DoubleClick);
+            Lv_Usuarios.BackColor = Color.Thistle;
+            Lv_Usuarios.Font = new Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Lv_Usuarios.ForeColor = Color.FromArgb(0, 0, 64);
+            Lv_Usuarios.FullRowSelect = true;
+            Lv_Usuarios.GridLines = true;
+            Lv_Usuarios.LabelWrap = false;
+            Lv_Usuarios.Location = new Point(13, 131);
+            Lv_Usuarios.Margin = new Padding(4);
+            Lv_Usuarios.MultiSelect = false;
+            Lv_Usuarios.Name = "Lv_Usuarios";
+            Lv_Usuarios.ShowGroups = false;
+            Lv_Usuarios.Size = new Size(1162, 377);
+            Lv_Usuarios.TabIndex = 42;
+            Lv_Usuarios.UseCompatibleStateImageBehavior = false;
+            Lv_Usuarios.View = View.Details;
+            Lv_Usuarios.ItemSelectionChanged += Lv_Usuarios_ItemSelectionChanged;
+            Lv_Usuarios.DoubleClick += Lv_Usuarios_DoubleClick;
             // 
             // Label1
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.BackColor = System.Drawing.Color.Transparent;
-            this.Label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.ForeColor = System.Drawing.Color.White;
-            this.Label1.Location = new System.Drawing.Point(17, 9);
-            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(221, 23);
-            this.Label1.TabIndex = 94;
-            this.Label1.Text = "Registro de Usuarios:";
+            Label1.AutoSize = true;
+            Label1.BackColor = Color.Transparent;
+            Label1.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label1.ForeColor = Color.White;
+            Label1.Location = new Point(15, 8);
+            Label1.Margin = new Padding(4, 0, 4, 0);
+            Label1.Name = "Label1";
+            Label1.Size = new Size(180, 18);
+            Label1.TabIndex = 94;
+            Label1.Text = "Registro de Usuarios:";
             // 
             // Cbo_Tipo
             // 
-            this.Cbo_Tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cbo_Tipo.FormattingEnabled = true;
-            this.Cbo_Tipo.Items.AddRange(new object[] {
-            "ADMINISTRADOR",
-            "GRABADOR",
-            "CONSULTOR"});
-            this.Cbo_Tipo.Location = new System.Drawing.Point(857, 100);
-            this.Cbo_Tipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Cbo_Tipo.Name = "Cbo_Tipo";
-            this.Cbo_Tipo.Size = new System.Drawing.Size(484, 26);
-            this.Cbo_Tipo.TabIndex = 47;
-            this.Cbo_Tipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Cbo_Tipo_KeyPress);
+            Cbo_Tipo.DropDownStyle = ComboBoxStyle.DropDownList;
+            Cbo_Tipo.FormattingEnabled = true;
+            Cbo_Tipo.Items.AddRange(new object[] { "ADMINISTRADOR", "GRABADOR", "CONSULTOR" });
+            Cbo_Tipo.Location = new Point(750, 94);
+            Cbo_Tipo.Margin = new Padding(4);
+            Cbo_Tipo.Name = "Cbo_Tipo";
+            Cbo_Tipo.Size = new Size(424, 23);
+            Cbo_Tipo.TabIndex = 47;
+            Cbo_Tipo.KeyPress += Cbo_Tipo_KeyPress;
             // 
             // Txt_Usuario
             // 
-            this.Txt_Usuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Txt_Usuario.Location = new System.Drawing.Point(212, 100);
-            this.Txt_Usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_Usuario.Name = "Txt_Usuario";
-            this.Txt_Usuario.Size = new System.Drawing.Size(484, 24);
-            this.Txt_Usuario.TabIndex = 46;
-            this.Txt_Usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Usuario_KeyPress);
+            Txt_Usuario.CharacterCasing = CharacterCasing.Upper;
+            Txt_Usuario.Location = new Point(186, 94);
+            Txt_Usuario.Margin = new Padding(4);
+            Txt_Usuario.Name = "Txt_Usuario";
+            Txt_Usuario.Size = new Size(424, 21);
+            Txt_Usuario.TabIndex = 46;
+            Txt_Usuario.KeyPress += Txt_Usuario_KeyPress;
             // 
             // Txt_Login
             // 
-            this.Txt_Login.BackColor = System.Drawing.Color.White;
-            this.Txt_Login.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Txt_Login.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Login.Location = new System.Drawing.Point(212, 66);
-            this.Txt_Login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_Login.Name = "Txt_Login";
-            this.Txt_Login.Size = new System.Drawing.Size(484, 25);
-            this.Txt_Login.TabIndex = 34;
-            this.Txt_Login.WordWrap = false;
-            this.Txt_Login.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Login_KeyPress);
+            Txt_Login.BackColor = Color.White;
+            Txt_Login.CharacterCasing = CharacterCasing.Upper;
+            Txt_Login.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txt_Login.Location = new Point(186, 62);
+            Txt_Login.Margin = new Padding(4);
+            Txt_Login.Name = "Txt_Login";
+            Txt_Login.Size = new Size(424, 21);
+            Txt_Login.TabIndex = 34;
+            Txt_Login.WordWrap = false;
+            Txt_Login.KeyPress += Txt_Login_KeyPress;
             // 
             // Chk_Activo
             // 
-            this.Chk_Activo.AutoSize = true;
-            this.Chk_Activo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chk_Activo.ForeColor = System.Drawing.Color.White;
-            this.Chk_Activo.Location = new System.Drawing.Point(321, 32);
-            this.Chk_Activo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Chk_Activo.Name = "Chk_Activo";
-            this.Chk_Activo.Size = new System.Drawing.Size(83, 24);
-            this.Chk_Activo.TabIndex = 41;
-            this.Chk_Activo.Text = "Activo";
-            this.Chk_Activo.UseVisualStyleBackColor = true;
+            Chk_Activo.AutoSize = true;
+            Chk_Activo.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Chk_Activo.ForeColor = Color.White;
+            Chk_Activo.Location = new Point(281, 30);
+            Chk_Activo.Margin = new Padding(4);
+            Chk_Activo.Name = "Chk_Activo";
+            Chk_Activo.Size = new Size(67, 19);
+            Chk_Activo.TabIndex = 41;
+            Chk_Activo.Text = "Activo";
+            Chk_Activo.UseVisualStyleBackColor = true;
             // 
             // Label5
             // 
-            this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.ForeColor = System.Drawing.Color.White;
-            this.Label5.Location = new System.Drawing.Point(700, 105);
-            this.Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(144, 20);
-            this.Label5.TabIndex = 39;
-            this.Label5.Text = "Tipo de Usuario:";
+            Label5.AutoSize = true;
+            Label5.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label5.ForeColor = Color.White;
+            Label5.Location = new Point(612, 98);
+            Label5.Margin = new Padding(4, 0, 4, 0);
+            Label5.Name = "Label5";
+            Label5.Size = new Size(112, 15);
+            Label5.TabIndex = 39;
+            Label5.Text = "Tipo de Usuario:";
             // 
             // Cmd_Nuevo
             // 
-            this.Cmd_Nuevo.BackColor = System.Drawing.Color.Transparent;
-            this.Cmd_Nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cmd_Nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmd_Nuevo.ForeColor = System.Drawing.Color.White;
-            this.Cmd_Nuevo.Image = ((System.Drawing.Image)(resources.GetObject("Cmd_Nuevo.Image")));
-            this.Cmd_Nuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cmd_Nuevo.Location = new System.Drawing.Point(23, 63);
-            this.Cmd_Nuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Cmd_Nuevo.Name = "Cmd_Nuevo";
-            this.Cmd_Nuevo.Size = new System.Drawing.Size(171, 37);
-            this.Cmd_Nuevo.TabIndex = 87;
-            this.Cmd_Nuevo.Text = "Agregar";
-            this.Cmd_Nuevo.UseVisualStyleBackColor = false;
-            this.Cmd_Nuevo.Click += new System.EventHandler(this.Cmd_Nuevo_Click);
+            Cmd_Nuevo.BackColor = Color.IndianRed;
+            Cmd_Nuevo.FlatStyle = FlatStyle.Flat;
+            Cmd_Nuevo.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Cmd_Nuevo.ForeColor = Color.White;
+            Cmd_Nuevo.Image = (Image)resources.GetObject("Cmd_Nuevo.Image");
+            Cmd_Nuevo.ImageAlign = ContentAlignment.MiddleLeft;
+            Cmd_Nuevo.Location = new Point(20, 59);
+            Cmd_Nuevo.Margin = new Padding(4);
+            Cmd_Nuevo.Name = "Cmd_Nuevo";
+            Cmd_Nuevo.Size = new Size(150, 35);
+            Cmd_Nuevo.TabIndex = 87;
+            Cmd_Nuevo.Text = "Agregar";
+            Cmd_Nuevo.UseVisualStyleBackColor = false;
+            Cmd_Nuevo.Click += Cmd_Nuevo_Click;
             // 
             // Cmd_Editar
             // 
-            this.Cmd_Editar.BackColor = System.Drawing.Color.Transparent;
-            this.Cmd_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cmd_Editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmd_Editar.ForeColor = System.Drawing.Color.White;
-            this.Cmd_Editar.Image = ((System.Drawing.Image)(resources.GetObject("Cmd_Editar.Image")));
-            this.Cmd_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cmd_Editar.Location = new System.Drawing.Point(909, 63);
-            this.Cmd_Editar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Cmd_Editar.Name = "Cmd_Editar";
-            this.Cmd_Editar.Size = new System.Drawing.Size(171, 37);
-            this.Cmd_Editar.TabIndex = 90;
-            this.Cmd_Editar.Text = "Editar";
-            this.Cmd_Editar.UseVisualStyleBackColor = false;
-            this.Cmd_Editar.Click += new System.EventHandler(this.Cmd_Editar_Click);
+            Cmd_Editar.BackColor = Color.IndianRed;
+            Cmd_Editar.FlatStyle = FlatStyle.Flat;
+            Cmd_Editar.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Cmd_Editar.ForeColor = Color.White;
+            Cmd_Editar.Image = (Image)resources.GetObject("Cmd_Editar.Image");
+            Cmd_Editar.ImageAlign = ContentAlignment.MiddleLeft;
+            Cmd_Editar.Location = new Point(795, 59);
+            Cmd_Editar.Margin = new Padding(4);
+            Cmd_Editar.Name = "Cmd_Editar";
+            Cmd_Editar.Size = new Size(150, 35);
+            Cmd_Editar.TabIndex = 90;
+            Cmd_Editar.Text = "Editar";
+            Cmd_Editar.UseVisualStyleBackColor = false;
+            Cmd_Editar.Click += Cmd_Editar_Click;
             // 
             // Cmd_Guardar
             // 
-            this.Cmd_Guardar.BackColor = System.Drawing.Color.Transparent;
-            this.Cmd_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cmd_Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmd_Guardar.ForeColor = System.Drawing.Color.White;
-            this.Cmd_Guardar.Image = ((System.Drawing.Image)(resources.GetObject("Cmd_Guardar.Image")));
-            this.Cmd_Guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cmd_Guardar.Location = new System.Drawing.Point(315, 63);
-            this.Cmd_Guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Cmd_Guardar.Name = "Cmd_Guardar";
-            this.Cmd_Guardar.Size = new System.Drawing.Size(171, 37);
-            this.Cmd_Guardar.TabIndex = 88;
-            this.Cmd_Guardar.Text = "Guardar";
-            this.Cmd_Guardar.UseVisualStyleBackColor = false;
-            this.Cmd_Guardar.Click += new System.EventHandler(this.Cmd_Guardar_Click);
+            Cmd_Guardar.BackColor = Color.IndianRed;
+            Cmd_Guardar.FlatStyle = FlatStyle.Flat;
+            Cmd_Guardar.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Cmd_Guardar.ForeColor = Color.White;
+            Cmd_Guardar.Image = (Image)resources.GetObject("Cmd_Guardar.Image");
+            Cmd_Guardar.ImageAlign = ContentAlignment.MiddleLeft;
+            Cmd_Guardar.Location = new Point(276, 59);
+            Cmd_Guardar.Margin = new Padding(4);
+            Cmd_Guardar.Name = "Cmd_Guardar";
+            Cmd_Guardar.Size = new Size(150, 35);
+            Cmd_Guardar.TabIndex = 88;
+            Cmd_Guardar.Text = "Guardar";
+            Cmd_Guardar.UseVisualStyleBackColor = false;
+            Cmd_Guardar.Click += Cmd_Guardar_Click;
             // 
             // Txt_Password
             // 
-            this.Txt_Password.BackColor = System.Drawing.Color.White;
-            this.Txt_Password.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Txt_Password.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Password.Location = new System.Drawing.Point(857, 66);
-            this.Txt_Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_Password.Name = "Txt_Password";
-            this.Txt_Password.PasswordChar = '*';
-            this.Txt_Password.Size = new System.Drawing.Size(484, 25);
-            this.Txt_Password.TabIndex = 38;
-            this.Txt_Password.WordWrap = false;
-            this.Txt_Password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Password_KeyPress);
+            Txt_Password.BackColor = Color.White;
+            Txt_Password.CharacterCasing = CharacterCasing.Upper;
+            Txt_Password.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txt_Password.Location = new Point(750, 62);
+            Txt_Password.Margin = new Padding(4);
+            Txt_Password.Name = "Txt_Password";
+            Txt_Password.PasswordChar = '*';
+            Txt_Password.Size = new Size(424, 21);
+            Txt_Password.TabIndex = 38;
+            Txt_Password.WordWrap = false;
+            Txt_Password.KeyPress += Txt_Password_KeyPress;
             // 
             // Label4
             // 
-            this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.ForeColor = System.Drawing.Color.White;
-            this.Label4.Location = new System.Drawing.Point(733, 69);
-            this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(109, 20);
-            this.Label4.TabIndex = 37;
-            this.Label4.Text = "Contraseña:";
+            Label4.AutoSize = true;
+            Label4.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label4.ForeColor = Color.White;
+            Label4.Location = new Point(641, 65);
+            Label4.Margin = new Padding(4, 0, 4, 0);
+            Label4.Name = "Label4";
+            Label4.Size = new Size(87, 15);
+            Label4.TabIndex = 37;
+            Label4.Text = "Contraseña:";
             // 
             // Label3
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.ForeColor = System.Drawing.Color.White;
-            this.Label3.Location = new System.Drawing.Point(17, 105);
-            this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(178, 20);
-            this.Label3.TabIndex = 35;
-            this.Label3.Text = "Nombre del Usuario:";
+            Label3.AutoSize = true;
+            Label3.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label3.ForeColor = Color.White;
+            Label3.Location = new Point(15, 98);
+            Label3.Margin = new Padding(4, 0, 4, 0);
+            Label3.Name = "Label3";
+            Label3.Size = new Size(140, 15);
+            Label3.TabIndex = 35;
+            Label3.Text = "Nombre del Usuario:";
             // 
             // Label7
             // 
-            this.Label7.AutoSize = true;
-            this.Label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.ForeColor = System.Drawing.Color.White;
-            this.Label7.Location = new System.Drawing.Point(121, 69);
-            this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(78, 20);
-            this.Label7.TabIndex = 33;
-            this.Label7.Text = "Usuario:";
+            Label7.AutoSize = true;
+            Label7.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label7.ForeColor = Color.White;
+            Label7.Location = new Point(106, 65);
+            Label7.Margin = new Padding(4, 0, 4, 0);
+            Label7.Name = "Label7";
+            Label7.Size = new Size(62, 15);
+            Label7.TabIndex = 33;
+            Label7.Text = "Usuario:";
             // 
             // Label8
             // 
-            this.Label8.AutoSize = true;
-            this.Label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.ForeColor = System.Drawing.Color.White;
-            this.Label8.Location = new System.Drawing.Point(96, 33);
-            this.Label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(103, 20);
-            this.Label8.TabIndex = 31;
-            this.Label8.Text = "Id. Usuario:";
+            Label8.AutoSize = true;
+            Label8.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label8.ForeColor = Color.White;
+            Label8.Location = new Point(84, 31);
+            Label8.Margin = new Padding(4, 0, 4, 0);
+            Label8.Name = "Label8";
+            Label8.Size = new Size(81, 15);
+            Label8.TabIndex = 31;
+            Label8.Text = "Id. Usuario:";
             // 
             // GroupBox1
             // 
-            this.GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.GroupBox1.Controls.Add(this.Cbo_Tipo);
-            this.GroupBox1.Controls.Add(this.Txt_Usuario);
-            this.GroupBox1.Controls.Add(this.Label9);
-            this.GroupBox1.Controls.Add(this.Txt_Filtro);
-            this.GroupBox1.Controls.Add(this.Lbl_Contador);
-            this.GroupBox1.Controls.Add(this.Lv_Usuarios);
-            this.GroupBox1.Controls.Add(this.Txt_Login);
-            this.GroupBox1.Controls.Add(this.Chk_Activo);
-            this.GroupBox1.Controls.Add(this.Label5);
-            this.GroupBox1.Controls.Add(this.Txt_Password);
-            this.GroupBox1.Controls.Add(this.Label4);
-            this.GroupBox1.Controls.Add(this.Label3);
-            this.GroupBox1.Controls.Add(this.Label7);
-            this.GroupBox1.Controls.Add(this.Txt_Codigo);
-            this.GroupBox1.Controls.Add(this.Label8);
-            this.GroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.ForeColor = System.Drawing.Color.White;
-            this.GroupBox1.Location = new System.Drawing.Point(23, 108);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.GroupBox1.Size = new System.Drawing.Size(1355, 590);
-            this.GroupBox1.TabIndex = 93;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Datos Generales de los Usuarios:";
+            GroupBox1.BackColor = Color.Transparent;
+            GroupBox1.Controls.Add(Cbo_Tipo);
+            GroupBox1.Controls.Add(Txt_Usuario);
+            GroupBox1.Controls.Add(Label9);
+            GroupBox1.Controls.Add(Txt_Filtro);
+            GroupBox1.Controls.Add(Lbl_Contador);
+            GroupBox1.Controls.Add(Lv_Usuarios);
+            GroupBox1.Controls.Add(Txt_Login);
+            GroupBox1.Controls.Add(Chk_Activo);
+            GroupBox1.Controls.Add(Label5);
+            GroupBox1.Controls.Add(Txt_Password);
+            GroupBox1.Controls.Add(Label4);
+            GroupBox1.Controls.Add(Label3);
+            GroupBox1.Controls.Add(Label7);
+            GroupBox1.Controls.Add(Txt_Codigo);
+            GroupBox1.Controls.Add(Label8);
+            GroupBox1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            GroupBox1.ForeColor = Color.White;
+            GroupBox1.Location = new Point(20, 101);
+            GroupBox1.Margin = new Padding(4);
+            GroupBox1.Name = "GroupBox1";
+            GroupBox1.Padding = new Padding(4);
+            GroupBox1.Size = new Size(1186, 553);
+            GroupBox1.TabIndex = 93;
+            GroupBox1.TabStop = false;
+            GroupBox1.Text = "Datos Generales de los Usuarios:";
             // 
             // Txt_Codigo
             // 
-            this.Txt_Codigo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Txt_Codigo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Codigo.Location = new System.Drawing.Point(212, 33);
-            this.Txt_Codigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_Codigo.Name = "Txt_Codigo";
-            this.Txt_Codigo.Size = new System.Drawing.Size(91, 25);
-            this.Txt_Codigo.TabIndex = 32;
+            Txt_Codigo.BackColor = SystemColors.ButtonHighlight;
+            Txt_Codigo.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txt_Codigo.Location = new Point(186, 31);
+            Txt_Codigo.Margin = new Padding(4);
+            Txt_Codigo.Name = "Txt_Codigo";
+            Txt_Codigo.Size = new Size(80, 21);
+            Txt_Codigo.TabIndex = 32;
             // 
             // Btn_Cerrar
             // 
-            this.Btn_Cerrar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Cerrar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
-            this.Btn_Cerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Cerrar.Location = new System.Drawing.Point(1207, 63);
-            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Btn_Cerrar.Name = "Btn_Cerrar";
-            this.Btn_Cerrar.Size = new System.Drawing.Size(171, 37);
-            this.Btn_Cerrar.TabIndex = 91;
-            this.Btn_Cerrar.Text = "Cerrar";
-            this.Btn_Cerrar.UseVisualStyleBackColor = false;
-            this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
+            Btn_Cerrar.BackColor = Color.Brown;
+            Btn_Cerrar.FlatStyle = FlatStyle.Flat;
+            Btn_Cerrar.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Btn_Cerrar.ForeColor = Color.White;
+            Btn_Cerrar.Image = (Image)resources.GetObject("Btn_Cerrar.Image");
+            Btn_Cerrar.ImageAlign = ContentAlignment.MiddleLeft;
+            Btn_Cerrar.Location = new Point(1056, 59);
+            Btn_Cerrar.Margin = new Padding(4);
+            Btn_Cerrar.Name = "Btn_Cerrar";
+            Btn_Cerrar.Size = new Size(150, 35);
+            Btn_Cerrar.TabIndex = 91;
+            Btn_Cerrar.Text = "Cerrar";
+            Btn_Cerrar.UseVisualStyleBackColor = false;
+            Btn_Cerrar.Click += Btn_Cerrar_Click;
             // 
             // PictureBox1
             // 
-            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
-            this.PictureBox1.Location = new System.Drawing.Point(23, 39);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(375, 5);
-            this.PictureBox1.TabIndex = 95;
-            this.PictureBox1.TabStop = false;
+            PictureBox1.Image = (Image)resources.GetObject("PictureBox1.Image");
+            PictureBox1.Location = new Point(20, 37);
+            PictureBox1.Margin = new Padding(4);
+            PictureBox1.Name = "PictureBox1";
+            PictureBox1.Size = new Size(328, 5);
+            PictureBox1.TabIndex = 95;
+            PictureBox1.TabStop = false;
             // 
             // Imagenes
             // 
-            this.Imagenes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Imagenes.ImageStream")));
-            this.Imagenes.TransparentColor = System.Drawing.Color.Transparent;
-            this.Imagenes.Images.SetKeyName(0, "Cerrar.ico");
+            Imagenes.ColorDepth = ColorDepth.Depth8Bit;
+            Imagenes.ImageStream = (ImageListStreamer)resources.GetObject("Imagenes.ImageStream");
+            Imagenes.TransparentColor = Color.Transparent;
+            Imagenes.Images.SetKeyName(0, "Cerrar.ico");
             // 
             // ep_Error
             // 
-            this.ep_Error.ContainerControl = this;
+            ep_Error.ContainerControl = this;
             // 
             // Frm_Usuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(44)))), ((int)(((byte)(69)))));
-            this.ClientSize = new System.Drawing.Size(1395, 706);
-            this.Controls.Add(this.Cmd_Cancelar);
-            this.Controls.Add(this.Label1);
-            this.Controls.Add(this.Cmd_Nuevo);
-            this.Controls.Add(this.Cmd_Editar);
-            this.Controls.Add(this.Cmd_Guardar);
-            this.Controls.Add(this.GroupBox1);
-            this.Controls.Add(this.Btn_Cerrar);
-            this.Controls.Add(this.PictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Frm_Usuarios";
-            this.Text = "Frm_Usuarios";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Usuarios_FormClosing);
-            this.Load += new System.EventHandler(this.Frm_Usuarios_Load);
-            this.VisibleChanged += new System.EventHandler(this.Frm_Usuarios_VisibleChanged);
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ep_Error)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 128, 128);
+            ClientSize = new Size(1221, 662);
+            Controls.Add(Cmd_Cancelar);
+            Controls.Add(Label1);
+            Controls.Add(Cmd_Nuevo);
+            Controls.Add(Cmd_Editar);
+            Controls.Add(Cmd_Guardar);
+            Controls.Add(GroupBox1);
+            Controls.Add(Btn_Cerrar);
+            Controls.Add(PictureBox1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4);
+            Name = "Frm_Usuarios";
+            Text = "Frm_Usuarios";
+            FormClosing += Frm_Usuarios_FormClosing;
+            Load += Frm_Usuarios_Load;
+            VisibleChanged += Frm_Usuarios_VisibleChanged;
+            GroupBox1.ResumeLayout(false);
+            GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)PictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ep_Error).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

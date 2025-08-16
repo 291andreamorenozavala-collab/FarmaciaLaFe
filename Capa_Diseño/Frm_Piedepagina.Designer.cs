@@ -28,48 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Label2 = new System.Windows.Forms.Label();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            Label2 = new Label();
+            Label1 = new Label();
+            SuspendLayout();
             // 
             // Label2
             // 
-            this.Label2.AutoSize = true;
-            this.Label2.BackColor = System.Drawing.Color.Transparent;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Label2.Location = new System.Drawing.Point(1265, 28);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(85, 16);
-            this.Label2.TabIndex = 5;
-            this.Label2.Text = "Versión 1.0";
+            Label2.AutoSize = true;
+            Label2.BackColor = Color.Transparent;
+            Label2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Label2.ForeColor = SystemColors.ButtonHighlight;
+            Label2.Location = new Point(1149, 32);
+            Label2.Margin = new Padding(4, 0, 4, 0);
+            Label2.Name = "Label2";
+            Label2.Size = new Size(84, 16);
+            Label2.TabIndex = 5;
+            Label2.Text = "Versión 1.0";
             // 
             // Label1
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.BackColor = System.Drawing.Color.Transparent;
-            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Label1.Location = new System.Drawing.Point(12, 28);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(365, 16);
-            this.Label1.TabIndex = 4;
-            this.Label1.Text = "Copyright ©2019, Farmacia la Fé. All rights reserved";
+            Label1.AutoSize = true;
+            Label1.BackColor = Color.Transparent;
+            Label1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Label1.ForeColor = SystemColors.ButtonHighlight;
+            Label1.Location = new Point(13, 32);
+            Label1.Margin = new Padding(4, 0, 4, 0);
+            Label1.Name = "Label1";
+            Label1.Padding = new Padding(470, 0, 0, 0);
+            Label1.Size = new Size(819, 16);
+            Label1.TabIndex = 4;
+            Label1.Text = "Copyright ©2025, Farmacia MJ. All rights reserved";
             // 
             // Frm_Piedepagina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(44)))), ((int)(((byte)(69)))));
-            this.ClientSize = new System.Drawing.Size(1362, 73);
-            this.Controls.Add(this.Label2);
-            this.Controls.Add(this.Label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_Piedepagina";
-            this.Text = "Frm_Piedepagina";
-            this.Load += new System.EventHandler(this.Frm_Piedepagina_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 128, 128);
+            ClientSize = new Size(1262, 84);
+            Controls.Add(Label2);
+            Controls.Add(Label1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "Frm_Piedepagina";
+            StartPosition = FormStartPosition.Manual;
+            Text = "Frm_Piedepagina";
+            Load += Frm_Piedepagina_Load;
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

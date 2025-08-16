@@ -29,5 +29,10 @@ namespace Capa_Diseño
             if (Program.xMensaje == DialogResult.Yes)
                 this.Close();
         }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

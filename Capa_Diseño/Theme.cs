@@ -12,11 +12,12 @@ namespace Capa_Diseño
     public static class Theme
     {
         // 🎨 Colores principales
-        public static Color FormBg = Color.FromArgb(240, 249, 244);   // Verde claro de fondo
+        public static Color FormBg = Color.FromArgb(255, 128, 128);   // Verde claro de fondo
         public static Color FormFg = Color.Black;                     // Texto general
 
-        public static Color BtnBg = Color.FromArgb(34, 139, 34);       // Verde intenso
-        public static Color BtnFg = Color.White;                       // Texto de botones
+        public static Color BtnBg = Color.FromArgb(255, 128, 128);       // Verde intenso
+        private static readonly Color white = Color.White;
+        public static Color BtnFg = white;                       // Texto de botones
 
         public static Color BtnHoverBg = Color.FromArgb(255, 140, 0);  // Naranja hover
         public static Color BtnHoverFg = Color.White;
@@ -24,9 +25,9 @@ namespace Capa_Diseño
         public static Color LabelFg = Color.FromArgb(25, 25, 25);      // Texto oscuro
         public static Color TextBoxBg = Color.White;
         public static Color TextBoxFg = Color.Black;
-        public static Color PanelBg = Color.FromArgb(220, 237, 200);   // Verde pálido
+        public static Color PanelBg = Color.FromArgb(255, 128, 128);   // Verde pálido
         public static Color ProgressBg = Color.LightGray;
-        public static Color ProgressFg = Color.FromArgb(255, 140, 0);  // Naranja
+        public static Color ProgressFg = Color.FromArgb(255, 128, 128);  // Naranja
 
         public static void ApplyTo(Control control)
         {

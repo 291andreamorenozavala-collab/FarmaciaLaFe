@@ -28,321 +28,322 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Productos));
-            this.Cmd_Cancelar = new System.Windows.Forms.Button();
-            this.Txt_Codigo = new System.Windows.Forms.TextBox();
-            this.Label9 = new System.Windows.Forms.Label();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.Txt_Filtro = new System.Windows.Forms.TextBox();
-            this.Lbl_Contador = new System.Windows.Forms.Label();
-            this.Lv_Datos = new System.Windows.Forms.ListView();
-            this.Cmd_Nuevo = new System.Windows.Forms.Button();
-            this.Cmd_Editar = new System.Windows.Forms.Button();
-            this.Cmd_Guardar = new System.Windows.Forms.Button();
-            this.Txt_Descripcion = new System.Windows.Forms.TextBox();
-            this.Chk_Estado = new System.Windows.Forms.CheckBox();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.Label8 = new System.Windows.Forms.Label();
-            this.Btn_Cerrar = new System.Windows.Forms.Button();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Imagenes = new System.Windows.Forms.ImageList(this.components);
-            this.ep_Error = new System.Windows.Forms.ErrorProvider(this.components);
-            this.GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ep_Error)).BeginInit();
-            this.SuspendLayout();
+            Cmd_Cancelar = new Button();
+            Txt_Codigo = new TextBox();
+            Label9 = new Label();
+            Label1 = new Label();
+            Txt_Filtro = new TextBox();
+            Lbl_Contador = new Label();
+            Lv_Datos = new ListView();
+            Imagenes = new ImageList(components);
+            Cmd_Nuevo = new Button();
+            Cmd_Editar = new Button();
+            Cmd_Guardar = new Button();
+            Txt_Descripcion = new TextBox();
+            Chk_Estado = new CheckBox();
+            GroupBox1 = new GroupBox();
+            Label7 = new Label();
+            Label8 = new Label();
+            Btn_Cerrar = new Button();
+            PictureBox1 = new PictureBox();
+            ep_Error = new ErrorProvider(components);
+            GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ep_Error).BeginInit();
+            SuspendLayout();
             // 
             // Cmd_Cancelar
             // 
-            this.Cmd_Cancelar.BackColor = System.Drawing.Color.Transparent;
-            this.Cmd_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cmd_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmd_Cancelar.ForeColor = System.Drawing.Color.White;
-            this.Cmd_Cancelar.Image = ((System.Drawing.Image)(resources.GetObject("Cmd_Cancelar.Image")));
-            this.Cmd_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cmd_Cancelar.Location = new System.Drawing.Point(663, 63);
-            this.Cmd_Cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Cmd_Cancelar.Name = "Cmd_Cancelar";
-            this.Cmd_Cancelar.Size = new System.Drawing.Size(171, 37);
-            this.Cmd_Cancelar.TabIndex = 107;
-            this.Cmd_Cancelar.Text = "Cancelar";
-            this.Cmd_Cancelar.UseVisualStyleBackColor = false;
-            this.Cmd_Cancelar.Click += new System.EventHandler(this.Cmd_Cancelar_Click);
+            Cmd_Cancelar.BackColor = Color.IndianRed;
+            Cmd_Cancelar.FlatStyle = FlatStyle.Flat;
+            Cmd_Cancelar.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Cmd_Cancelar.ForeColor = Color.White;
+            Cmd_Cancelar.Image = (Image)resources.GetObject("Cmd_Cancelar.Image");
+            Cmd_Cancelar.ImageAlign = ContentAlignment.MiddleLeft;
+            Cmd_Cancelar.Location = new Point(580, 59);
+            Cmd_Cancelar.Margin = new Padding(4);
+            Cmd_Cancelar.Name = "Cmd_Cancelar";
+            Cmd_Cancelar.Size = new Size(150, 35);
+            Cmd_Cancelar.TabIndex = 107;
+            Cmd_Cancelar.Text = "Cancelar";
+            Cmd_Cancelar.UseVisualStyleBackColor = false;
+            Cmd_Cancelar.Click += Cmd_Cancelar_Click;
             // 
             // Txt_Codigo
             // 
-            this.Txt_Codigo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Txt_Codigo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Codigo.Location = new System.Drawing.Point(191, 32);
-            this.Txt_Codigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_Codigo.Name = "Txt_Codigo";
-            this.Txt_Codigo.Size = new System.Drawing.Size(161, 25);
-            this.Txt_Codigo.TabIndex = 105;
+            Txt_Codigo.BackColor = SystemColors.ButtonHighlight;
+            Txt_Codigo.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txt_Codigo.Location = new Point(167, 30);
+            Txt_Codigo.Margin = new Padding(4);
+            Txt_Codigo.Name = "Txt_Codigo";
+            Txt_Codigo.Size = new Size(141, 21);
+            Txt_Codigo.TabIndex = 105;
             // 
             // Label9
             // 
-            this.Label9.AutoSize = true;
-            this.Label9.BackColor = System.Drawing.Color.Transparent;
-            this.Label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label9.ForeColor = System.Drawing.Color.White;
-            this.Label9.Location = new System.Drawing.Point(11, 554);
-            this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(254, 20);
-            this.Label9.TabIndex = 45;
-            this.Label9.Text = "Buscar Código o Descripción:";
-            this.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            Label9.AutoSize = true;
+            Label9.BackColor = Color.Transparent;
+            Label9.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label9.ForeColor = Color.White;
+            Label9.Location = new Point(10, 519);
+            Label9.Margin = new Padding(4, 0, 4, 0);
+            Label9.Name = "Label9";
+            Label9.Size = new Size(199, 15);
+            Label9.TabIndex = 45;
+            Label9.Text = "Buscar Código o Descripción:";
+            Label9.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // Label1
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.BackColor = System.Drawing.Color.Transparent;
-            this.Label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.ForeColor = System.Drawing.Color.White;
-            this.Label1.Location = new System.Drawing.Point(17, 9);
-            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(277, 23);
-            this.Label1.TabIndex = 112;
-            this.Label1.Text = "Registro de Médicamentos:";
+            Label1.AutoSize = true;
+            Label1.BackColor = Color.Transparent;
+            Label1.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label1.ForeColor = Color.White;
+            Label1.Location = new Point(15, 8);
+            Label1.Margin = new Padding(4, 0, 4, 0);
+            Label1.Name = "Label1";
+            Label1.Size = new Size(225, 18);
+            Label1.TabIndex = 112;
+            Label1.Text = "Registro de Médicamentos:";
             // 
             // Txt_Filtro
             // 
-            this.Txt_Filtro.BackColor = System.Drawing.Color.White;
-            this.Txt_Filtro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Txt_Filtro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Filtro.Location = new System.Drawing.Point(273, 551);
-            this.Txt_Filtro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_Filtro.Name = "Txt_Filtro";
-            this.Txt_Filtro.Size = new System.Drawing.Size(841, 25);
-            this.Txt_Filtro.TabIndex = 44;
-            this.Txt_Filtro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Filtro_KeyPress);
+            Txt_Filtro.BackColor = Color.White;
+            Txt_Filtro.CharacterCasing = CharacterCasing.Upper;
+            Txt_Filtro.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txt_Filtro.Location = new Point(239, 517);
+            Txt_Filtro.Margin = new Padding(4);
+            Txt_Filtro.Name = "Txt_Filtro";
+            Txt_Filtro.Size = new Size(736, 21);
+            Txt_Filtro.TabIndex = 44;
+            Txt_Filtro.KeyPress += Txt_Filtro_KeyPress;
             // 
             // Lbl_Contador
             // 
-            this.Lbl_Contador.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_Contador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Lbl_Contador.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Contador.ForeColor = System.Drawing.Color.White;
-            this.Lbl_Contador.Location = new System.Drawing.Point(1129, 553);
-            this.Lbl_Contador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_Contador.Name = "Lbl_Contador";
-            this.Lbl_Contador.Size = new System.Drawing.Size(213, 23);
-            this.Lbl_Contador.TabIndex = 43;
-            this.Lbl_Contador.Text = "Registro:";
+            Lbl_Contador.BackColor = Color.Transparent;
+            Lbl_Contador.BorderStyle = BorderStyle.FixedSingle;
+            Lbl_Contador.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Lbl_Contador.ForeColor = Color.White;
+            Lbl_Contador.Location = new Point(988, 518);
+            Lbl_Contador.Margin = new Padding(4, 0, 4, 0);
+            Lbl_Contador.Name = "Lbl_Contador";
+            Lbl_Contador.Size = new Size(187, 22);
+            Lbl_Contador.TabIndex = 43;
+            Lbl_Contador.Text = "Registro:";
             // 
             // Lv_Datos
             // 
-            this.Lv_Datos.BackColor = System.Drawing.Color.Thistle;
-            this.Lv_Datos.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lv_Datos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Lv_Datos.FullRowSelect = true;
-            this.Lv_Datos.GridLines = true;
-            this.Lv_Datos.LabelWrap = false;
-            this.Lv_Datos.Location = new System.Drawing.Point(15, 98);
-            this.Lv_Datos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Lv_Datos.MultiSelect = false;
-            this.Lv_Datos.Name = "Lv_Datos";
-            this.Lv_Datos.ShowGroups = false;
-            this.Lv_Datos.Size = new System.Drawing.Size(1327, 444);
-            this.Lv_Datos.SmallImageList = this.Imagenes;
-            this.Lv_Datos.StateImageList = this.Imagenes;
-            this.Lv_Datos.TabIndex = 42;
-            this.Lv_Datos.UseCompatibleStateImageBehavior = false;
-            this.Lv_Datos.View = System.Windows.Forms.View.Details;
-            this.Lv_Datos.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.Lv_Datos_ItemSelectionChanged);
-            this.Lv_Datos.DoubleClick += new System.EventHandler(this.Lv_Datos_DoubleClick);
-            // 
-            // Cmd_Nuevo
-            // 
-            this.Cmd_Nuevo.BackColor = System.Drawing.Color.Transparent;
-            this.Cmd_Nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cmd_Nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmd_Nuevo.ForeColor = System.Drawing.Color.White;
-            this.Cmd_Nuevo.Image = ((System.Drawing.Image)(resources.GetObject("Cmd_Nuevo.Image")));
-            this.Cmd_Nuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cmd_Nuevo.Location = new System.Drawing.Point(23, 63);
-            this.Cmd_Nuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Cmd_Nuevo.Name = "Cmd_Nuevo";
-            this.Cmd_Nuevo.Size = new System.Drawing.Size(171, 37);
-            this.Cmd_Nuevo.TabIndex = 105;
-            this.Cmd_Nuevo.Text = "Agregar";
-            this.Cmd_Nuevo.UseVisualStyleBackColor = false;
-            this.Cmd_Nuevo.Click += new System.EventHandler(this.Cmd_Nuevo_Click);
-            // 
-            // Cmd_Editar
-            // 
-            this.Cmd_Editar.BackColor = System.Drawing.Color.Transparent;
-            this.Cmd_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cmd_Editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmd_Editar.ForeColor = System.Drawing.Color.White;
-            this.Cmd_Editar.Image = ((System.Drawing.Image)(resources.GetObject("Cmd_Editar.Image")));
-            this.Cmd_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cmd_Editar.Location = new System.Drawing.Point(953, 63);
-            this.Cmd_Editar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Cmd_Editar.Name = "Cmd_Editar";
-            this.Cmd_Editar.Size = new System.Drawing.Size(171, 37);
-            this.Cmd_Editar.TabIndex = 108;
-            this.Cmd_Editar.Text = "Editar";
-            this.Cmd_Editar.UseVisualStyleBackColor = false;
-            this.Cmd_Editar.Click += new System.EventHandler(this.Cmd_Editar_Click);
-            // 
-            // Cmd_Guardar
-            // 
-            this.Cmd_Guardar.BackColor = System.Drawing.Color.Transparent;
-            this.Cmd_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cmd_Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmd_Guardar.ForeColor = System.Drawing.Color.White;
-            this.Cmd_Guardar.Image = ((System.Drawing.Image)(resources.GetObject("Cmd_Guardar.Image")));
-            this.Cmd_Guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cmd_Guardar.Location = new System.Drawing.Point(355, 63);
-            this.Cmd_Guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Cmd_Guardar.Name = "Cmd_Guardar";
-            this.Cmd_Guardar.Size = new System.Drawing.Size(171, 37);
-            this.Cmd_Guardar.TabIndex = 106;
-            this.Cmd_Guardar.Text = "Guardar";
-            this.Cmd_Guardar.UseVisualStyleBackColor = false;
-            this.Cmd_Guardar.Click += new System.EventHandler(this.Cmd_Guardar_Click);
-            // 
-            // Txt_Descripcion
-            // 
-            this.Txt_Descripcion.BackColor = System.Drawing.Color.White;
-            this.Txt_Descripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Txt_Descripcion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Descripcion.Location = new System.Drawing.Point(191, 65);
-            this.Txt_Descripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_Descripcion.Name = "Txt_Descripcion";
-            this.Txt_Descripcion.Size = new System.Drawing.Size(1113, 25);
-            this.Txt_Descripcion.TabIndex = 34;
-            this.Txt_Descripcion.WordWrap = false;
-            this.Txt_Descripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Descripcion_KeyPress);
-            // 
-            // Chk_Estado
-            // 
-            this.Chk_Estado.AutoSize = true;
-            this.Chk_Estado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chk_Estado.ForeColor = System.Drawing.Color.White;
-            this.Chk_Estado.Location = new System.Drawing.Point(371, 33);
-            this.Chk_Estado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Chk_Estado.Name = "Chk_Estado";
-            this.Chk_Estado.Size = new System.Drawing.Size(88, 24);
-            this.Chk_Estado.TabIndex = 41;
-            this.Chk_Estado.Text = "Estado";
-            this.Chk_Estado.UseVisualStyleBackColor = true;
-            // 
-            // GroupBox1
-            // 
-            this.GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.GroupBox1.Controls.Add(this.Txt_Codigo);
-            this.GroupBox1.Controls.Add(this.Label9);
-            this.GroupBox1.Controls.Add(this.Txt_Filtro);
-            this.GroupBox1.Controls.Add(this.Lbl_Contador);
-            this.GroupBox1.Controls.Add(this.Lv_Datos);
-            this.GroupBox1.Controls.Add(this.Txt_Descripcion);
-            this.GroupBox1.Controls.Add(this.Chk_Estado);
-            this.GroupBox1.Controls.Add(this.Label7);
-            this.GroupBox1.Controls.Add(this.Label8);
-            this.GroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.ForeColor = System.Drawing.Color.White;
-            this.GroupBox1.Location = new System.Drawing.Point(23, 108);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.GroupBox1.Size = new System.Drawing.Size(1355, 590);
-            this.GroupBox1.TabIndex = 111;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Datos Generales de los Clientes:";
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.ForeColor = System.Drawing.Color.White;
-            this.Label7.Location = new System.Drawing.Point(63, 68);
-            this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(114, 20);
-            this.Label7.TabIndex = 33;
-            this.Label7.Text = "Descripción:";
-            // 
-            // Label8
-            // 
-            this.Label8.AutoSize = true;
-            this.Label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.ForeColor = System.Drawing.Color.White;
-            this.Label8.Location = new System.Drawing.Point(107, 32);
-            this.Label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(74, 20);
-            this.Label8.TabIndex = 31;
-            this.Label8.Text = "Código:";
-            // 
-            // Btn_Cerrar
-            // 
-            this.Btn_Cerrar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Cerrar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
-            this.Btn_Cerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Cerrar.Location = new System.Drawing.Point(1207, 63);
-            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Btn_Cerrar.Name = "Btn_Cerrar";
-            this.Btn_Cerrar.Size = new System.Drawing.Size(171, 37);
-            this.Btn_Cerrar.TabIndex = 109;
-            this.Btn_Cerrar.Text = "Cerrar";
-            this.Btn_Cerrar.UseVisualStyleBackColor = false;
-            this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
-            this.PictureBox1.Location = new System.Drawing.Point(23, 39);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(375, 5);
-            this.PictureBox1.TabIndex = 113;
-            this.PictureBox1.TabStop = false;
+            Lv_Datos.BackColor = Color.Thistle;
+            Lv_Datos.Font = new Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Lv_Datos.ForeColor = Color.FromArgb(0, 0, 64);
+            Lv_Datos.FullRowSelect = true;
+            Lv_Datos.GridLines = true;
+            Lv_Datos.LabelWrap = false;
+            Lv_Datos.Location = new Point(13, 92);
+            Lv_Datos.Margin = new Padding(4);
+            Lv_Datos.MultiSelect = false;
+            Lv_Datos.Name = "Lv_Datos";
+            Lv_Datos.ShowGroups = false;
+            Lv_Datos.Size = new Size(1162, 416);
+            Lv_Datos.SmallImageList = Imagenes;
+            Lv_Datos.StateImageList = Imagenes;
+            Lv_Datos.TabIndex = 42;
+            Lv_Datos.UseCompatibleStateImageBehavior = false;
+            Lv_Datos.View = View.Details;
+            Lv_Datos.ItemSelectionChanged += Lv_Datos_ItemSelectionChanged;
+            Lv_Datos.DoubleClick += Lv_Datos_DoubleClick;
             // 
             // Imagenes
             // 
-            this.Imagenes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Imagenes.ImageStream")));
-            this.Imagenes.TransparentColor = System.Drawing.Color.Transparent;
-            this.Imagenes.Images.SetKeyName(0, "Cerrar.ico");
+            Imagenes.ColorDepth = ColorDepth.Depth8Bit;
+            Imagenes.ImageStream = (ImageListStreamer)resources.GetObject("Imagenes.ImageStream");
+            Imagenes.TransparentColor = Color.Transparent;
+            Imagenes.Images.SetKeyName(0, "Cerrar.ico");
+            // 
+            // Cmd_Nuevo
+            // 
+            Cmd_Nuevo.BackColor = Color.IndianRed;
+            Cmd_Nuevo.FlatStyle = FlatStyle.Flat;
+            Cmd_Nuevo.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Cmd_Nuevo.ForeColor = Color.White;
+            Cmd_Nuevo.Image = (Image)resources.GetObject("Cmd_Nuevo.Image");
+            Cmd_Nuevo.ImageAlign = ContentAlignment.MiddleLeft;
+            Cmd_Nuevo.Location = new Point(20, 59);
+            Cmd_Nuevo.Margin = new Padding(4);
+            Cmd_Nuevo.Name = "Cmd_Nuevo";
+            Cmd_Nuevo.Size = new Size(150, 35);
+            Cmd_Nuevo.TabIndex = 105;
+            Cmd_Nuevo.Text = "Agregar";
+            Cmd_Nuevo.UseVisualStyleBackColor = false;
+            Cmd_Nuevo.Click += Cmd_Nuevo_Click;
+            // 
+            // Cmd_Editar
+            // 
+            Cmd_Editar.BackColor = Color.IndianRed;
+            Cmd_Editar.FlatStyle = FlatStyle.Flat;
+            Cmd_Editar.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Cmd_Editar.ForeColor = Color.White;
+            Cmd_Editar.Image = (Image)resources.GetObject("Cmd_Editar.Image");
+            Cmd_Editar.ImageAlign = ContentAlignment.MiddleLeft;
+            Cmd_Editar.Location = new Point(834, 59);
+            Cmd_Editar.Margin = new Padding(4);
+            Cmd_Editar.Name = "Cmd_Editar";
+            Cmd_Editar.Size = new Size(150, 35);
+            Cmd_Editar.TabIndex = 108;
+            Cmd_Editar.Text = "Editar";
+            Cmd_Editar.UseVisualStyleBackColor = false;
+            Cmd_Editar.Click += Cmd_Editar_Click;
+            // 
+            // Cmd_Guardar
+            // 
+            Cmd_Guardar.BackColor = Color.IndianRed;
+            Cmd_Guardar.FlatStyle = FlatStyle.Flat;
+            Cmd_Guardar.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Cmd_Guardar.ForeColor = Color.White;
+            Cmd_Guardar.Image = (Image)resources.GetObject("Cmd_Guardar.Image");
+            Cmd_Guardar.ImageAlign = ContentAlignment.MiddleLeft;
+            Cmd_Guardar.Location = new Point(311, 59);
+            Cmd_Guardar.Margin = new Padding(4);
+            Cmd_Guardar.Name = "Cmd_Guardar";
+            Cmd_Guardar.Size = new Size(150, 35);
+            Cmd_Guardar.TabIndex = 106;
+            Cmd_Guardar.Text = "Guardar";
+            Cmd_Guardar.UseVisualStyleBackColor = false;
+            Cmd_Guardar.Click += Cmd_Guardar_Click;
+            // 
+            // Txt_Descripcion
+            // 
+            Txt_Descripcion.BackColor = Color.White;
+            Txt_Descripcion.CharacterCasing = CharacterCasing.Upper;
+            Txt_Descripcion.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txt_Descripcion.Location = new Point(167, 61);
+            Txt_Descripcion.Margin = new Padding(4);
+            Txt_Descripcion.Name = "Txt_Descripcion";
+            Txt_Descripcion.Size = new Size(974, 21);
+            Txt_Descripcion.TabIndex = 34;
+            Txt_Descripcion.WordWrap = false;
+            Txt_Descripcion.KeyPress += Txt_Descripcion_KeyPress;
+            // 
+            // Chk_Estado
+            // 
+            Chk_Estado.AutoSize = true;
+            Chk_Estado.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Chk_Estado.ForeColor = Color.White;
+            Chk_Estado.Location = new Point(325, 31);
+            Chk_Estado.Margin = new Padding(4);
+            Chk_Estado.Name = "Chk_Estado";
+            Chk_Estado.Size = new Size(71, 19);
+            Chk_Estado.TabIndex = 41;
+            Chk_Estado.Text = "Estado";
+            Chk_Estado.UseVisualStyleBackColor = true;
+            // 
+            // GroupBox1
+            // 
+            GroupBox1.BackColor = Color.Transparent;
+            GroupBox1.Controls.Add(Txt_Codigo);
+            GroupBox1.Controls.Add(Label9);
+            GroupBox1.Controls.Add(Txt_Filtro);
+            GroupBox1.Controls.Add(Lbl_Contador);
+            GroupBox1.Controls.Add(Lv_Datos);
+            GroupBox1.Controls.Add(Txt_Descripcion);
+            GroupBox1.Controls.Add(Chk_Estado);
+            GroupBox1.Controls.Add(Label7);
+            GroupBox1.Controls.Add(Label8);
+            GroupBox1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            GroupBox1.ForeColor = Color.White;
+            GroupBox1.Location = new Point(20, 101);
+            GroupBox1.Margin = new Padding(4);
+            GroupBox1.Name = "GroupBox1";
+            GroupBox1.Padding = new Padding(4);
+            GroupBox1.Size = new Size(1186, 553);
+            GroupBox1.TabIndex = 111;
+            GroupBox1.TabStop = false;
+            GroupBox1.Text = "Datos Generales de los Clientes:";
+            // 
+            // Label7
+            // 
+            Label7.AutoSize = true;
+            Label7.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label7.ForeColor = Color.White;
+            Label7.Location = new Point(55, 64);
+            Label7.Margin = new Padding(4, 0, 4, 0);
+            Label7.Name = "Label7";
+            Label7.Size = new Size(90, 15);
+            Label7.TabIndex = 33;
+            Label7.Text = "Descripción:";
+            // 
+            // Label8
+            // 
+            Label8.AutoSize = true;
+            Label8.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label8.ForeColor = Color.White;
+            Label8.Location = new Point(94, 30);
+            Label8.Margin = new Padding(4, 0, 4, 0);
+            Label8.Name = "Label8";
+            Label8.Size = new Size(57, 15);
+            Label8.TabIndex = 31;
+            Label8.Text = "Código:";
+            // 
+            // Btn_Cerrar
+            // 
+            Btn_Cerrar.BackColor = Color.Brown;
+            Btn_Cerrar.FlatStyle = FlatStyle.Flat;
+            Btn_Cerrar.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Btn_Cerrar.ForeColor = Color.White;
+            Btn_Cerrar.Image = (Image)resources.GetObject("Btn_Cerrar.Image");
+            Btn_Cerrar.ImageAlign = ContentAlignment.MiddleLeft;
+            Btn_Cerrar.Location = new Point(1056, 59);
+            Btn_Cerrar.Margin = new Padding(4);
+            Btn_Cerrar.Name = "Btn_Cerrar";
+            Btn_Cerrar.Size = new Size(150, 35);
+            Btn_Cerrar.TabIndex = 109;
+            Btn_Cerrar.Text = "Cerrar";
+            Btn_Cerrar.UseVisualStyleBackColor = false;
+            Btn_Cerrar.Click += Btn_Cerrar_Click;
+            // 
+            // PictureBox1
+            // 
+            PictureBox1.Image = (Image)resources.GetObject("PictureBox1.Image");
+            PictureBox1.Location = new Point(20, 37);
+            PictureBox1.Margin = new Padding(4);
+            PictureBox1.Name = "PictureBox1";
+            PictureBox1.Size = new Size(328, 5);
+            PictureBox1.TabIndex = 113;
+            PictureBox1.TabStop = false;
             // 
             // ep_Error
             // 
-            this.ep_Error.ContainerControl = this;
+            ep_Error.ContainerControl = this;
             // 
             // Frm_Productos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(44)))), ((int)(((byte)(69)))));
-            this.ClientSize = new System.Drawing.Size(1395, 706);
-            this.Controls.Add(this.Cmd_Cancelar);
-            this.Controls.Add(this.Label1);
-            this.Controls.Add(this.Cmd_Nuevo);
-            this.Controls.Add(this.Cmd_Editar);
-            this.Controls.Add(this.Cmd_Guardar);
-            this.Controls.Add(this.GroupBox1);
-            this.Controls.Add(this.Btn_Cerrar);
-            this.Controls.Add(this.PictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Frm_Productos";
-            this.Text = "Frm_Productos";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Productos_FormClosing);
-            this.Load += new System.EventHandler(this.Frm_Productos_Load);
-            this.VisibleChanged += new System.EventHandler(this.Frm_Productos_VisibleChanged);
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ep_Error)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 128, 128);
+            ClientSize = new Size(1221, 662);
+            Controls.Add(Cmd_Cancelar);
+            Controls.Add(Label1);
+            Controls.Add(Cmd_Nuevo);
+            Controls.Add(Cmd_Editar);
+            Controls.Add(Cmd_Guardar);
+            Controls.Add(GroupBox1);
+            Controls.Add(Btn_Cerrar);
+            Controls.Add(PictureBox1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4);
+            Name = "Frm_Productos";
+            Text = "Frm_Productos";
+            FormClosing += Frm_Productos_FormClosing;
+            Load += Frm_Productos_Load;
+            VisibleChanged += Frm_Productos_VisibleChanged;
+            GroupBox1.ResumeLayout(false);
+            GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)PictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ep_Error).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
